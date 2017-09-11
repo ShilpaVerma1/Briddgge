@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+   
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+<ion-row class="top-profile">
+<img src="img/backprofile.jpg"/> 
+<p class="triangle"></p></ion-row>
+
+ <img class="pro-img"  [src]="profiledata.img" />
+  <h1 class="main-heading"> 
+   <span class="span-heading">{{profiledata.name}}</span><br/>
+    <span class="span-heading2"> {{profiledata.user_type}}  </span>
+     <button class="follow-btn">  <ion-icon ios="ios-person" md="md-person"></ion-icon>65</button>
+  </h1>
+
+<ion-row class="background-div">
+  </ion-row>
+
+
+ <ion-tabs style="position:relative;height:60%;">
+  <ion-tab [root]="tab1Root" tabTitle="Images"  [rootParams]="uid"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="videos" [rootParams]="uid"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Tag-posts"></ion-tab>
+
+</ion-tabs>
+
+
+</ion-content>

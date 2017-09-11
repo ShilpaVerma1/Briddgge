@@ -1,0 +1,40 @@
+<ion-header>
+ <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-scroll scrollX="true" class="first-scroll top-scroll">
+      <ion-card >
+      <img class="storyimg" [src]="profiledata.img" /> 
+      <button ion-button class="addstory" (click)="addstory()"> 
+       <ion-icon class="addicon" ios="ios-add" md="md-add"></ion-icon>
+      </button>
+      <a>{{profiledata.name}}</a>
+    </ion-card>
+    <ion-card *ngFor="let story of stories;">
+      <img [src]="story.profile_img" />
+      <a>{{story.name}}</a>
+    </ion-card>
+  </ion-scroll>
+
+ <ion-tabs style="position:relative;height:92%;top:2%;">
+ <ion-tab [root]="tab1Root"  tabBadge="{{imgcount}}" tabBadgeStyle="danger"  tabTitle="Images"> </ion-tab>  
+  <ion-tab [root]="tab2Root"   tabBadge="{{videocount}}" tabBadgeStyle="danger" tabTitle="Videos"></ion-tab>
+   <ion-tab [root]="tab3Root"  tabBadge="25" tabBadgeStyle="danger" tabTitle="Live Videos"></ion-tab>
+</ion-tabs>
+
+
+<ion-footer class="bottom-footer">
+      <ion-icon ios="ios-home" md="md-home" (click)="home()" ></ion-icon>
+      <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+      <ion-icon ios="ios-person" md="md-person" (click)="profile()"></ion-icon>
+    </ion-footer>
+
+
+</ion-content>

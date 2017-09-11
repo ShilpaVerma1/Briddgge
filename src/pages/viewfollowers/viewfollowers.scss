@@ -1,0 +1,97 @@
+page-viewfollowers {
+  
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;}
+ion-scroll .scroll-content {
+    left: 20px;
+    right: 20px;}
+ .fixed-content{background: #2370b5;
+  background: -webkit-linear-gradient(left, #2370b5 , #8bc6f4);
+  background: -o-linear-gradient(right, #2370b5, #8bc6f4);
+  background: -moz-linear-gradient(right, #2370b5, #8bc6f4); 
+  background: linear-gradient(to right, #2370b5 , #8bc6f4); 
+  }
+    button{
+         text-transform: none;
+    }
+ .tiles{     
+       background-color: #83b8f3;
+       margin: 15px 0 16px 0px;
+       width:100%}
+ .tiles img{    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 5px 9px;
+    border: 2px solid #e6e6e6;}
+    .tiles p.name{    color: #fff;
+    font-size: 16px;
+    padding-top: 7px;
+    width: 43%;
+    font-weight: 200;
+}
+.tiles p.next{
+    width: 31%;
+    text-align: right;
+    font-size: 19px;
+    color: #fff;
+}
+.button-outline-md {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    color: #fff;}
+.button-round-md {
+    border-radius: 64px;
+    padding: 0 1.6rem;}
+.button-inner {
+    font-size: 16px;
+    text-transform: none;}
+
+ 
+ .toolbar-background-md{background-color:#2c7ca6;}
+
+.dropdown{
+    border: 1px solid #fff;margin: 20px 30px 0px 30px;
+    border-radius:30px;
+}
+.label-md {
+  margin: 15px 0px 13px 23px;color:#fff;font-weight:500;font-size:15px;
+}
+.select-md .select-icon .select-icon-inner {
+    left: 5px;
+    top: 50%;
+    margin-top: -3px;
+    position: absolute;
+     width: 0; 
+     height: 0; 
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #fff;}
+.select-md .select-icon {
+    position: relative;
+ 
+    right: 17px;}
+    /****footer css****/
+  ion-footer.bottom-footer{width:100%;height: 50px;;
+    background: #2370b5;    bottom: 0px;
+    position: fixed;}
+    .bottom-footer ion-icon{    width: 24%;
+    font-size: 32px;
+    color: #fff;
+    margin: 7px auto;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;}
+   .bottom-footer .ion-md-home:before {
+    content: "\f30c";
+    vertical-align: middle;
+}
+
+.bottom-footer .ion-md-search:before{ vertical-align: middle;}
+.ion-md-heart:before{    vertical-align: middle;}
+.ion-md-person:before{    vertical-align: middle;}
+}

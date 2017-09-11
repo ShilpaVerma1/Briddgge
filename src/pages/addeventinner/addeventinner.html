@@ -1,0 +1,107 @@
+
+<ion-header>
+
+<ion-navbar>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding class="main-background">
+ <ion-row class="heading"> <p>ADD EVENTS</p></ion-row>
+<ion-row> <ion-input   placeholder="Name" class="input-pass" name="eventname" [(ngModel)]="eventname"></ion-input> </ion-row>
+<ion-row> <ion-input   placeholder="Location" class="input-pass" name="eventlocation" [(ngModel)]="eventlocation"></ion-input> </ion-row>
+<ion-row class="row-padding">  
+  <span style="color:#fff;margin-bottom:-10px;" *ngIf="!eventtype">Event type</span>    
+  <select  placeholder="Event type" onmousedown="this.value='';" name="eventtype" [(ngModel)]="eventtype" (change)="onChange(eventtype)" >		
+          <option > BBQ</option>
+          <option >  Banquet </option>
+          <option > Party</option>
+          <option > Meeting</option>
+          <option > Birthday</option>
+          <option > Festival</option>
+          <option > Galas</option>
+          <option > Award Programs</option>
+          <option > Lunch</option>
+          <option > Wedding</option>
+          <option > Reunion</option>
+          <option > Anniversary</option>
+          <option > Dinner</option>
+          <option > Sports</option>
+          <option > Kickback</option>
+
+        </select></ion-row>
+<ion-row>
+  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="price" > ${{price}}</p>
+  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="!price" > Price</p> </ion-row>
+  <ion-range min="5" max="50" step="5" snaps="true"  pin="true" (ionChange)="rangeprice($event)" [(ngModel)]="brightness">
+    <ion-icon small range-left name="logo-usd"></ion-icon>>
+     <ion-icon range-right name="logo-usd"></ion-icon>
+   </ion-range>
+
+      <ion-row class="heading"> <p>EVENTS DATE</p></ion-row>
+  <ion-grid>  
+      <ion-row class="dateline">
+
+<ion-col col-2 class="col-one">
+<img src="img/innericon1.png"/>
+  </ion-col>
+<ion-col col-6 class="col-second">
+<p> JUNE25,2016 </p>
+  </ion-col>
+  <ion-col col-4 class="col-third" (click)="selectday()">
+<span>Day</span>
+  </ion-col>
+ </ion-row>
+ </ion-grid>
+
+
+   <ion-grid>  
+      <ion-row class="dateline">
+
+<ion-col col-2 class="col-one">
+<img src="img/innericon2.png"/>
+  </ion-col>
+<ion-col col-6 class="col-second" >
+<p >{{today}} </p>
+
+  </ion-col>
+  <ion-col col-4 class="col-third" (click)="selecttime()">
+<span class="time">Time</span>
+  </ion-col>
+ </ion-row>
+ </ion-grid>
+
+
+
+   <ion-grid>  
+      <ion-row class="cemra">
+
+<ion-col col-5 class="col-second">
+<p>Photos</p>
+  </ion-col>
+<ion-col col-7 class="col-img">
+<img src="img/cemra.png"/>
+<img src="img/add.png"/>
+  </ion-col>
+
+ </ion-row>
+ </ion-grid>
+
+
+<ion-grid>  
+<ion-row class="cemra">
+
+<ion-col col-5 class="col-second">
+<p>Video</p>
+  </ion-col>
+<ion-col col-7 class="col-img">
+<img src="img/videonew.png"/>
+<img src="img/add.png"/>
+  </ion-col>
+
+ </ion-row>
+ </ion-grid>
+
+
+<ion-row class="post" (click)="post()"><span>Post</span></ion-row>
+
+</ion-content>

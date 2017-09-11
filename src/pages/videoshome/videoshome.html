@@ -1,0 +1,30 @@
+<ion-header>
+</ion-header>
+
+<ion-content >
+<div  *ngFor="let post of status let i=index;">
+<div *ngIf=" post.video">
+	<ion-row class="post-heading" >
+		<img [src]="post.profile_img" /><h5>{{post.name}}</h5>
+	</ion-row>
+
+	<ion-row  class="post-inner">
+		<p *ngIf="post.message!='undefined'">{{post.message}}</p>
+		<div class="video-main">
+		<video  width="100%" height="180" controls id="{{post.id}}" [src]="post.video"   controlsList="nodownload"></video>
+		<!--<img  *ngIf="test=='playimg'" src="img/playbutton.png"  (click)="play(post.id,i)" />
+		<img  *ngIf="test=='pauseimg'" src="img/pause.png" (click)="play(post.id,i)" />-->
+		
+		</div>
+	</ion-row>
+	<ion-row class="post-comments" >
+		<a><ion-icon name="ios-chatboxes-outline" (click)="Comments(post.id,post.video,post.message,post.name,post.profile_img)"></ion-icon> <span class="count">{{afstatus[post.id].Commentcount}}</span></a>
+		<a>  
+		<ion-icon name="heart-outline" *ngIf="post.likeStatus==false" (click)="like(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
+		<ion-icon style="color:red;" md="md-heart" *ngIf="post.likeStatus==true" (click)="unlike(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
+		<span class="count" (click)="likepost(post.id,post.img,post.message,post.name,post.profile_img)"></span>{{afstatus[post.id].Likecount}}	</a>
+	</ion-row>
+</div>
+</div>
+
+</ion-content>

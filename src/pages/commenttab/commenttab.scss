@@ -1,0 +1,56 @@
+page-commenttab {
+
+    ion-icon.comment-icon{    font-size: 22px;
+    margin-right:5px;}
+    .comment{   margin: 20px 0px 10px;}
+    p.comments{width:100%;}
+.comment img{    border-radius: 50%;
+    height: 50px;
+    width: 50px;}
+.comment p.heading{font-size: 17px;
+    font-weight: 600;
+    padding: 0px;
+    margin: 10px;}
+    .comment p{  font-size: 15px;
+    font-weight: 500;
+    margin: 8px 7px 0px;
+    min-height: 30px}
+
+    ul {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    margin-top: 2px;
+    margin-left: 9px;}
+
+ul li {
+    float: none!important;
+    display: inline-block;
+color:#000;
+    width:25%;
+}
+ul li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+.reply{
+  
+    position:static;
+}
+ion-footer ion-row .item-md{ width: 60%!important;}
+ion-footer .text-input-md {
+       margin: 5px 8px;
+    font-size: 16px;
+}
+    ion-footer .item-md{    padding: 0px;}
+   .button-md{     background-color: #05457e;
+    color: #fff;text-transform: none;
+    padding: 7px 24px;
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 300;}
+    footer{    bottom: 39px;
+    background: #dcdcdc;}
+}

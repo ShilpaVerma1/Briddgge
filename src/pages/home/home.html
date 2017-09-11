@@ -8,11 +8,54 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <button ion-button color="danger"  round block (click)="doLogout()">
+      Logout
+    </button>
+<button ion-button color="danger" outline round (click)="takePicture(0)">
+ Accessing image gallery
+</button>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+<button ion-button color="danger" outline round (click)="takePicture(1)">
+ Accessing video gallery
+</button>
+<button ion-button color="danger" outline round (click)="takePicture(2)">
+   Accessing all media
+</button><br>
+<button ion-button color="danger" outline round (click)="capture()">
+   Capture image
+</button>
+<button ion-button color="danger" outline round (click)="takePicture(4)">
+   Capture video
+</button>
+<button ion-button color="danger" outline round (click)="audiorecord()">
+  Audio
+</button>
+<!--<button ion-button color="danger" outline round (click)="test()">
+ Test
+</button>-->
+<!--<img [src]="x" *ngIf="x"/>-->
+<!--<video width="320" height="240" id="resource-video" controls="controls" autoplay="false" 
+  [src]="MediaFile" *ngIf="MediaFile">
+</video>-->
+<ion-list >    
+  <ion-card>
+  <ion-item *ngFor="let value of img">  
+ <img [src]="value.downloadURL"  *ngIf="value.downloadURL"/> 
+ <video width="320" height="240" id="resource-video" controls="controls" autoplay="false" [src]="value.videodownloadURL" *ngIf="value.videodownloadURL">
+</video>
+ <audio width="320" height="240" controls="controls" *ngIf="value.audiodownloadURL" [src]="value.audiodownloadURL">
+</audio>
+ </ion-item>
+  </ion-card>  
+ </ion-list> 
+   <div id="recaptcha-container"></div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-item>
+    <ion-label stacked>Phone Number</ion-label>
+    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+
+  <button ion-button id="sign-in-button" (click)="signIn(phoneNumber)">
+    Sign In
+  </button>
 </ion-content>

@@ -1,0 +1,61 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-actionsheet": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        }
+    }
+}

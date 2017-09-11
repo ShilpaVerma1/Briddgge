@@ -1,0 +1,83 @@
+
+<ion-header>
+
+ <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
+    </button>
+        <ion-title>Find Friends</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar  style="width:100%;" placeholder="Search Friends" autocorrect="off"></ion-searchbar>
+
+<ion-scroll scrollX="true" class="first-scroll top-scroll" style="height:100px;">
+    <ion-card>
+      <img src="img/profile-img.jpg" />
+      <a>Lorem ipsam</a>
+    </ion-card>
+    <ion-card>
+   <img src="img/profile-img.jpg" />
+      <a>Lorem ipsam</a>
+    </ion-card>
+    <ion-card>
+ <img src="img/profile-img.jpg" />
+      <a>Lorem ipsam</a>
+    </ion-card>
+    <ion-card>
+   <img src="img/profile-img.jpg" />
+      <a>Lorem ipsam</a>
+    </ion-card>
+    <ion-card>
+<img src="img/profile-img.jpg" />
+      <a>Lorem ipsam</a>
+    </ion-card>
+    <ion-card>
+  <img src="img/profile-img.jpg" />
+    <a>Lorem ipsam</a>
+    </ion-card>
+  </ion-scroll>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+<p class="next">  
+    <!--<ion-icon ios="ios-send" md="md-send"></ion-icon>-->
+    <button ion-button  outline round>Follow</button>
+</p>
+</ion-row>
+
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+         <button ion-button  outline round>Follow</button>
+    </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next"> 
+        <button ion-button  outline round>Follow</button>
+  </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+           <button ion-button  outline round>Follow</button>
+  </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+        <button ion-button  outline round>Follow</button>
+    </p>
+</ion-row>
+<ion-footer class="bottom-footer">
+     <ion-icon ios="ios-home" md="md-home" (click)="home()"></ion-icon>
+       <ion-icon ios="ios-search" md="md-search"></ion-icon>
+       <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+        <ion-icon ios="ios-person" md="md-person" (click)="profile()"></ion-icon>
+    </ion-footer>
+</ion-content>

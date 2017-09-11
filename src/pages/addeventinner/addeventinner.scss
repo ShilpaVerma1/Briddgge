@@ -1,0 +1,82 @@
+page-addeventinner {
+    .text-input-md{    padding: 5px;}
+    select{padding: 2px;}
+  .dateline img{  height: 22px;}
+    .heading{padding-left: 10px;}
+    .heading p{color: #fff;
+    font-size: 14px;
+    font-weight: 700;}
+.range-md .range-bar{height:5px;}
+.row-padding{  padding: 15px 10px;}
+    input[type="text"]::-webkit-input-placeholder {
+  color: #fff;
+}
+.bar-button-default-md{color:#fff;}
+.back-button-icon-md{font-size: 3.0rem;}
+    input[type="email"]::-webkit-input-placeholder {
+color: #fff;
+}
+    input[type="password"]::-webkit-input-placeholder {
+color: #fff;
+}
+    input[type="search"].searchbar-input::-webkit-input-placeholder {
+color: #fff;
+}
+.range-md .range-knob{    width: 25px;
+    height: 25px;    top: 10px;
+    background:rgba(255, 255, 255, 0.76)}
+.ion-logo-usd{  color: rgba(255, 255, 255, 0.72) !important; }
+select{    width: 100%;
+    
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;}
+.range-md .range-knob-handle{top:22px;}
+.range-bar.range-bar-active{ background: rgba(255, 255, 255, 0.72) !important;}
+    .range-md .range-bar{ background:#246cae;}
+    .range-md .range-tick{margin-left: -1px;
+    border-radius: 0px;
+    position: absolute;
+    top: 21px;
+    z-index: 1;
+    width: 1px;
+    height: 4px;
+   background: #e4e4e4;;
+   }
+.main-background{background-image:(url("../img/backnew.jpg"));
+background-size:cover;}
+.text-input{border-bottom: 1px solid #fff; color:#fff;}
+.range-md .range-pin::before{ background:#246cae;}
+.range-md.range-has-pin {
+    padding-top: 10px;
+}
+.col-one{padding: 5px 0px;
+    text-align: center;}
+    
+    .col-second p{padding: 2px 0px; margin:0px; color:#fff;}
+.col-third span{
+    border: 1px solid #fff;
+    padding: 3px 26px;
+    border-radius: 16px;
+    color:#fff;
+}  .time{padding:3px 23px!important;}
+.col-third{ text-align: right;}
+.col-img{text-align: right;}
+.col-img img{height:18px;width:18px; margin-left:5px;}
+.cemra{    border: 1px solid #fff;  margin:5px 0px;}
+.post span { margin: 10px auto 0px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 26px;
+    font-size: 17px;
+    border-radius: 14px;
+}
+
+
+
+
+
+}

@@ -1,0 +1,65 @@
+
+<ion-header>
+
+ <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
+    </button>
+        <ion-title>Followers</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <ion-row class="dropdown">
+ <ion-label >Select Year</ion-label>
+  <ion-select [(ngModel)]="Year" class="selyear">
+    <ion-option>2013</ion-option>
+    <ion-option>2012</ion-option>
+    <ion-option>2014</ion-option>
+    <ion-option>2015</ion-option>
+    <ion-option>2016</ion-option>
+    <ion-option>2017</ion-option>
+  </ion-select>
+  </ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+<p class="next">  
+    <button ion-button  outline round>View Profile</button>
+</p>
+</ion-row>
+
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+         <button ion-button  outline round>View Profile</button>
+    </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next"> 
+        <button ion-button  outline round>View Profile</button>
+  </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+           <button ion-button  outline round>View Profile</button>
+  </p>
+</ion-row>
+<ion-row class="tiles">
+   <img src="img/profile-img.jpg"/>
+   <p class="name">Jason Statham</p>
+   <p class="next">  
+        <button ion-button  outline round>View Profile</button>
+    </p>
+</ion-row>
+<ion-footer class="bottom-footer">
+     <ion-icon ios="ios-home" md="md-home" (click)="home()"></ion-icon>
+       <ion-icon ios="ios-search" md="md-search"></ion-icon>
+       <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+        <ion-icon ios="ios-person" md="md-person"></ion-icon>
+    </ion-footer>
+</ion-content>

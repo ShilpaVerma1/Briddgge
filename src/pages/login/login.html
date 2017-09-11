@@ -1,0 +1,43 @@
+
+<ion-header >
+
+</ion-header>
+<ion-content class="main">
+
+<img class="img-profile "  src="img/logo.png" />
+  <ion-grid>
+  <form [formGroup]="loginForm"  novalidate>
+
+    <ion-row  class="row-input">
+      <img src="img/1.png" style="height:30px;"/>
+      <ion-input #email formControlName="email" type="email"  placeholder="abc@gmail.com" class="input-email" name="loginForm.email" [(ngModel)]="loginForm.email"  [class.invalid]="!loginForm.controls.email.valid &&  submitAttempt"></ion-input>
+    </ion-row >
+    <ion-row class="error-message" *ngIf="!loginForm.controls.email.valid && error && submitAttempt">
+      <p>{{error}}</p>
+    </ion-row>
+    <ion-row  class="row-input">
+      <img src="img/2.png" style="height:30px;"/>
+
+      <ion-input #password formControlName="password" type="password" placeholder="Password" class="input-pass" name="loginForm.pass" [(ngModel)]="loginForm.pass" [class.invalid]="!loginForm.controls.password.valid && submitAttempt"></ion-input>
+    </ion-row>
+    <ion-row class="error-message" *ngIf="!loginForm.controls.password.valid  &&  submitAttempt && errormsg">
+      <p>{{errormsg}}</p>
+    </ion-row>
+  <ion-row class="row-submit">
+    <button ion-button round outline (click)="loginUser(loginForm.email,loginForm.pass)" class="logincls">
+     Sign in
+    </button>
+  </ion-row>
+  <ion-row>
+  <p (click)="register()" class="registercls">
+    Don't have an account?Register Now
+  </p>
+  </ion-row>
+  <!--<ion-row>
+    <p (click)="forgot(loginForm.email)" class="forgetcls">
+      Forgot Password
+    </p>
+  </ion-row>-->
+  </form>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,14 @@
+
+
+
+<ion-content >
+     
+<ion-row class="tiles" *ngFor="let post of likesdata;let i=index;">
+   <img [src]="post.profile_img"/>
+   <p class="name">{{post.name}}</p>
+<p class="next">  
+    <button ion-button (click)="view(post.user_id)" class="btn-follow" >View profile</button>
+</p>
+</ion-row>
+
+</ion-content>

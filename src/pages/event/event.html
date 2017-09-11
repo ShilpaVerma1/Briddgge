@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle *ngIf="!toggled">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="!toggled" >Event</ion-title>
+     <ion-icon *ngIf="!toggled" (click)="toggleSearch()" name="search" class="search" style="float:right;"></ion-icon>
+  <ion-searchbar *ngIf="toggled" [(ngModel)]="cities"  (ionCancel)="onCancel(cities)" [showCancelButton]="shouldShowCancel" (ionInput)="getItems(cities)"></ion-searchbar>
+
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+<select [(ngModel)]="states" name="states"  (change)="onChange(states)" >		
+	  <option  disabled selected value style="color:Grey;">Schools</option>
+  	<option *ngFor="let item of citydata" >   {{ item.name }}</option>
+    <option *ngFor="let item of citydata" style="display:none;">{{ item.state }}</option>
+
+</select>
+  </ion-grid>
+<ion-row style="margin-top: 25px;">
+<button ion-button color="danger" outline round (click)="showDate()">
+Calender
+</button>
+<button ion-button color="danger" outline round (click)="showTime()">
+Time
+</button>
+</ion-row>
+
+ <div id="recaptcha-container"></div>
+
+  <ion-item>
+    <ion-label stacked>Phone Number</ion-label>
+    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+
+  <button ion-button id="sign-in-button" (click)="signIn(phoneNumber)">
+    Sign In
+  </button>
+  <ion-searchbar (ionInput)="getItems($event)" style="width:80%;" multiple placeholder="City" ></ion-searchbar>
+  <br>  <select onmousedown="this.value='';" type="text" style="background-color: #6c6459;;color:#fff;font-size:initial;" name="city" [(ngModel)]="city" (change)="City(city)" >		
+      <option  id="test" *ngFor="let item of citydata"  >   {{ item }}</option>
+    </select>
+    <br>
+  <!--<ion-row style="margin-top:10px;">
+    <select type="text"  class="sel-school" name="registerForm.school" [(ngModel)]="school" (change)="onChangesel(school)" >		
+      <option *ngFor="let i of schools" >   {{ i.name }}</option>
+    </select>
+  </ion-row >-->
+</ion-content>

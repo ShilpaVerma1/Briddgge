@@ -1,0 +1,28 @@
+<ion-header>
+
+</ion-header>
+<ion-content padding>
+<div *ngIf="status.length!=undefined">
+	<div *ngFor="let post of status;let i=index;">
+			<ion-row *ngIf="post.message!='undefined' || (post.img!=null)" class="post-heading">
+			<img  *ngIf="post.profile_img!='null'" [src]="post.profile_img" /><h5>{{post.name}}</h5>
+			</ion-row>
+
+			<ion-row class="post-inner">
+				<p *ngIf="post.message!='undefined'">{{post.message}}</p>
+				<img *ngIf="post.img" [src]="post.img"/>
+			</ion-row>
+			<ion-row class="post-comments" *ngIf="post.message!='undefined' || (post.img!=null)">
+				<a><ion-icon name="ios-chatboxes-outline" (click)="Comments(post.id,post.img,post.message,post.name,post.profile_img)"></ion-icon> <span class="count">{{afstatus[post.id].Commentcount}}</span></a>
+				<a>  
+				<ion-icon name="heart-outline" *ngIf="post.likeStatus==false" (click)="like(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
+				<ion-icon style="color:red;" md="md-heart" *ngIf="post.likeStatus==true" (click)="unlike(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
+				<span class="count" (click)="likepost(post.id,post.img,post.message,post.name,post.profile_img)"></span>{{afstatus[post.id].Likecount}}	</a>
+			</ion-row>
+	</div>
+</div>
+<div *ngIf="status.length==undefined">
+	Enjoy posting your first story
+</div>
+
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+ 
+    <ion-row class="main-profile">
+        <img src="img/proimg1.jpg"/>
+    </ion-row>
+    <ion-row class="profile-row">
+          <img class="img-pro" [src]="profiledata.img"/>
+
+      <p class="heading-main">{{profiledata.name}}</p>
+      <p class="heading-second">{{profiledata.user_type}}</p>
+<ul>
+    <li><a href="#">20K</a>Followers</li><img src="img/dot.png"/>
+    <li><a href="#">10</a>Chat</li><img src="img/dot.png"/>
+    <li><a href="#">15</a> Members</li>
+</ul>
+
+        </ion-row>
+ <ion-tabs style="position:relative;height:60%;">
+  <ion-tab [root]="tab1Root" tabTitle="Video" tabIcon="logo-youtube" [rootParams]="userid" ><img src="img/vid.png"/></ion-tab>
+  <ion-tab [root]="tab2Root " tabIcon="md-aperture"  tabTitle="Images" [rootParams]="userid"></ion-tab>
+  <ion-tab [root]="tab3Root"  tabIcon="md-barcode"  tabTitle="Live Video"></ion-tab>
+
+</ion-tabs>
+<ion-footer class="bottom-footer">
+     <ion-icon ios="ios-home" md="md-home" (click)="home()"></ion-icon>
+       <ion-icon ios="ios-search" md="md-search"></ion-icon>
+       <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+        <ion-icon ios="ios-person" md="md-person" (click)="profile()"></ion-icon>
+    </ion-footer>
+</ion-content>
+

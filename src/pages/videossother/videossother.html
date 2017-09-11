@@ -1,0 +1,13 @@
+<ion-header>
+</ion-header>
+
+<ion-content class="main-div" style="position:relative;">
+<ion-row *ngFor="let vid of status" class="video-row">
+     <video  controls="controls" *ngIf="vid.video" controlsList="nodownload" >      
+              <source  [src]="vid.video" codecs="avc1.42E01E, mp4a.40.2" /> 
+      </video>
+
+    </ion-row>
+   
+
+</ion-content>

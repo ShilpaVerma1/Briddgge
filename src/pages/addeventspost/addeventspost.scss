@@ -1,0 +1,79 @@
+page-addeventspost {
+    .scroll-content{padding:0px;}
+ ion-textarea{    width: 81%;
+     margin: 0px auto;color:#fff;}
+    .text-input-md{ margin: 29px 4px 0px;
+        font-size: 14px;  font-family: roboto;}
+.fixed-content{
+    background:#549aef;
+}
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;}
+ion-textarea {
+    border-bottom: 1px solid #fff;
+  
+  }
+/************Placeholder CSS**************/
+.text-input:-ms-input-placeholder {
+  color: white;
+  text-align:center;
+}
+.text-input::-moz-placeholder {
+  color: white;  text-align:center;
+
+}
+
+.text-input::-webkit-input-placeholder {
+  color: white;  text-align:center;
+
+}
+.col-temp{display:inline-block;    text-align: right; max-width:120px!important;}
+
+.main-top{margin-top: 40px;}
+.main-top img{    width: 54%;height: 20%;}
+
+.footer-md::before{background-image:none!important;}
+ font-family: CenturyGothic;
+.center-img{
+          margin: 20px 28px 0px 28px;
+}
+.colicon img{    margin: 30px auto 10px;   
+    display: block;}
+.colicon{
+    background-color:transparent;
+    margin:0px 0px 4px 7px; height: 150px;
+    box-shadow: 1px 1px 7px 1px #c8c8c8;
+}
+a{
+    color: #fff;font-size:20px;text-align: center;
+    margin: auto;font-weight: 800;
+    display: block;
+}
+.center-row{
+        margin: 7px 28px 0px 28px;
+}
+
+.button-outline-md {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+      }
+
+
+    .post-btn{color: #fff;
+    margin: 30px auto;
+    font-weight: 400;
+    text-transform: none;
+    display: block;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 0px 50px;
+    font-family: roboto;}
+
+    @media(max-width:320px){.colicon img{height:40px; width:40px;    margin-top: 20px;}
+ .colicon{    height: 120px;}}
+}

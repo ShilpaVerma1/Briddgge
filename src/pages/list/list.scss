@@ -1,3 +1,49 @@
 page-list {
-
+.card-md{
+    margin-top:70px;
+}
+.login{
+    margin-bottom: 50px;
+    text-transform: none;
+    font-size:18px;
+    height: 50px; margin: 33px;margin-top:-10px!important;
+}
+.register{
+  margin-bottom: 10px;
+  text-transform: none;      margin: 33px;
+  font-size:18px;    height: 50px;
+}
+.input-email{    text-align: center;
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 17px;
+    font-size: 17px;
+    
+}
+.error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+    .input-email .text-input-md ,.input-email .text-input-ios{margin:0px !important; text-align:center;}
+        .input-pass .text-input-md ,.input-pass .text-input-ios{margin:0px !important; text-align:center;}
+    .input-pass{ 
+    text-align: center;
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 17px;
+    font-size: 17px;
+    margin-top: 17px;}
+        .input-name .text-input-md ,.input-pass .text-input-ios{margin:0px !important; text-align:center;}
+    .input-name{ 
+    text-align: center;
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 17px;
+    font-size: 17px;
+    margin-top: 17px;}
 }

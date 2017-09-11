@@ -1,0 +1,65 @@
+page-login {
+  .fixed-content{ background-image: url(../img/backsignup.jpg)!important;background-size: cover!important;}
+
+ .logincls{
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: none;
+    font-size: 18px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+.row-submit{
+      padding: 25px 0px 10px 0px;
+}
+.input-email{   
+    text-align: center;
+    font-size: 17px;
+    
+}
+.input-email .text-input-md ,.input-email .text-input-ios{margin:0px !important; text-align:center;color:#fff;}
+.input-pass .text-input-md ,.input-pass .text-input-ios{margin:0px !important; text-align:center;color:#fff;}
+    .input-pass{ 
+    text-align: center;
+    font-size: 17px;
+    margin-top: 17px;}
+.row-input{
+    border-bottom: 1px solid #ffffff;
+    margin: 0px 22px 0px 22px;
+    padding: 15px 11px 7px;
+}
+.registercls{
+  text-transform: none;font-weight:400;font-style: normal;
+  font-size:18px;display:block;margin:13px auto;color:#fff;
+}
+ .img-profile{height:174px;
+    width:170px;
+    border-radius:50%;
+    display:block;
+    margin:1em auto;
+    margin-top: 40px;
+    }
+  form {
+    margin: 20px;
+    button {
+      margin-top: 20px !important;
+    }
+    p {
+      font-style: italic;
+      color: red;
+      font-size:16px;
+    }
+  }
+
+
+.forgetcls{
+ display:block;font-style: normal;
+ margin: auto;
+ margin-top: 10px;
+ font-weight: bold;
+ font-size:18px;color:#fff;
+}
+
+
+}

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
+    </button>
+      <ion-title >Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div id="recaptcha-container"></div>
+
+  <ion-item>
+    <ion-label stacked>Phone Number</ion-label>
+    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+
+  <button ion-button id="sign-in-button" (click)="signIn(phoneNumber)">
+    Sign In
+  </button>
+
+</ion-content>

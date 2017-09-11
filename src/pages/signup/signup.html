@@ -1,0 +1,103 @@
+<ion-header>
+  <!--<ion-navbar>
+  </ion-navbar>-->
+</ion-header>
+
+
+<ion-content class="maingrid">
+  <button ion-button (click)="back()" style="box-shadow:none;background:transparent;border:none;" >
+    <ion-icon name="ios-arrow-back" style="color:#fff;font-size:40px;font-weight:bolder;" >
+    </ion-icon>
+  </button>
+<img class="img-profile "  (click)="photoupload()" *ngIf="!captureDataUrl" src="http://2.mediaoncloud.com/Shilpa/icon_person_by_ninjavdesign-d8x96sl.png" />
+<img class="img-profile "  (click)="photoupload()" *ngIf="captureDataUrl" [src]="captureDataUrl" />
+<img class="img-profile "   *ngIf="imgurl" [src]="imgurl" style="display:none;" />
+
+  <form  class="signup" [formGroup]="registerForm" novalidate>
+     <ion-row class="row-input">  
+        <img src="img/1.png" style="height:30px;"/>
+        <ion-input #fullname formControlName="fullname" type="text" placeholder="Enter your name" class="input-name" [class.invalid]="!registerForm.controls.fullname.valid && submitAttempt"  name="registerForm.name" [(ngModel)]="registerForm.name"> </ion-input>
+    </ion-row>
+    <ion-row  class="error-message" *ngIf="!registerForm.controls.fullname.valid  &&  submitAttempt && errorname">
+        <p >{{errorname}}</p>
+    </ion-row >
+    <ion-row  class="row-input">
+        <ion-icon  name="ios-mail-outline" style="font-size: 2.6em;color:#fff;margin-bottom:-5px;"></ion-icon>
+        <ion-input #email formControlName="email" type="email" 
+        placeholder="abc@gmail.com"  class="input-email"  name="registerForm.email" [(ngModel)]="registerForm.email"
+        [class.invalid]="!registerForm.controls.email.valid && submitAttempt"></ion-input>
+    </ion-row> 
+    <ion-row class="error-message" *ngIf="!registerForm.controls.email.valid  &&  submitAttempt && erroremail">
+        <p>{{erroremail}}</p>
+    </ion-row>
+    <ion-row  class="row-input">
+          <img src="img/3.png" style="height:30px;"/>
+          <ion-list radio-group class="gender-list" formControlName="gender">
+          <ion-radio value="Female"  (click)="selected('Female')" [checked]="Female" >
+             Female
+           </ion-radio>Female
+           <ion-radio value="Male" (click)="selected('Male')">
+            Male
+           </ion-radio>Male
+           <ion-item style="display:none;">{{gender}}</ion-item>
+           </ion-list>
+  
+    </ion-row>
+    <ion-row class="error-message"  *ngIf="!registerForm.controls.gender.valid  &&  submitAttempt && errorgender">
+          <p>{{errorgender}}</p>
+    </ion-row>
+    <ion-row class="row-input">
+          <img src="img/2.png" style="height:30px;" />
+          <ion-input #password   formControlName="password" type="{{typee}}"   placeholder="Password" class="input-pass" [class.invalid]="!registerForm.controls.password.valid && submitAttempt"  name="registerForm.pass" [(ngModel)]="registerForm.pass" show-hide-input></ion-input>   
+          <ion-icon md="ios-eye" style="font-size: 2.5em;color:#fff;" *ngIf="eye=='true'" (click)="hidepass()"></ion-icon>
+          <ion-icon md="ios-eye-off" style="font-size: 2.5em;color:#fff;" *ngIf="eye!='true'" (click)="showpass()"></ion-icon>
+    </ion-row>
+    <ion-row  class="error-message" *ngIf="!registerForm.controls.password.valid  && submitAttempt && errorpass">
+          <p>{{errorpass}}</p>
+    </ion-row>
+    <!--<ion-row class="row-input">
+            <img src="img/2.png" style="height:30px;"  />
+            <ion-input #password formControlName="password" type="password" placeholder="Confirm Password" class="input-pass" [class.invalid]="!registerForm.controls.password.valid && submitAttempt"  name="registerForm.confpass" [(ngModel)]="registerForm.confpass"></ion-input>
+            <ion-icon md="ios-eye" style="font-size: 2.5em;color:#fff;" *ngIf="eye=='true'" (click)="hidepass()"></ion-icon>
+            <ion-icon md="ios-eye-off" style="font-size: 2.5em;color:#fff;" *ngIf="eye!='true'" (click)="showpass()"></ion-icon>
+    </ion-row>
+    <ion-row  class="error-message" *ngIf="!registerForm.controls.password.valid  && submitAttempt && errorpass">
+          <p>{{errorpass}}</p>
+    </ion-row>-->
+ <ion-row class="row-input">
+          <img src="img/state.png" style="height:30px;" />
+      <span  class="school-fraternity" *ngIf="!registerForm.states">States</span>
+        <select #states  formControlName="states"  onmousedown="this.value='';" type="text" name="registerForm.states" [class.invalid]="!registerForm.controls.states.valid && submitAttempt"  class="sel-school" [(ngModel)]="registerForm.states" (change)="selstates(registerForm.states)" >		
+            <option *ngFor="let i of statesdata;" [ngValue]="i.code" style="color:#000;" >  {{i.currency}}</option>
+        </select>
+  </ion-row >
+    
+  <ion-row  class="row-sel">
+          <img src="img/5.png" class="city-img" />
+          <span  class="school-fraternity" *ngIf="!registerForm.states">City</span>
+
+         <!--<ion-searchbar (ionInput)="getItems($event)" style="width:45%;" placeholder="City" autocorrect="off"></ion-searchbar>-->
+          <select #city formControlName="city" class="search-box" onmousedown="this.value='';" type="text"  [class.invalid]="!registerForm.controls.city.valid && submitAttempt"  name="registerForm.city" [(ngModel)]="registerForm.city" (change)="onChange(registerForm.city)" >		
+            <option   *ngFor="let item of citydata"  >   {{ item }}</option>
+          </select>
+  </ion-row > 
+  <ion-row class="row-input">
+          <img src="img/4.png" style="height:30px;"/>
+          <span class="school-plc" *ngIf="!schools">University</span>
+          <select #school class="uni-select "  formControlName="school" placeholder="University Name" onmousedown="this.value='';" type="text" *ngIf="citydata && (schools)" [class.invalid]="!registerForm.controls.school.valid && submitAttempt"  name="registerForm.school" [(ngModel)]="registerForm.school" (change)="onChangesel(registerForm.school)" >		
+            <option *ngFor="let i of schools" >   {{ i.name }}</option>
+          </select>
+  </ion-row >
+ <ion-row class="row-input">
+      <ion-icon name="people" style="font-size: 2.6em;color:#fff;"></ion-icon>
+      <span  class="school-fraternity" *ngIf="!registerForm.fraternity">User Type</span>
+        <select #fraternity  formControlName="fraternity" placeholder="User type" onmousedown="this.value='';" type="text" name="registerForm.fraternity" [class.invalid]="!registerForm.controls.fraternity.valid && submitAttempt"  class="sel-school" [(ngModel)]="registerForm.fraternity" (change)="sel(registerForm.fraternity)" >		
+          <option >  Regular </option>
+          <option >  Member </option>
+          <option > Member Admin</option>
+        </select>
+  </ion-row >
+   <ion-row style="margin-top:26px;"><button ion-button  round outline  class="register"  (click)="doRegister(imgurl,registerForm.school,registerForm.city,registerForm.email,registerForm.pass,registerForm.name,gender,registerForm.fraternity,registerForm.states)">Sign Up</button></ion-row>
+  </form>
+
+</ion-content>

@@ -1,0 +1,29 @@
+
+<ion-header>
+
+ <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
+    </button>
+        <ion-title>Add Activities</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-textarea type="text" placeholder="Write your message here" [(ngModel)]="statustext" ></ion-textarea>
+          <ion-row class="center-img"> 
+            <ion-col col-40 class="colicon" style="background:url('img/events-bg.png')!important;" (click)="events()"><img src="img/events.png" />
+          <a  >Events</a></ion-col>
+            <ion-col col-40 class="colicon" style="background:url('img/images-bg.png')!important;" (click)="imageupload()"><img src="img/images.png"  />
+            <a  class="heading-under">Images</a></ion-col>
+        </ion-row>
+                <ion-row class="center-row">
+            <ion-col col-40 class="colicon" style="background:url('img/live-video-bg.png')!important;"><img src="img/live-video.png" />
+                <a  >Live video</a></ion-col>
+            <ion-col col-40 class="colicon" style="background:url('img/video-bg.png')!important;" (click)="videoupload()" ><img src="img/video.png"  />
+           <a  class="heading-under">Videos</a></ion-col>
+        </ion-row>
+    <ion-row>
+        <button ion-button round outline class="post-btn" (click)="post(imgurl,videourl)">Post</button>
+    </ion-row>
+</ion-content>

@@ -1,3 +1,22 @@
 page-home {
+.input-wrapper{
+        border: 1px solid firebrick;
+      
+}
+video::-internal-media-controls-download-button {
+    display:none;
+   }
+
+   video::-webkit-media-controls-enclosure {
+        overflow:hidden;
+   }
+
+   video::-webkit-media-controls-panel {
+        width: calc(100% + 40px); 
+   }
+   audio, canvas, progress, video {
+    vertical-align: baseline;
+    background: black;
+}
 
 }

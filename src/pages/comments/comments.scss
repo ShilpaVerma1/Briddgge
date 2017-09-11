@@ -1,0 +1,90 @@
+page-comments {
+
+ .tabs-md .tabbar {
+    background-color: transparent;
+    height:60px;
+}
+.back-button-icon-md{font-size: 2.6rem;
+    font-weight: normal;
+    color: #fff;}
+.scroll-content {
+    padding: 0px 5px 0px !important;
+}
+.post-inner img{ width:100%;height:200px;}
+.post-inner p{   color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+.post-heading{margin: 7px 0px;}
+.post-heading h5{       font-size: 17px;
+    padding: 0px 0px 0px 6px;
+    color: #000;
+    font-weight:500;}
+.post-heading img{    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;}
+
+ .tabs-md .tabbar{width:55%;}
+     .scroll-content{      background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+ .tabs-md .tab-button{    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+ .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color:#2370b5 !important;
+    position: absolute;
+    right: calc(72% - 25px);
+    font-size: 24px;
+}
+
+.has-icon .tab-button-icon, .has-title .tab-button-text {
+
+    color: #000!important;}
+.tabs-md .tab-button-text{font-size: 15px;
+    width: 80%;
+color:#000;
+font-weight:300;
+}
+    .tabs-md .tab-button[aria-selected=true] {
+      color: #000;
+    background-color: transparent;
+    padding: 0px !important;
+    border-radius: 14px;
+    border: 1px solid #636363;
+    margin-bottom: 4px;}
+
+
+    .tabs-md .tab-button[aria-selected=true] .tab-button-text{      font-size: 14px;
+    width: 80%;
+    text-align: center;
+    font-weight: 300; color:#000;}
+.main-profile img{width:100%;}
+.tabs-md .tabbar{position:relative;}
+.show-tab{position:relative;}
+
+
+.has-icon .tab-badge{    font-size: 14px;
+    background-color: transparent;
+    right: calc(38% - 20px);
+    border-radius: 50%;
+    padding: 4px;
+    top: 0px;
+    font-weight: 500;
+    color:#000;}
+
+    .tabs-md .tab-button-icon{font-size:25px;}
+    .tabs-md .tab-button {
+    min-height: 35px;}
+ .tabs-md .tab-button[aria-selected=true] .tab-button-icon .has-icon .tab-badge{color:#000;}
+.share-logo{      position: inherit;
+    right: 5%;    margin-top: 5px;
+    background-color: transparent;
+    padding: 0px 19px !important;
+    border: 2px solid #8e8e8e;
+    border-radius: 14px;}
+    .share-alt{font-size:32px;}
+}

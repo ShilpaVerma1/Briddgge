@@ -1,0 +1,56 @@
+page-chatslist {
+  .scroll-content{background: #2370b5;
+  background: -webkit-linear-gradient(left, #2370b5 , #8bc6f4);
+  background: -o-linear-gradient(right, #2370b5, #8bc6f4);
+  background: -moz-linear-gradient(right, #2370b5, #8bc6f4); 
+  background: linear-gradient(to right, #2370b5 , #8bc6f4); 
+  }
+.tiles{  //   background-color: #2370b5;
+    border-bottom: 1px solid #fff;
+    margin: 15px 10px;}
+ .tiles img{    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 5px 9px;
+    border: 2px solid #e6e6e6;
+    }
+    .tiles p.name{    color: #fff;
+    font-size: 16px;
+    padding-top: 7px;
+    width: 43%;
+    font-weight: 200;
+}
+.tiles p.next{
+    width: 32%;
+    text-align: right;
+    font-size: 19px;
+    color: #fff;
+}
+.icon-call{
+    color:#218aeb;
+    font-size: 21px;
+}
+.button-md {background-color: #fff;border-radius: 50%;  
+    font-size: 9px;}
+     ion-footer.bottom-footer{width:100%;height: 43px;;
+    background: #2370b5;    bottom: 0px;
+    position: fixed;}
+        ion-footer.bottom-footer{width:100%;height: 50px;
+    background: #2370b5;    bottom: 0px;
+    position: fixed;}
+    .bottom-footer ion-icon{    width: 24%;
+    font-size: 32px;
+    color: #fff;
+    margin: 8px auto;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;}
+   .bottom-footer .ion-md-home:before {
+    content: "\f30c";
+    vertical-align: middle;
+}
+
+.bottom-footer .ion-md-search:before{ vertical-align: middle;}
+.ion-md-heart:before{    vertical-align: middle;}
+.ion-md-person:before{    vertical-align: middle;}
+}

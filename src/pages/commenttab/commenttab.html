@@ -1,4 +1,4 @@
-<ion-content >
+<!--<ion-content >
 <p *ngIf="commentdata==null">Post your comment here</p>
 
 <ion-row class="comment" *ngFor="let post of commentdata;let i=index;">
@@ -11,7 +11,9 @@
     <li><a href="#"> 
         <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>
         <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>
-  {{afstatus1[post.id].Likes}}    </a></li>
+  {{afstatus1[post.id].Likes}}    
+
+  </a></li>
    </ul>
     </ion-row>
 </ion-content>
@@ -19,10 +21,35 @@
   <ion-row>
     <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>
       <button ion-button (click)="send(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>
+
+  </ion-row>
+
+    </ion-footer>-->
+
+
+<ion-content >
+<p *ngIf="!afstatus1">Post your comment here</p>
+
+<ion-row class="comment" *ngFor="let cmt of afstatus1">
+ <img [src]="cmt.profile_img"/>
+  <p class="heading">{{cmt.name}}</p> 
+  <p class="comments">{{cmt.comment}}</p>
+<ul>
+ <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>{{cmt.createdAt| date: 'h:mm a' }}</a></li>
+    <li><a href="#"> 
+        <ion-icon class="comment-icon" [ngClass]="commentstatus" name="thumbs-up" (click)=like(cmt.$key,cmt.Likes,cmt.user_ids)></ion-icon>
+       <!-- <ion-icon class="comment-icon" style="color:#2370b5;" name="thumbs-up" (click)=unlike()></ion-icon>-->
+  {{cmt.Likes}}
+  </a></li>
+   </ul>
+    </ion-row>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>
+        <button ion-button (click)="senddd(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>
+
   </ion-row>
 
     </ion-footer>
 
-<!--
-            <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(post.likes_comment,i,post.id)></ion-icon>
-        <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(post.likes_comment,i,post.id)></ion-icon>-->

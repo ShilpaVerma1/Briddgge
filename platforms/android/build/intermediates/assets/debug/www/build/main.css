@@ -25295,7 +25295,7 @@ video::-internal-media-controls-download-button {
 /******sidemenu css*******/
 .sidemain .item-md {
   background: transparent;
-  padding: 0px;
+  padding: 0px 9px 0px 17px;
   background-color: transparent;
 }
 
@@ -26227,6 +26227,14 @@ page-comments .share-logo {
 
 page-comments .share-alt {
   font-size: 32px;
+}
+
+page-commenttab .commentliked {
+  color: #2370b5;
+}
+
+page-commenttab .commentunliked {
+  color: grey;
 }
 
 page-commenttab ion-icon.comment-icon {

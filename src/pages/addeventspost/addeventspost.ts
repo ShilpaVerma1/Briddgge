@@ -111,7 +111,6 @@ post(img,vid){
                 this.counts = this.db.list('/Count/'+pid); 
                 this.counts.push({ 
                       Likecount: 0,
-                      likedislikevar:0,
                       Commentcount:0
                 });
                 this.statustext='';

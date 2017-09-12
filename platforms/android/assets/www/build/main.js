@@ -113,7 +113,7 @@ ImagessPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__likestab_likestab__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__commenttab_commenttab__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -170,7 +170,7 @@ CommentsPage = __decorate([
 
 /***/ }),
 
-/***/ 182:
+/***/ 188:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -178,9 +178,9 @@ CommentsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ImagepopverPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(25);
@@ -315,7 +315,6 @@ var AddeventspostPage = (function () {
                         _this.counts = _this.db.list('/Count/' + pid);
                         _this.counts.push({
                             Likecount: 0,
-                            likedislikevar: 0,
                             Commentcount: 0
                         });
                         _this.statustext = '';
@@ -564,7 +563,7 @@ webpackEmptyAsyncContext.id = 248;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FindfriendsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__briddggehome_briddggehome__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -613,7 +612,7 @@ FindfriendsPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -933,7 +932,9 @@ VideossotherPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -948,6 +949,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CommenttabPage = (function () {
     function CommenttabPage(platform, db, http, storage, navCtrl, navParams) {
         var _this = this;
@@ -957,6 +959,7 @@ var CommenttabPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.commentdata = [];
+        this.cmtdata = [];
         this.statusid = navParams.data;
         this.db = db;
         this.storage.get('usrid').then(function (usrid) {
@@ -968,96 +971,119 @@ var CommenttabPage = (function () {
         refNew.subscribe(function (data) {
             _this.afstatus = data;
         });
-        var ref = this.db.list('/Commentlikes/', { query: {
-                orderByChild: 'key'
-            } }).map(function (array) { return array.reverse(); });
+        // var ref = this.db.list('/Commentlikes/', { query: {
+        //        orderByChild:'key'
+        //     }}).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
+        //     ref.subscribe((data)=>{
+        //       var rawlist=[];
+        //       this.afstatus1 = [];    
+        //       data.forEach(minispanshot =>{ 
+        //       var refval = minispanshot.$key;
+        //       var refNew = this.db.list('/Commentlikes/'+refval);
+        //        refNew.subscribe((dataInner)=>{ 
+        //          let newData = dataInner[0];
+        //           rawlist[refval] = newData;
+        //           this.afstatus1 = rawlist;
+        //        })
+        //      })
+        //     })
+        var ref = this.db.list('/Commentss/');
         ref.subscribe(function (data) {
-            var rawlist = [];
             _this.afstatus1 = [];
-            data.forEach(function (minispanshot) {
-                var refval = minispanshot.$key;
-                var refNew = _this.db.list('/Commentlikes/' + refval);
-                refNew.subscribe(function (dataInner) {
-                    var newData = dataInner[0];
-                    rawlist[refval] = newData;
-                    _this.afstatus1 = rawlist;
-                });
-            });
-        });
-    }
-    CommenttabPage.prototype.send = function (afcount, afkey) {
-        var _this = this;
-        this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/saveComment?user_id=" + usrid + "&post_id=" + _this.statusid + "&comment=" + _this.commenttext).map(function (res) { return res.json(); }).subscribe(function (data) {
-                if (data.status == 'Success') {
-                    var newcommentcount = JSON.parse(afcount) + 1;
-                    var ref = _this.db.list('/Count/' + _this.statusid);
-                    ref.update(afkey, {
-                        Commentcount: newcommentcount
-                    });
-                    var commentid = data.id;
-                    _this.counts = _this.db.list('/Commentlikes/' + commentid);
-                    _this.counts.push({
-                        Likes: 0,
-                    });
-                    _this.platform.ready().then(function () {
-                        window.plugins.toast.show("Comments posted", "short", "center");
-                    });
-                    _this.commenttext = '';
-                    _this.storage.get('usrid').then(function (usrid) {
-                        _this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id=" + _this.statusid + "&user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
-                            _this.commentdata = data.comment;
+            data.forEach(function (snapshot) {
+                var keys = snapshot.$key;
+                if (keys == _this.statusid) {
+                    var reff = _this.db.list('/Commentss/' + keys + '/Comments/');
+                    reff.subscribe(function (keydata) {
+                        keydata.forEach(function (data) {
+                            _this.afstatus1.push(data);
+                            //   var refff=this.db.list('/Commentss/')
+                            //   refff.subscribe((commnttext)=>{
+                            //       commnttext.forEach((text)=>{
+                            //           this.afstatus1.push(text);
+                            //        console.log(this.afstatus1)
+                            //     }) 
+                            // })
                         });
                     });
                 }
-                else {
-                    _this.platform.ready().then(function () {
-                        window.plugins.toast.show("Write your comment in commentbox", "short", "center");
+            });
+        });
+    }
+    CommenttabPage.prototype.senddd = function (afcount, afkey) {
+        var _this = this;
+        if (this.commenttext == undefined) {
+            this.platform.ready().then(function () {
+                window.plugins.toast.show("Write your comment", "long", "center");
+            });
+        }
+        else {
+            this.storage.get('usrid').then(function (usrid) {
+                _this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
+                    _this.counts = _this.db.list('/Commentss/' + _this.statusid + '/Comments/');
+                    /****Push comments ****/
+                    _this.counts.push({
+                        loginuserid: usrid,
+                        comment: _this.commenttext,
+                        createdAt: __WEBPACK_IMPORTED_MODULE_4_firebase__["database"].ServerValue.TIMESTAMP,
+                        Likes: 0,
+                        profile_img: data.img,
+                        name: data.name,
+                        user_ids: ''
                     });
-                }
+                    /****Increase comment count in count node ****/
+                    var newcommentcount = JSON.parse(afcount) + 1;
+                    var ref = _this.db.list('/Count/' + _this.statusid);
+                    ref.update(afkey, {
+                        Commentcount: newcommentcount,
+                    });
+                });
             });
-        });
+        }
     };
-    CommenttabPage.prototype.like = function (afcount, afkey, index, pid) {
+    CommenttabPage.prototype.like = function (key, likecount, usrids) {
         var _this = this;
-        var newcount = JSON.parse(afcount) + 1;
-        this.commentdata[index].likeStatus = true;
         this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeComment?user_id=" + usrid + "&comment_id=" + pid + "&likesComment=1").map(function (res) { return res.json(); }).subscribe(function (data) {
-            });
-        });
-        var ref = this.db.list('/Commentlikes/' + pid);
-        ref.update(afkey, {
-            Likes: newcount,
-        });
-    };
-    CommenttabPage.prototype.unlike = function (afcount, afkey, index, pid) {
-        var _this = this;
-        var newcount = JSON.parse(afcount) - 1;
-        this.commentdata[index].likeStatus = false;
-        this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeComment?user_id=" + usrid + "&comment_id=" + pid + "&likesComment=0").map(function (res) { return res.json(); }).subscribe(function (data) {
-            });
-        });
-        var ref = this.db.list('/Commentlikes/' + pid);
-        ref.update(afkey, {
-            Likes: newcount,
+            var split_str = usrids.split(",");
+            /******Like  comments******/
+            if (split_str.includes(usrid) == false) {
+                var userids_1 = usrids + ',' + usrid;
+                var newcount = JSON.parse(likecount) + 1;
+                _this.commentstatus = 'commentliked';
+                var ref = _this.db.list('/Commentss/' + _this.statusid + '/Comments/');
+                ref.update(key, {
+                    Likes: newcount,
+                    user_ids: userids_1
+                });
+            }
+            else {
+                var remove_index = split_str.indexOf(usrid);
+                split_str.splice(remove_index, 1);
+                var userids = split_str.join(",");
+                var count = JSON.parse(likecount) - 1;
+                _this.commentstatus = 'commentunliked';
+                var ref = _this.db.list('/Commentss/' + _this.statusid + '/Comments/');
+                ref.update(key, {
+                    Likes: count,
+                    user_ids: userids
+                });
+            }
         });
     };
     return CommenttabPage;
 }());
 CommenttabPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-commenttab',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/'<ion-content >\n<p *ngIf="commentdata==null">Post your comment here</p>\n\n<ion-row class="comment" *ngFor="let post of commentdata;let i=index;">\n  <img [src]="post.profile_img"/>\n  <p class="heading">{{post.name}}</p> \n  <p class="comments">{{post.comment}}</p>\n<ul>\n \n <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>10:30AM</a></li>\n    <li><a href="#"> \n        <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n        <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n  {{afstatus1[post.id].Likes}}    </a></li>\n   </ul>\n    </ion-row>\n</ion-content>\n<ion-footer>\n  <ion-row>\n    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>\n      <button ion-button (click)="send(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>\n  </ion-row>\n\n    </ion-footer>\n\n<!--\n            <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(post.likes_comment,i,post.id)></ion-icon>\n        <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(post.likes_comment,i,post.id)></ion-icon>-->\n'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/,
+        selector: 'page-commenttab',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/'<!--<ion-content >\n<p *ngIf="commentdata==null">Post your comment here</p>\n\n<ion-row class="comment" *ngFor="let post of commentdata;let i=index;">\n  <img [src]="post.profile_img"/>\n  <p class="heading">{{post.name}}</p> \n  <p class="comments">{{post.comment}}</p>\n<ul>\n \n <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>10:30AM</a></li>\n    <li><a href="#"> \n        <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n        <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n  {{afstatus1[post.id].Likes}}    \n\n  </a></li>\n   </ul>\n    </ion-row>\n</ion-content>\n<ion-footer>\n  <ion-row>\n    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>\n      <button ion-button (click)="send(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>\n\n  </ion-row>\n\n    </ion-footer>-->\n\n\n<ion-content >\n<p *ngIf="!afstatus1">Post your comment here</p>\n\n<ion-row class="comment" *ngFor="let cmt of afstatus1">\n <img [src]="cmt.profile_img"/>\n  <p class="heading">{{cmt.name}}</p> \n  <p class="comments">{{cmt.comment}}</p>\n<ul>\n <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>{{cmt.createdAt| date: \'h:m a\' }}</a></li>\n    <li><a href="#"> \n        <ion-icon class="comment-icon" [ngClass]="commentstatus" name="thumbs-up" (click)=like(cmt.$key,cmt.Likes,cmt.user_ids)></ion-icon>\n       <!-- <ion-icon class="comment-icon" style="color:#2370b5;" name="thumbs-up" (click)=unlike()></ion-icon>-->\n  {{cmt.Likes}}\n  </a></li>\n   </ul>\n    </ion-row>\n</ion-content>\n<ion-footer>\n  <ion-row>\n    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>\n        <button ion-button (click)="senddd(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>\n\n  </ion-row>\n\n    </ion-footer>\n\n'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], CommenttabPage);
 
 //# sourceMappingURL=commenttab.js.map
 
 /***/ }),
 
-/***/ 339:
+/***/ 349:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1067,7 +1093,7 @@ CommenttabPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1177,7 +1203,7 @@ VideoshomePage = __decorate([
 
 /***/ }),
 
-/***/ 340:
+/***/ 350:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1254,7 +1280,7 @@ var AddeventinnerPage = (function () {
             is24Hour: true,
             androidTheme: this.datePicker.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT
         }).then(function (date) {
-            alert(date);
+            //alert( date);
         }, function (err) {
             alert(err);
         });
@@ -1267,7 +1293,7 @@ var AddeventinnerPage = (function () {
             is24Hour: true,
             androidTheme: this.datePicker.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT
         }).then(function (date) {
-            alert(date);
+            //alert( date);
             _this.today = date;
         }, function (err) {
             alert(err);
@@ -1295,7 +1321,7 @@ AddeventinnerPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatslistPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__briddggehome_briddggehome__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1344,14 +1370,14 @@ ChatslistPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_Rx__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_camera__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_camera__ = __webpack_require__(115);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1730,7 +1756,7 @@ RequestPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1820,7 +1846,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(763);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_event_event__ = __webpack_require__(764);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_signup_signup__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_storyposting_storyposting__ = __webpack_require__(765);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_chatslist_chatslist__ = __webpack_require__(353);
@@ -1831,9 +1857,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_findfriends_findfriends__ = __webpack_require__(293);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_briddggehome_briddggehome__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_imageshome_imageshome__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_videoshome_videoshome__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_livevideoshome_livevideoshome__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_addeventspost_addeventspost__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_videoshome_videoshome__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_livevideoshome_livevideoshome__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_addeventspost_addeventspost__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_viewfollowers_viewfollowers__ = __webpack_require__(766);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_comments_comments__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_likestab_likestab__ = __webpack_require__(295);
@@ -1847,9 +1873,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_status_bar__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_splash_screen__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_angularfire2__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_angularfire2_database__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_camera__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_angularfire2__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_angularfire2_database__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_camera__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_media_capture__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__ionic_native_file__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_angularfire2_auth__ = __webpack_require__(767);
@@ -2003,7 +2029,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_onesignal__ = __webpack_require__(376);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_briddggehome_briddggehome__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_addeventspost_addeventspost__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_addeventspost_addeventspost__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_eventinner_eventinner__ = __webpack_require__(377);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_members_members__ = __webpack_require__(378);
@@ -2136,12 +2162,12 @@ MyApp = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imageshome_imageshome__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__videoshome_videoshome__ = __webpack_require__(339);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__livevideoshome_livevideoshome__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__videoshome_videoshome__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__livevideoshome_livevideoshome__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addeventspost_addeventspost__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addeventspost_addeventspost__ = __webpack_require__(188);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2207,7 +2233,7 @@ BriddggeHomePage = __decorate([
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2277,14 +2303,14 @@ ProfilePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_media_capture__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_take__ = __webpack_require__(367);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_take___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_take__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__login_login__ = __webpack_require__(87);
@@ -2624,8 +2650,8 @@ HomePage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(29);
@@ -2724,7 +2750,7 @@ ListPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2870,7 +2896,7 @@ EventPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__videoss_videoss__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__imagess_imagess__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__briddggehome_briddggehome__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2921,7 +2947,7 @@ StorypostingPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewfollowersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile_profile__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__briddggehome_briddggehome__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2971,7 +2997,7 @@ ViewfollowersPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__briddggehome_briddggehome__ = __webpack_require__(46);

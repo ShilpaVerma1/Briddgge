@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 11 17:53:58 IST 2017
+#Tue Sep 12 17:13:18 IST 2017
 210.set=ASSET
 14.set=NATIVE_RESOURCE
 180.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v21/notification_template_custom_big.xml
@@ -116,7 +116,7 @@
 168.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_light_normal.xml
 199.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 122.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-220.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_light.xml
+220.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/resources.arsc
 143.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_icon_light_focused.xml
 251.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 174.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
@@ -141,7 +141,7 @@
 257.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/profil-pic2.jpg
 103.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/mipmap-mdpi-v4/icon.png
 232.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-file/www/fileSystemPaths.js
-155.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/raw/consumer_onesignal_keep.xml
+155.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v21/notification_action_tombstone.xml
 230.set=JAVA_RESOURCE
 130.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png
 171.set=ASSET
@@ -187,7 +187,7 @@
 169.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-port-xxhdpi-v4/screen.png
 200.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 123.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
-221.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/resources.arsc
+221.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_light.xml
 144.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/backsignup.jpg
 252.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 175.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
@@ -211,7 +211,7 @@
 258.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-land-xhdpi-v4/screen.png
 104.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/video.png
 233.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/assets/fonts/roboto-regular.ttf
-156.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v21/notification_action_tombstone.xml
+156.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/raw/consumer_onesignal_keep.xml
 240.set=ANDROID_RESOURCE
 131.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/pause.png
 181.set=ASSET
@@ -260,7 +260,7 @@
 201.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 70.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/assets/fonts/noto-sans-bold.ttf
 124.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-222.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/icon.png
+222.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_media_custom.xml
 145.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/camera.png
 253.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 176.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
@@ -302,7 +302,7 @@
 165.set=ANDROID_RESOURCE
 63.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 215.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-84.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_lines_media.xml
+84.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/icon.png
 138.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 22.set=ANDROID_RESOURCE
 267.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
@@ -328,7 +328,7 @@
 202.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 71.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/onesignal_bgimage_notif_layout.xml
 125.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-223.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_media_custom.xml
+223.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/icon.png
 146.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/assets/fonts/roboto.scss
 254.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 177.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
@@ -351,7 +351,7 @@
 214.set=ASSET
 106.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/color/common_google_signin_btn_tint.xml
 18.set=ASSET
-235.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+235.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-port-xxxhdpi-v4/screen.png
 158.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/plugins/cordova-plugin-file/www/fileSystems-roots.js
 260.set=ANDROID_RESOURCE
 210.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/gallery.png
@@ -370,7 +370,7 @@
 33.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/assets/fonts/noto-sans-regular.ttf
 64.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 216.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
-85.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/mipmap-hdpi-v4/icon.png
+85.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_lines_media.xml
 139.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 32.set=ASSET
 268.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
@@ -407,7 +407,7 @@
 256.set=ASSET
 197.set=ASSET
 230.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar
-5.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_big_media_narrow_custom.xml
+5.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_big_media.xml
 153.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 180.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_
 111.set=ANDROID_RESOURCE
@@ -423,7 +423,7 @@
 107.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png
 28.set=ASSET
 80.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-236.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-port-xxxhdpi-v4/screen.png
+236.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/notification_bg_low_normal.9.png
 159.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_custom_big.xml
 211.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug/www/img/5.png
 134.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout/notification_action_tombstone.xml
@@ -478,7 +478,7 @@
 266.set=ASSET
 231.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 154.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
-6.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_big_media.xml
+6.file=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_big_media_narrow_custom.xml
 181.base=/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/assets/debug
 121.set=ANDROID_RESOURCE
 227.set=ASSET

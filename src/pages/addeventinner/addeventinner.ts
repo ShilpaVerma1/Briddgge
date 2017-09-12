@@ -28,7 +28,7 @@ selectday(){
         androidTheme: this.datePicker.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT
       }).then(
         (date )=>{ 
-          alert( date);
+          //alert( date);
       },(err) =>{
         alert(err);
       });
@@ -41,7 +41,7 @@ selecttime(){
         androidTheme: this.datePicker.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT
       }).then(
         (date )=>{ 
-          alert( date);
+          //alert( date);
           this.today=date;
       },(err) =>{
         alert(err);

@@ -1,5 +1,10 @@
 page-commenttab {
-
+.commentliked{
+    color:#2370b5;
+}
+.commentunliked{
+    color:grey;
+}
     ion-icon.comment-icon{    font-size: 22px;
     margin-right:5px;}
     .comment{   margin: 20px 0px 10px;}

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform ,MenuController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -18,6 +18,7 @@ import { RequestPage } from '../pages/request/request';
 import { SettingsPage } from '../pages/settings/settings';
 import { Http } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
+import { ProfilePage } from '../pages/profile/profile';
 
 @Component({
   templateUrl: 'app.html',
@@ -31,7 +32,7 @@ export class MyApp {
 profiledata=[];
   pages: Array<{title: string, component: any,icon: any,imgs:any }>;
   options:any;fireAuth:any;
-  constructor(public http:Http,private storage: Storage,private oneSignal: OneSignal,public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public menu:MenuController,public http:Http,private storage: Storage,private oneSignal: OneSignal,public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
      
     this.initializeApp();
              document.addEventListener("pause", () => {
@@ -104,6 +105,10 @@ profiledata=[];
     });
 
     this.oneSignal.endInit();
+  }
+  profile(){
+    this.nav.push(ProfilePage);
+  
   }
 logout(){
   this.nav.push(LoginPage);

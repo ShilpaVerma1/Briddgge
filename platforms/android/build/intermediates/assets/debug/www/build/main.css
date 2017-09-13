@@ -25199,6 +25199,97 @@ ion-navbar.toolbar {
   }
 }
 
+page-videoshome .scroll-content {
+  padding: 0px 16px 60px !important;
+}
+
+page-videoshome .post-comments a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-videoshome span.count {
+  padding: 0px 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+page-videoshome .post-inner img {
+  width: 100%;
+}
+
+page-videoshome .post-inner p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+page-videoshome .post-heading {
+  margin-top: 20px;
+}
+
+page-videoshome .post-heading h5 {
+  font-size: 16px;
+  padding: 0px 0px 0px 6px;
+  font-weight: bold;
+}
+
+page-videoshome .post-heading img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #3ca0d2;
+}
+
+page-videoshome .post-comments {
+  margin-top: 12px;
+}
+
+page-videoshome .post-comments ion-icon {
+  font-size: 23px;
+  color: #2a2a2a;
+}
+
+page-videoshome .post-comments a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #488aff;
+  margin-right: 20px;
+}
+
+page-videoshome video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+page-videoshome video::-webkit-media-controls-panel {
+  width: calc(100% + 40px);
+}
+
+page-videoshome .video-main {
+  background: black;
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+page-videoshome .video-main img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
+page-videoshome .playimg {
+  display: none;
+}
+
 .loading-md .loading-wrapper {
   background: none;
   -webkit-box-shadow: none;
@@ -25332,6 +25423,15 @@ video::-internal-media-controls-download-button {
 
 .sidemain .list-md .item-block .item-inner {
   border-bottom: 1px solid #7fc0f9;
+}
+
+/*********Video player css****************/
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% + 40px);
 }
 
 page-addeventinner .text-input-md {
@@ -26086,6 +26186,20 @@ page-chatslist .ion-md-person:before {
 }
 
 page-comments .tabs-md .tabbar {
+  bottom: -2px !important;
+  background-color: #fff !important;
+}
+
+page-comments .tabs-md .tabbar {
+  position: absolute !important;
+}
+
+page-comments .new-tab .tabbar {
+  position: relative;
+  top: 0px;
+}
+
+page-comments .tabs-md .tabbar {
   background-color: transparent;
   height: 60px;
 }
@@ -26130,7 +26244,7 @@ page-comments .post-heading img {
 }
 
 page-comments .tabs-md .tabbar {
-  width: 55%;
+  width: 100%;
 }
 
 page-comments .scroll-content {
@@ -26229,8 +26343,13 @@ page-comments .share-alt {
   font-size: 32px;
 }
 
+page-commenttab .scroll-content {
+  margin-top: 43px;
+  margin-bottom: 50px !important;
+}
+
 page-commenttab .commentliked {
-  color: #2370b5;
+  color: #2370b5 !important;
 }
 
 page-commenttab .commentunliked {
@@ -26240,6 +26359,7 @@ page-commenttab .commentunliked {
 page-commenttab ion-icon.comment-icon {
   font-size: 22px;
   margin-right: 5px;
+  color: #636363;
 }
 
 page-commenttab .comment {
@@ -26265,9 +26385,11 @@ page-commenttab .comment p.heading {
 
 page-commenttab .comment p {
   font-size: 15px;
-  font-weight: 500;
-  margin: 8px 7px 0px;
+  font-weight: 400;
+  margin: 15px 14px 15px 0px;
   min-height: 30px;
+  line-height: 25px;
+  text-align: justify;
 }
 
 page-commenttab ul {
@@ -26294,6 +26416,10 @@ page-commenttab ul li a {
 
 page-commenttab .reply {
   position: static;
+}
+
+page-commenttab ion-footer {
+  position: fixed;
 }
 
 page-commenttab ion-footer ion-row .item-md {
@@ -26941,7 +27067,7 @@ page-likestab .scroll-content {
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -2px;
+  margin-top: 50px;
   padding: 0px !important;
 }
 
@@ -28148,9 +28274,20 @@ page-videoshome .post-comments a {
   margin-right: 20px;
 }
 
+page-videoshome video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+page-videoshome video::-webkit-media-controls-panel {
+  width: calc(100% + 40px);
+}
+
 page-videoshome .video-main {
+  background: black;
   width: 100%;
   float: left;
+  margin-top: 8px;
+  border-radius: 10px;
   position: relative;
 }
 
@@ -28169,7 +28306,15 @@ page-videoshome .playimg {
   display: none;
 }
 
-page-videoss .video-row video {
+page-videoss video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+page-videoss video::-webkit-media-controls-panel {
+  width: calc(100% + 40px);
+}
+
+page-videoss video::-webkit-media-controls-panel .video-row video {
   width: 33.2%;
   float: left;
   height: 130px;

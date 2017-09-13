@@ -45,7 +45,7 @@
 <img src="img/innericon1.png"/>
   </ion-col>
 <ion-col col-6 class="col-second">
-<p> JUNE25,2016 </p>
+<p> {{daytime| date: 'longDate'}} </p>
   </ion-col>
   <ion-col col-4 class="col-third" (click)="selectday()">
 <span>Day</span>
@@ -61,7 +61,7 @@
 <img src="img/innericon2.png"/>
   </ion-col>
 <ion-col col-6 class="col-second" >
-<p >{{today}} </p>
+<p >{{time| date: 'EEEE shortTime'}} </p>
 
   </ion-col>
   <ion-col col-4 class="col-third" (click)="selecttime()">
@@ -79,8 +79,8 @@
 <p>Photos</p>
   </ion-col>
 <ion-col col-7 class="col-img">
-<img src="img/cemra.png"/>
-<img src="img/add.png"/>
+<img src="img/cemra.png" (click)="selimages(1)"/>
+<img src="img/add.png" (click)="selimages(2)"/>
   </ion-col>
 
  </ion-row>
@@ -94,8 +94,8 @@
 <p>Video</p>
   </ion-col>
 <ion-col col-7 class="col-img">
-<img src="img/videonew.png"/>
-<img src="img/add.png"/>
+<img src="img/videonew.png" (click)="selimages(3)"/>
+<img src="img/add.png" (click)="selimages(4)"/>
   </ion-col>
 
  </ion-row>

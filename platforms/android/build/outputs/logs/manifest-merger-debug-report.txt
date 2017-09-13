@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:2:1-35:12
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:2:98-124
 		INJECTED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml
@@ -39,7 +39,10 @@ MERGED from [com.google.android.gms:play-services-iid:11.2.2] /home/moc/Desktop/
 	android:name
 		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:5:5-24:19
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:5:5-25:19
+MERGED from [com.android.support:appcompat-v7:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.onesignal:OneSignal:3.6.1] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.6.1/AndroidManifest.xml:49:5-97:19
 MERGED from [com.google.android.gms:play-services-gcm:11.2.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.2.2/AndroidManifest.xml:23:5-19
 MERGED from [com.google.android.gms:play-services-iid:11.2.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.2.2/AndroidManifest.xml:23:5-19
@@ -88,59 +91,70 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:9:27-74
+activity#com.synconset.MultiImageChooserActivity
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:9-160
+	android:label
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:19-57
+	android:theme
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:113-157
+	android:name
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:58-112
 provider#android.support.v4.content.FileProvider
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:9-14:20
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:9-15:20
 	android:authorities
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:19-66
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:19-66
 		INJECTED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml
 	android:grantUriPermissions
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:92-126
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:92-126
 	android:exported
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:67-91
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:67-91
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:12:127-181
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:127-181
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:13-116
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:14:13-116
 	android:resource
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:75-113
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:14:75-113
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:13:24-74
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:14:24-74
 amazon:enable-feature
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:15:9-159
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:9-159
 	xmlns:amazon
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:15:100-156
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:100-156
 	android:required
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:15:75-99
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:75-99
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:15:32-74
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:32-74
 service#com.onesignal.ADMMessageHandler
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:9-92
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:9-92
 	android:exported
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:18-42
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:18-42
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:16:43-89
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:43-89
 receiver#com.onesignal.ADMMessageHandler$Receiver
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:9-23:20
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:18:9-24:20
 	android:permission
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:75-139
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:18:75-139
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:17:19-74
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:18:19-74
 intent-filter#com.amazon.device.messaging.intent.RECEIVE+com.amazon.device.messaging.intent.REGISTRATION+com.briddgge.com
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:18:13-22:29
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:19:13-23:29
 action#com.amazon.device.messaging.intent.REGISTRATION
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:19:17-90
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:20:17-90
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:19:25-87
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:20:25-87
 action#com.amazon.device.messaging.intent.RECEIVE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:20:17-85
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:21:17-85
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:20:25-82
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:21:25-82
 category#com.briddgge.com
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:21:17-61
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:22:17-61
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:21:27-58
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:22:27-58
 uses-sdk
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:25:5-74
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:26:5-74
+MERGED from [com.android.support:appcompat-v7:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.onesignal:OneSignal:3.6.1] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.6.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-gcm:11.2.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.2.2/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-iid:11.2.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.2.2/AndroidManifest.xml:17:5-43
@@ -157,49 +171,49 @@ MERGED from [com.android.support:customtabs:26.0.2] /home/moc/Desktop/All Projec
 MERGED from [com.android.support:support-compat:26.0.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/AndroidManifest.xml:21:5-23:58
 MERGED from [org.apache.cordova:CordovaLib:6.2.3:debug] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.2.3/debug/AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:26.0.2] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.2/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:appcompat-v7:23.4.0] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:25:42-71
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:26:42-71
 	android:minSdkVersion
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:25:15-41
-uses-permission#android.permission.READ_CALENDAR
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:26:5-72
-	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:26:22-69
-uses-permission#android.permission.WRITE_CALENDAR
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:27:5-73
-	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:27:22-70
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:26:15-41
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:28:5-81
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:27:5-81
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:28:22-78
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:27:22-78
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:28:5-72
+	android:name
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:28:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:29:5-73
+	android:name
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:29:22-70
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:29:5-71
-	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:29:22-68
-uses-permission#android.permission.RECORD_VIDEO
 ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:30:5-71
 	android:name
 		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:30:22-68
+uses-permission#android.permission.RECORD_VIDEO
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:31:5-71
+	android:name
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:31:22-68
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:31:5-80
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:32:5-80
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:31:22-77
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:32:22-77
 uses-permission#com.amazon.device.messaging.permission.RECEIVE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:32:5-86
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:33:5-86
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:32:22-83
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:33:22-83
 permission#com.briddgge.com.permission.RECEIVE_ADM_MESSAGE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:33:5-118
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:34:5-118
 	android:protectionLevel
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:33:80-115
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:34:80-115
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:33:17-79
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:34:17-79
 uses-permission#com.briddgge.com.permission.RECEIVE_ADM_MESSAGE
-ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:34:5-87
+ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:35:5-87
 	android:name
-		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:34:22-84
+		ADDED from /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/AndroidManifest.xml:35:22-84
 permission#${applicationId}.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:3.6.1] /home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.6.1/AndroidManifest.xml:8:5-10:47
 	android:protectionLevel

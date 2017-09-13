@@ -76,6 +76,7 @@ constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,pr
 }
 
 senddd(afcount,afkey){
+
     if(this.commenttext==undefined){
         this.platform.ready().then(() => {
             window.plugins.toast.show("Write your comment", "long", "center");
@@ -115,7 +116,7 @@ like(key,likecount,usrids){
     if(split_str.includes(usrid)==false){
         let userids=usrids+','+usrid
          var newcount=JSON.parse(likecount)+1;
-         this.commentstatus='commentliked'
+         //this.commentstatus='commentliked'
             var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
                 ref.update(key,{
                     Likes:newcount,
@@ -128,7 +129,7 @@ like(key,likecount,usrids){
           split_str.splice(remove_index,1);
            var userids=split_str.join(",");
            var count=JSON.parse(likecount)-1;
-            this.commentstatus='commentunliked'
+           // this.commentstatus='commentunliked'
             var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
                 ref.update(key,{
                     Likes:count,

@@ -10,14 +10,14 @@
 
 <ion-scroll scrollX="true" class="first-scroll top-scroll">
       <ion-card >
-      <img class="storyimg" [src]="profiledata.img" /> 
+      <img class="storyimg" *ngIf="profiledata.img" [src]="profiledata.img" /> 
       <button ion-button class="addstory" (click)="addstory()"> 
        <ion-icon class="addicon" ios="ios-add" md="md-add"></ion-icon>
       </button>
       <a>{{profiledata.name}}</a>
     </ion-card>
     <ion-card *ngFor="let story of stories;">
-      <img [src]="story.profile_img" />
+      <img *ngIf="story.profile_img" [src]="story.profile_img" (click)="openstory(story.post_id)" />
       <a>{{story.name}}</a>
     </ion-card>
   </ion-scroll>

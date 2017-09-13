@@ -1,6 +1,14 @@
 page-videoss {
+       video::-webkit-media-controls-enclosure {
+        overflow:hidden;
+   }
+
+   video::-webkit-media-controls-panel {
+        
 .video-row video{width:33.2%;float:left;    height: 130px;
 }
+width: calc(100% + 40px); 
+   }
 video::-webkit-media-controls {
   //display: none;
 }

@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_da35398dbc38559907ac4f6a0342883b079243f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/libs/sqlite-connector.jar"
         jumboMode="false"
         optimize="true"
@@ -39,6 +48,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_bf376689f805146fdc4f1507cf08148073b4edbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -54,6 +72,15 @@
         revision="26.0.1"
         sha1="7ed36108b22a98a311676b5ad153d1e3587fcd16">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.2.2_6b81fc1abc86189906dd21f849970395037967dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_52039c55ad68b990d28e07734ebd06e3f4e9d4d3.jar" />
     </item>
     <item
         is-multidex="false"

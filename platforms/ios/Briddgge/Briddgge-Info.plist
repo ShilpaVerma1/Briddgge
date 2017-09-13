@@ -73,7 +73,7 @@
     <key>NSCameraUsageDescription</key>
     <string/>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string/>
+    <string>Multiple images access</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string/>
     <key>NSMicrophoneUsageDescription</key>

@@ -6,7 +6,7 @@
    <ion-content class="sidemain">   
       <ion-row class="main-sidebar"> 
         <img *ngIf="!profiledata.img" src="http://2.mediaoncloud.com/Shilpa/icon_person_by_ninjavdesign-d8x96sl.png"/>      
-          <img *ngIf="profiledata.img" [src]="profiledata.img"/>      
+          <img *ngIf="profiledata.img" [src]="profiledata.img" (click)="profile()"/>      
           </ion-row>      
            <p *ngIf="profiledata.name">{{profiledata.name}}</p>   
       <ion-list>    

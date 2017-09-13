@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
         "cordova-plugin-actionsheet": {
             "PACKAGE_NAME": "com.briddgge.com"
         },

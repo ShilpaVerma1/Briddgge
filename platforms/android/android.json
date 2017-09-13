@@ -9,6 +9,10 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"ActionSheet\"><param name=\"android-package\" value=\"nl.xservices.plugins.actionsheet.ActionSheet\" /></feature>",
                             "count": 1
                         },
@@ -73,7 +77,29 @@
             },
             "AndroidManifest.xml": {
                 "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@style/Theme.AppCompat.Light\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.briddgge.com\" /></intent-filter></receiver>",
+                            "count": 1
+                        }
+                    ],
                     "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
                             "count": 1
@@ -118,26 +144,15 @@
                             "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
                             "count": 1
                         }
-                    ],
-                    "/manifest/application": [
-                        {
-                            "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.briddgge.com\" /></intent-filter></receiver>",
-                            "count": 1
-                        }
                     ]
                 }
             }
         }
     },
     "installed_plugins": {
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
         "cordova-plugin-actionsheet": {
             "PACKAGE_NAME": "com.briddgge.com"
         },
@@ -189,6 +204,14 @@
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "id": "com.synconset.imagepicker.ImagePicker",
+            "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+            "pluginId": "com.synconset.imagepicker",
+            "clobbers": [
+                "plugins.imagePicker"
+            ]
+        },
         {
             "id": "cordova-plugin-actionsheet.ActionSheet",
             "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
@@ -550,6 +573,7 @@
         }
     ],
     "plugin_metadata": {
+        "com.synconset.imagepicker": "2.1.8",
         "cordova-plugin-actionsheet": "2.3.3",
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-calendar": "4.6.0",

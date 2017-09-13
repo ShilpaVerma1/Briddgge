@@ -88,6 +88,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "com.synconset.imagepicker/com-ignorelinterrors.gradle"
+apply from: "com.synconset.imagepicker/com-androidtarget.gradle"
 apply from: "onesignal-cordova-plugin/com-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
@@ -250,6 +252,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
+    compile "com.android.support:appcompat-v7:23+"
     compile "com.android.support:support-v4:24.1.1+"
     compile "com.onesignal:OneSignal:3.6.1"
     compile "com.google.android.gms:play-services-gcm:+"

@@ -1,4 +1,9 @@
 page-comments {
+    .tabs-md .tabbar{    bottom: -2px!important;
+    background-color : #fff!important;}
+
+    .tabs-md .tabbar{position: absolute!important;}
+    .new-tab .tabbar{position:relative;top:0px;}
 
  .tabs-md .tabbar {
     background-color: transparent;
@@ -25,7 +30,7 @@ page-comments {
     border-radius: 50%;
     border: 1px solid #000;}
 
- .tabs-md .tabbar{width:55%;}
+ .tabs-md .tabbar{width:100%;}
      .scroll-content{      background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;}

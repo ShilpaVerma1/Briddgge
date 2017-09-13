@@ -43,13 +43,14 @@
   </a></li>
    </ul>
     </ion-row>
-</ion-content>
 <ion-footer>
-  <ion-row>
-    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>
-        <button ion-button (click)="senddd(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>
+  <ion-row class="comment-row">
+    <ion-textarea class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-textarea >
+       <button ion-button (click)="senddd(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>
 
   </ion-row>
+   </ion-footer>
 
-    </ion-footer>
+</ion-content>
+
 

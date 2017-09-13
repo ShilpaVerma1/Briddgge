@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "pluginId": "com.synconset.imagepicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
+    },
+    {
         "id": "cordova-plugin-actionsheet.ActionSheet",
         "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
         "pluginId": "cordova-plugin-actionsheet",
@@ -363,6 +371,7 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "com.synconset.imagepicker": "2.1.8",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-calendar": "4.6.0",

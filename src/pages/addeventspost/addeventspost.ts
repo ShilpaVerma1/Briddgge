@@ -58,7 +58,7 @@ events(){
 post(img,vid){
   this.storage.get('usrid').then((usrid)=>{
       if(img){
-         this.http.get( this.apiurl+"saveStatus?user_id="+usrid+"&message="+this.statustext+"&img="+img).map(res => res.json()).subscribe(data => {
+         this.http.get( this.apiurl+"saveStatus?user_id="+usrid+"&message="+this.statustext+"&img="+img+"&mobile_id=android").map(res => res.json()).subscribe(data => {
             if(data.status=='Success'){
               //alert('Status  updated successfully');
                 var pid=data.id;
@@ -80,7 +80,7 @@ post(img,vid){
 
           })
       }else if(vid){
-       this.http.get( this.apiurl+"saveStatusVideo?user_id="+usrid+"&message="+this.statustext+"&video="+vid).map(res => res.json()).subscribe(data => {
+       this.http.get( this.apiurl+"saveStatusVideo?user_id="+usrid+"&message="+this.statustext+"&video="+vid+"&mobile_id=android").map(res => res.json()).subscribe(data => {
             if(data.status=='Success'){
               //alert('Status  updated successfully');
               this.platform.ready().then(() => {
@@ -101,7 +101,7 @@ post(img,vid){
            }
           })
       }else if(!img && this.statustext && !vid){
-          this.http.get( this.apiurl+"saveStatus?user_id="+usrid+"&message="+this.statustext).map(res => res.json()).subscribe(data => {        
+          this.http.get( this.apiurl+"saveStatus?user_id="+usrid+"&message="+this.statustext+"&mobile_id=android").map(res => res.json()).subscribe(data => {        
             if(data.status=='Success'){
                 //alert('Status updated successfully');
                 this.platform.ready().then(() => {
@@ -156,7 +156,7 @@ export class ImagepopverPage {
 captureDataUrl:any;imageurl:any;
 captureidd:any;videourl:any;
 MediaFile:any;
-  constructor( private mediaCapture: MediaCapture,public navParams: NavParams,private file: File,public viewCtrl:ViewController,public loadingCtrl:LoadingController,public navCtrl: NavController,public zone : NgZone,public camera: Camera,) {
+  constructor( private mediaCapture: MediaCapture,public navParams: NavParams,private file: File,public viewCtrl:ViewController,public loadingCtrl:LoadingController,public navCtrl: NavController,public zone : NgZone,public camera: Camera) {
     this.captureidd=this.navParams.get('captureid');
   
   }

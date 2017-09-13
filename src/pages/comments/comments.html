@@ -5,18 +5,21 @@
 </ion-header>
 <ion-content>
 <ion-row class="post-heading">
-		<img [src]="profilepic" /><h5>{{postusrname}}</h5>
+		<img *ngIf="commentdata.profile_img" [src]="commentdata.profile_img" /><h5>{{commentdata.name}}</h5>
 		</ion-row>
 		<ion-row class="post-inner">
 			<p></p>
-			<img *ngIf="postimg!=null &&(postimg!='')" [src]="postimg" />
-		<video  *ngIf="postvideo!=null" controls="controls" width="100%" height="180"  [src]="postvideo"   controlsList="nodownload"></video>
-      <p *ngIf="postmsg!='undefined'">{{postmsg}} </p>
+			<img *ngIf="commentdata.img!=null &&(commentdata.img!='')" [src]="commentdata.img" />
+		<video  *ngIf="commentdata.video" controls="controls" width="100%" height="180"  [src]="commentdata.video"   controlsList="nodownload"></video>
+      <p *ngIf="commentdata.message!='undefined'">{{commentdata.message}} </p>
 </ion-row>
-  <span class="share-logo"> <ion-icon class="share-alt" name="share-alt"></ion-icon></span>
-  <ion-tabs style="position:relative;height:60%;margin-top: 5px;">
+ 
+  <ion-tabs class="new-tab" style="position:relative;height:100%;margin-top: 5px;">
+			<ion-tab [root]="tab2Root " tabIcon="md-chatbubbles" tabBadge="{{afstatus[0].Commentcount}}" [rootParams]="postid"></ion-tab>
+
 		<ion-tab [root]="tab1Root" tabBadge="{{afstatus[0].Likecount}}" tabIcon="md-thumbs-up" [rootParams]="postid"></ion-tab>
-		<ion-tab [root]="tab2Root " tabIcon="md-chatbubbles" tabBadge="{{afstatus[0].Commentcount}}" [rootParams]="postid"></ion-tab>
+
+		<ion-tab  tabIcon="share-alt" (ionSelect)="share()"> </ion-tab>
 	</ion-tabs>
 
 </ion-content>

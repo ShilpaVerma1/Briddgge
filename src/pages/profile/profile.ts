@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,MenuController } from 'ionic-angular';
 import { VideossPage } from '../videoss/videoss';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
@@ -16,7 +16,7 @@ export class ProfilePage {
   tab2Root = ImagessPage;
   userid:any;
   profiledata:any=[];
-constructor(private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
+constructor(public menu:MenuController,private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
 this.storage.get('usrid').then((usrid)=>{
   this.userid=usrid;
     this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
@@ -30,4 +30,13 @@ home(){
 profile(){
   
 }
+ionViewDidEnter() {
+    //to disable menu, or
+    this.menu.enable(false);
+  }
+
+  ionViewWillLeave() {
+    // to enable menu.
+    this.menu.enable(true);
+  }
 }

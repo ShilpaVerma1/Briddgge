@@ -7,6 +7,7 @@ import { Http } from '@angular/http';
 import * as firebase from 'firebase';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, FirebaseListObservable, AngularFireDatabase} from 'angularfire2/database';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-comments',
@@ -24,26 +25,32 @@ profilepic:any;
 likecount:any;
 postvideo:any;
 db:any;
+commentdata=[];
 afstatus:Array <FirebaseListObservable<any>>;
-constructor(db: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
+constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   this.db=db;
-  this.postid=this.navParams.get('postid');
-  this.postimg=this.navParams.get('postimg');
-  this.postmsg=this.navParams.get('postmsg');
-  this.postusrname=this.navParams.get('postusrname');
-  this.profilepic=this.navParams.get('profilepic');
-  this.postvideo=this.navParams.get('postvideo')
   
-    // this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id="+this.postid).map(res => res.json()).subscribe(data => {
-    //   this.commentcount=data.countComment;
-    //   this.likecount=data.likes;
-    // })
+  // this.postimg=this.navParams.get('postimg');
+  // this.postmsg=this.navParams.get('postmsg');
+  // this.postusrname=this.navParams.get('postusrname');
+  // this.profilepic=this.navParams.get('profilepic');
+  // this.postvideo=this.navParams.get('postvideo');
+  this.postid=this.navParams.get('postid');
+
+   this.storage.get('usrid').then((usrid)=>{
+      this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id="+this.postid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+        this.commentdata=data;
+
+      })
+   })
     var refNew = this.db.list('/Count/'+this.postid);
         refNew.subscribe((data)=>{
         this.afstatus=data;
    })
 }
-
+share(){
+ 
+}
   back(){
     this.navCtrl.push(BriddggeHomePage);
   }

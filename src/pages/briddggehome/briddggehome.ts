@@ -8,6 +8,7 @@ import { ProfilePage } from '../profile/profile';
 import { Storage } from '@ionic/storage';
 import { Http } from '@angular/http';
 import { AddeventspostPage } from '../addeventspost/addeventspost';
+import { CommentsPage } from '../comments/comments';
 
 declare var window: any;
 @Component({
@@ -41,6 +42,11 @@ profile(){
 }
 home(){
   
+}
+openstory(postid){
+  this.navCtrl.push(CommentsPage,{
+    postid:postid
+  });
 }
 addstory(){
   this.navCtrl.push(AddeventspostPage);

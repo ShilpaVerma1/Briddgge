@@ -89,3 +89,11 @@ video::-internal-media-controls-download-button {
  .main-sidebar img{     height: 106px;
     width: 106px;   border: 2px solid #a9d7ff;    border-radius: 50%;    text-align: center;    margin: 2.5em auto 0px;}
  .sidemain{background-image: url(../img/sidemenu.jpg);    background-size: cover;}    .sidemain  .list-md .item-block .item-inner {    border-bottom: 1px solid rgb(127, 192, 249);}
+/*********Video player css****************/
+   video::-webkit-media-controls-enclosure {
+        overflow:hidden;
+   }
+
+   video::-webkit-media-controls-panel {
+        width: calc(100% + 40px); 
+   }

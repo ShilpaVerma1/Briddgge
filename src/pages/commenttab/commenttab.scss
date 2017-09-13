@@ -1,12 +1,14 @@
 page-commenttab {
+
+    .scroll-content{    margin-top: 43px;margin-bottom:50px!important;}
 .commentliked{
-    color:#2370b5;
+    color:#2370b5!important;
 }
 .commentunliked{
     color:grey;
 }
     ion-icon.comment-icon{    font-size: 22px;
-    margin-right:5px;}
+    margin-right:5px;  color:#636363;}
     .comment{   margin: 20px 0px 10px;}
     p.comments{width:100%;}
 .comment img{    border-radius: 50%;
@@ -16,10 +18,12 @@ page-commenttab {
     font-weight: 600;
     padding: 0px;
     margin: 10px;}
-    .comment p{  font-size: 15px;
-    font-weight: 500;
-    margin: 8px 7px 0px;
-    min-height: 30px}
+    .comment p{     font-size: 15px;
+    font-weight: 400;
+    margin: 15px 14px 15px 0px;
+    min-height: 30px;
+    line-height: 25px;
+    text-align: justify;}
 
     ul {
     list-style: none;
@@ -44,6 +48,7 @@ ul li a {
   
     position:static;
 }
+ion-footer {position:fixed;}
 ion-footer ion-row .item-md{ width: 60%!important;}
 ion-footer .text-input-md {
        margin: 5px 8px;
@@ -58,4 +63,5 @@ ion-footer .text-input-md {
     font-weight: 300;}
     footer{    bottom: 39px;
     background: #dcdcdc;}
+
 }

@@ -49,6 +49,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { Device } from '@ionic-native/device';
+import { ImagePicker } from '@ionic-native/image-picker';
 
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
@@ -112,7 +113,7 @@ import { Device } from '@ionic-native/device';
     AddeventspostPage,ImagepopverPage
   ],
   providers: [
-    StatusBar,Calendar,OneSignal,Device,
+    StatusBar,Calendar,OneSignal,Device,ImagePicker,
     SplashScreen,File,MediaCapture,Camera,DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth

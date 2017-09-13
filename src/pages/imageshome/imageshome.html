@@ -17,7 +17,7 @@
 				<a>  
 				<ion-icon name="heart-outline" *ngIf="post.likeStatus==false" (click)="like(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
 				<ion-icon style="color:red;" md="md-heart" *ngIf="post.likeStatus==true" (click)="unlike(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> 
-				<span class="count" (click)="likepost(post.id,post.img,post.message,post.name,post.profile_img)"></span>{{afstatus[post.id].Likecount}}	</a>
+				<span class="count" ></span>{{afstatus[post.id].Likecount}}	</a>
 			</ion-row>
 	</div>
 </div>

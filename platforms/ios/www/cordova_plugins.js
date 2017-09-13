@@ -368,6 +368,14 @@ module.exports = [
     "clobbers": [
       "OneSignal"
     ]
+  },
+  {
+    "id": "com.synconset.imagepicker.ImagePicker",
+    "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+    "pluginId": "com.synconset.imagepicker",
+    "clobbers": [
+      "plugins.imagePicker"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -388,7 +396,8 @@ module.exports.metadata =
   "cordova-plugin-x-toast": "2.6.0",
   "cordova-sqlite-storage": "2.0.4",
   "ionic-plugin-keyboard": "2.2.1",
-  "onesignal-cordova-plugin": "2.2.0"
+  "onesignal-cordova-plugin": "2.2.0",
+  "com.synconset.imagepicker": "2.1.8"
 };
 // BOTTOM OF METADATA
 });

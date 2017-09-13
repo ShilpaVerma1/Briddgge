@@ -57,6 +57,10 @@
         },
         "onesignal-cordova-plugin": {
             "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "com.synconset.imagepicker": {
+            "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Multiple images access",
+            "PACKAGE_NAME": "com.briddgge.com"
         }
     },
     "dependent_plugins": {

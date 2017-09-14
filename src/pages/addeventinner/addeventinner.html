@@ -73,7 +73,7 @@
 
 
    <ion-grid>  
-      <ion-row class="cemra">
+<ion-row class="cemra">
 
 <ion-col col-5 class="col-second">
 <p>Photos</p>
@@ -81,8 +81,10 @@
 <ion-col col-7 class="col-img">
 <img src="img/cemra.png" (click)="selimages(1)"/>
 <img src="img/add.png" (click)="selimages(2)"/>
-  </ion-col>
-
+</ion-col>
+<span class="imgggrid" *ngFor="let imgg of imagearray">
+  <img class="selimg" *ngIf="imagearray" [src]='imgg' />
+</span>
  </ion-row>
  </ion-grid>
 

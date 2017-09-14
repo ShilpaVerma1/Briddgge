@@ -25434,6 +25434,10 @@ video::-webkit-media-controls-panel {
   width: calc(100% + 40px);
 }
 
+page-addeventinner .imgggrid img {
+  height: 121px;
+}
+
 page-addeventinner .text-input-md {
   padding: 5px;
 }

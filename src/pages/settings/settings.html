@@ -7,15 +7,20 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <div id="recaptcha-container"></div>
+   <ion-list radio-group>
+      <ion-radio value="english" (click)="selected('english')" [checked]="english">
+          Order By 1
+      </ion-radio>
 
-  <ion-item>
-    <ion-label stacked>Phone Number</ion-label>
-    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
-  </ion-item>
+     <ion-radio value="orderBy2" (click)="selected('orderBy2')">
+         Order By 2
+     </ion-radio>
 
-  <button ion-button id="sign-in-button" (click)="signIn(phoneNumber)">
-    Sign In
-  </button>
+     <ion-radio value="orderBy3" (click)="selected('orderBy3')">
+        Order By 3
+     </ion-radio>
 
+  </ion-list>
+  
+  <ion-item>Order by: {{orderBy}}</ion-item>
 </ion-content>

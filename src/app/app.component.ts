@@ -65,14 +65,14 @@ profiledata=[];
               this.rootPage = BriddggeHomePage;
           }
     });
-    //Observable.interval(1000 * 60).subscribe(x => {
+    Observable.interval(1000 * 60).subscribe(x => {
 
       this.storage.get('usrid').then((usrid)=>{
         this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
           this.profiledata=data;
         })
       })
-    //})
+    })
   }
 
   initializeApp() {

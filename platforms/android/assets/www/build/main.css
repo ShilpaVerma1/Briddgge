@@ -25199,97 +25199,6 @@ ion-navbar.toolbar {
   }
 }
 
-page-videoshome .scroll-content {
-  padding: 0px 16px 60px !important;
-}
-
-page-videoshome .post-comments a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-page-videoshome span.count {
-  padding: 0px 5px;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-page-videoshome .post-inner img {
-  width: 100%;
-}
-
-page-videoshome .post-inner p {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-page-videoshome .post-heading {
-  margin-top: 20px;
-}
-
-page-videoshome .post-heading h5 {
-  font-size: 16px;
-  padding: 0px 0px 0px 6px;
-  font-weight: bold;
-}
-
-page-videoshome .post-heading img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid #3ca0d2;
-}
-
-page-videoshome .post-comments {
-  margin-top: 12px;
-}
-
-page-videoshome .post-comments ion-icon {
-  font-size: 23px;
-  color: #2a2a2a;
-}
-
-page-videoshome .post-comments a {
-  font-size: 15px;
-  font-weight: 500;
-  color: #488aff;
-  margin-right: 20px;
-}
-
-page-videoshome video::-webkit-media-controls-enclosure {
-  overflow: hidden;
-}
-
-page-videoshome video::-webkit-media-controls-panel {
-  width: calc(100% + 40px);
-}
-
-page-videoshome .video-main {
-  background: black;
-  width: 100%;
-  float: left;
-  margin-top: 8px;
-  border-radius: 10px;
-  position: relative;
-}
-
-page-videoshome .video-main img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
-}
-
-page-videoshome .playimg {
-  display: none;
-}
-
 .loading-md .loading-wrapper {
   background: none;
   -webkit-box-shadow: none;
@@ -27861,6 +27770,112 @@ page-settings .toolbar-title-md {
   color: #fff;
 }
 
+page-settings .msg-row .toggle-md {
+  left: 47%;
+}
+
+page-settings .fixed-content {
+  background: #2370b5;
+  background: -webkit-gradient(linear, left top, right top, from(#2370b5), to(#8bc6f4));
+  background: linear-gradient(to right, #2370b5, #8bc6f4);
+}
+
+page-settings .txtprofile-row {
+  height: 48px;
+  margin: 45px 13px 0px 13px;
+  background: #2d638e;
+  border-radius: 21px;
+}
+
+page-settings .txtprofile-row span {
+  margin: auto 35px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+page-settings .txtprofile-row ion-icon {
+  font-size: 2.2em;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+  left: 58%;
+  top: 14%;
+}
+
+page-settings .card-chat {
+  height: 200px;
+  border-radius: 22px;
+  background: #65aff0;
+}
+
+page-settings .chat-row span {
+  margin: auto 37px;
+}
+
+page-settings .chat-row ion-icon {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+  left: 60%;
+  top: 31%;
+}
+
+page-settings .msg-row {
+  width: 100%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 17px 0px 0px 36px;
+}
+
+page-settings .msg-row ion-icon {
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+page-settings .chat-row {
+  height: 48px;
+  background: #2d638e;
+  border-radius: 21px;
+  width: 100%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+page-settings .stories-row {
+  width: 100%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 17px 0px 0px 36px;
+}
+
+page-settings .stories-row ion-icon {
+  margin-right: 10px;
+  font-weight: 900;
+}
+
+page-settings .txtlog-row {
+  height: 48px;
+  margin: 15px 13px 0px 13px;
+  background: #2d638e;
+  border-radius: 21px;
+}
+
+page-settings .txtlog-row span {
+  margin: auto 35px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+page-settings .stories-row .toggle-md {
+  left: 52%;
+}
+
 page-signup img {
   margin-bottom: 3px;
 }
@@ -28359,6 +28374,18 @@ page-videoss .video-row video {
   height: 130px;
 }
 
+page-videoss .video-row img {
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
+page-videoss .video-icon {
+  width: 33%;
+  position: absolute;
+  top: 8%;
+}
+
 page-videossother .main-div {
   margin-top: 37px;
 }
@@ -28402,6 +28429,18 @@ page-videossother .video-row video {
   width: 100%;
   float: left;
   height: 130px;
+}
+
+page-videossother .video-row img {
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
+page-videossother .video-icon {
+  width: 33%;
+  position: absolute;
+  top: 8%;
 }
 
 page-viewfollowers {

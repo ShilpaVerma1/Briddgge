@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { EventPage } from '../pages/event/event';
 import { ProfilePage } from '../pages/profile/profile';
@@ -50,7 +49,7 @@ import { DatePicker } from '@ionic-native/date-picker';
 import { IonicStorageModule } from '@ionic/storage';
 import { Device } from '@ionic-native/device';
 import { ImagePicker } from '@ionic-native/image-picker';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
     authDomain: "geofirebase-b42f3.firebaseapp.com",
@@ -63,7 +62,6 @@ import { ImagePicker } from '@ionic-native/image-picker';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     EventPage,
     SignupPage,
@@ -94,7 +92,6 @@ import { ImagePicker } from '@ionic-native/image-picker';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     EventPage,
     SignupPage,
@@ -113,7 +110,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
     AddeventspostPage,ImagepopverPage
   ],
   providers: [
-    StatusBar,Calendar,OneSignal,Device,ImagePicker,
+    StatusBar,Calendar,OneSignal,Device,ImagePicker,InAppBrowser,
     SplashScreen,File,MediaCapture,Camera,DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth

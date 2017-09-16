@@ -15,9 +15,11 @@ export class ImageshomePage {
 status:any=[];
 db:any;
 afstatus:Array <FirebaseListObservable<any>>;
+apiurl:any;
 
 constructor(private app: App,db: AngularFireDatabase,private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
  this.db=db;
+ this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
  this.storage.get('usrid').then((usrid)=>{
  this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
           this.status=data;
@@ -55,7 +57,7 @@ like(afcount,afkey,index,pid){
    var newcount=JSON.parse(afcount)+1;
    this.status[index].likeStatus=true;
     this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=1").map(res => res.json()).subscribe(data => {
+        this.http.get(this.apiurl+"likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=1").map(res => res.json()).subscribe(data => {
         })
     })
     var ref=this.db.list('/Count/'+pid);
@@ -69,7 +71,7 @@ unlike(afcount,afkey,index,pid){
    var newcount=JSON.parse(afcount)-1;
    this.status[index].likeStatus=false;
     this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=0").map(res => res.json()).subscribe(data => {
+        this.http.get(this.apiurl+"likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=0").map(res => res.json()).subscribe(data => {
         })
     })
     var ref=this.db.list('/Count/'+pid);

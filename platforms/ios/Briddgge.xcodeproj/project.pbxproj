@@ -72,6 +72,7 @@
 		F0DFA2AECA174EEC84EB19F4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA90D391DF4546A2A6AD57B3 /* Accelerate.framework */; };
 		F653AF38ED1941E3849E18A3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0750CEE3EE924003B769406A /* Security.framework */; };
 		907104C9849F42E889BDAEF3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81180EADD5B2455DB4E6E697 /* Photos.framework */; };
+		0376A053891940128441BA58 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8678AE461D354DBB82A13CB6 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,8 @@
 		AA90D391DF4546A2A6AD57B3 /* Accelerate.framework */ = {isa = PBXFileReference; name = "Accelerate.framework"; path = "System/Library/Frameworks/Accelerate.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		0750CEE3EE924003B769406A /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		81180EADD5B2455DB4E6E697 /* Photos.framework */ = {isa = PBXFileReference; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8678AE461D354DBB82A13CB6 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CFE901DFBD1C46F39B71459D /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +404,8 @@
 				041B2B9CD4F84E769C8F3F82 /* GMImagePickerController.h */,
 				C6747E2670114FDBA8294DF6 /* PSYBlockTimer.h */,
 				55BAF73163884F99A61998E3 /* GMPHAsset.h */,
+				8678AE461D354DBB82A13CB6 /* CDVInAppBrowser.m */,
+				CFE901DFBD1C46F39B71459D /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "Briddgge/Plugins";
@@ -559,6 +564,7 @@
 				9906A68660D04E7682F47647 /* GMImagePickerController.m in Sources */,
 				8FBB09F777304BE684785F62 /* PSYBlockTimer.m in Sources */,
 				392E96AE33B24A4DA52621CD /* GMPHAsset.m in Sources */,
+				0376A053891940128441BA58 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

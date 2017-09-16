@@ -3,10 +3,12 @@
 
 <ion-content style="position:relative;">
 <ion-row *ngFor="let vid of status" class="video-row">
-     <video  controls="controls" *ngIf="vid.video" controlsList="nodownload"  [src]="vid.video" codecs="avc1.42E01E, mp4a.40.2"> 
+     <video   controls *ngIf="vid.video" controlsList="nodownload"  [src]="vid.video" (click)="openpost(vid.id)" codecs="avc1.42E01E, mp4a.40.2"> 
       </video>
-
-    </ion-row>
+    <!--<ion-row class="video-icon">
+		<img  *ngIf="vid.video" src="img/playbutton.png"   />
+    </ion-row>-->
+</ion-row>
    
 
 </ion-content>

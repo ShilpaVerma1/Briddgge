@@ -26,10 +26,12 @@ likecount:any;
 postvideo:any;
 db:any;
 commentdata=[];
+apiurl:any;
 afstatus:Array <FirebaseListObservable<any>>;
 constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   this.db=db;
-  
+  this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+
   // this.postimg=this.navParams.get('postimg');
   // this.postmsg=this.navParams.get('postmsg');
   // this.postusrname=this.navParams.get('postusrname');
@@ -38,7 +40,7 @@ constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: Nav
   this.postid=this.navParams.get('postid');
 
    this.storage.get('usrid').then((usrid)=>{
-      this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id="+this.postid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+      this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.postid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
         this.commentdata=data;
 
       })

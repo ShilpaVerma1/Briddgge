@@ -6,21 +6,38 @@
       <ion-title >Settings</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-   <ion-list radio-group>
-      <ion-radio value="english" (click)="selected('english')" [checked]="english">
-          Order By 1
-      </ion-radio>
+<ion-content >
+<ion-row class="txtprofile-row"><span>Profile</span>
+       <ion-icon name="ios-arrow-forward"  ></ion-icon>   
+</ion-row>
 
-     <ion-radio value="orderBy2" (click)="selected('orderBy2')">
-         Order By 2
-     </ion-radio>
-
-     <ion-radio value="orderBy3" (click)="selected('orderBy3')">
-        Order By 3
-     </ion-radio>
-
-  </ion-list>
+  <ion-row class="chat-row"><span>Chat</span>
+         <ion-icon name="ios-arrow-down" (click)="openchat()" ></ion-icon>   
+  </ion-row>
+  <ion-card  class="card-chat" *ngIf="buttonClicked">
+  <ion-row class="msg-row" >
+           <ion-icon name="ios-mail-outline"  ></ion-icon>
+           <span>Message</span> 
+              <ion-toggle [(ngModel)]="sausage" ></ion-toggle>  
+             
+  </ion-row>
+    <ion-row class="stories-row">
+           <ion-icon name="ios-add-circle-outline"  ></ion-icon>
+           <span>Stories</span> 
+              <ion-toggle [(ngModel)]="b"></ion-toggle>  
+       
+  </ion-row>
+  <ion-row class="stories-row last-stories">
+           <ion-icon name="ios-volume-up"  ></ion-icon>
+           <span>Sound</span> 
+           
+        <ion-toggle [(ngModel)]="c" ></ion-toggle>  
   
-  <ion-item>Order by: {{orderBy}}</ion-item>
+  </ion-row>
+
+</ion-card>
+<ion-row class="txtprofile-row"><span>Help</span>
+</ion-row>
+<ion-row class="txtlog-row"><span>Logout</span>
+</ion-row>
 </ion-content>

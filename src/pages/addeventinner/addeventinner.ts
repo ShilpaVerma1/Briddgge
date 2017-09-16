@@ -10,7 +10,10 @@ import { Camera,CameraOptions } from '@ionic-native/camera';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
 import * as firebase from 'firebase';
+import { Http } from '@angular/http';
+
 declare var window;
+
 @Component({
   selector: 'page-addeventinner',
   templateUrl: 'addeventinner.html',
@@ -23,19 +26,17 @@ captureDataUrl:any;
 videourl:any;
 MediaFile:any;
 imageurl:any;imagearray:any=[];
-constructor(public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
-var x='file:///data/user/0/com.briddgge.com/cache/tmp_IMG_20170914_111812756-448167941.jpg';
-
-
-
+apiurl:any;
+constructor(public storage:Storage,public http:Http,public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
+    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+ //   this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+ 
 }
 
 rangeprice(ev:any){
   this.price=ev._value;
 }
-post(){
-  
-}
+
 selectday(){
    this.datePicker.show({
         date: new Date(),
@@ -82,7 +83,7 @@ selimages(index){
         this.zone.run(()=>{ 
           this.camera.getPicture(options).then((imageData) => {     
           this.captureDataUrl= 'data:image/jpeg;base64,' + imageData;
-
+          
           const filename = Math.floor(Date.now() / 1000);
           let storagee = firebase.storage().ref();
 
@@ -116,39 +117,33 @@ selimages(index){
         }
     this.imagePicker.getPictures(options).then((results) => {
       let imageURLs=[];
+      let storagee = firebase.storage().ref();
+
       for (var i = 0; i < results.length; i++) {
-          this.imagearray.push(results[i]);
-          imageURLs.unshift(results[i]);
-      }
-      let imageB64strs=[];
-      for (var i = 0; i < imageURLs.length; i++) {
-        var imagePath = imageURLs[i].substr(0, imageURLs[i].lastIndexOf('/') + 1);
-        var imageName = imageURLs[i].substr(imageURLs[i].lastIndexOf('/') + 1);
-        this.file.readAsDataURL(imagePath, imageName).then((b64str) => {
-          const filename = Math.floor(Date.now() / 1000);
-          let storagee = firebase.storage().ref();
-
-          const imageRef = storagee.child(`eventimages/${filename}.jpg`);          
-          let loading = this.loadingCtrl.create({
-              spinner: 'ios',
-              content: 'Uploading...',
-          });
-          loading.present(); 
-          imageRef.putString(b64str,firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
-            this.imageurl=snapshot.downloadURL;
-              loading.dismiss();
-
-          })
-          loading.dismiss();
+     
+         var imagePath = results[i].substr(0, results[i].lastIndexOf('/') + 1);
+         var imageName = results[i].substr(results[i].lastIndexOf('/') + 1);
+         this.file.readAsDataURL(imagePath, imageName).then((b64str) => {
+            const filename = Math.floor(Date.now() / 1000);
+            const imageRef = storagee.child(`eventimages/${filename}.jpg`);          
+            let loading = this.loadingCtrl.create({
+                spinner: 'ios',
+                content: 'Uploading...',
+            });
+            loading.present(); 
+            imageRef.putString(b64str,firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
+              this.imageurl=snapshot.downloadURL;
+              this.imagearray.push(this.imageurl);
+                loading.dismiss();
+            })
+            loading.dismiss();
         }).catch(err => {
-          console.log('readAsDataURL failed: (' + err.code + ")" + err.message);
           this.platform.ready().then(() => {
               window.plugins.toast.show(err.message, "long", "center");
-          })
-        })
-      }
-    }
-    ,(err) => {
+           })
+         })
+       }
+    },(err) => {
            this.platform.ready().then(() => {
               window.plugins.toast.show(err, "long", "center");
           })
@@ -175,11 +170,11 @@ if(index==3){
                           content: 'Uploading...',
                       });
                   loading.present(); 
-                    // firebase.storage().ref().child(`eventvideo/${name}`).put(blob).then((snapshot)=> {
-                    //   this.videourl=snapshot.downloadURL;
+                     firebase.storage().ref().child(`eventvideo/${name}`).put(blob).then((snapshot)=> {
+                       this.videourl=snapshot.downloadURL;
                       loading.dismiss();
 
-                  //  });
+                    });
                 };
                 fileReader.readAsArrayBuffer(file);
               })
@@ -221,10 +216,10 @@ if(index==3){
                     content: 'Uploading...',
                 });
             loading.present(); 
-              // firebase.storage().ref().child(`eventvideo/${name}`).put(blob).then((snapshot)=> {
-              //   this.videourl=snapshot.downloadURL;
+               firebase.storage().ref().child(`eventvideo/${name}`).put(blob).then((snapshot)=> {
+                 this.videourl=snapshot.downloadURL;
                 loading.dismiss();
-             // });
+              });
           };
            fileReader.readAsArrayBuffer(file);
          }, (error) => {
@@ -246,7 +241,31 @@ if(index==3){
     })
   }
 }
+
 onChange(ev){
 
+}
+post(aray,eventtype,price,vid){
+  var time=document.getElementById('timee').innerHTML;
+  var year=document.getElementById('yearr').innerHTML;
+
+    if(this.eventname!=undefined && this.eventlocation!=undefined && time!='' && year!='' && eventtype!=undefined && price!=undefined ||vid ){
+  
+      this.storage.get('usrid').then((usrid)=>{
+        this.http.get( this.apiurl+"saveEvent?user_id="+usrid+"&name="+this.eventname+"&location="+this.eventlocation+"&event_type="+eventtype+"&evt_date="+year+"&evt_time="+time+"&price="+price+"&video="+vid).map(res => res.json()).subscribe(data => {
+          if(data.status=='Success'){
+          
+            for(var i=0;i<aray.length;i++) {
+              this.http.get(this.apiurl+"saveEventImage?evt_id="+data.id+"&img="+aray[i]).map(res => res.json()).subscribe(data => {
+                  
+              })
+            }
+            this.platform.ready().then(() => {
+                window.plugins.toast.show('Event successfully posted', "long", "center");
+            })
+          }
+        })
+      })
+    }
 }
 }

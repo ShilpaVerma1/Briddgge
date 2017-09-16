@@ -22,9 +22,11 @@ public loginForm;
 items:any;
 submitAttempt: boolean = false;
 error:any;errormsg:any;
+apiurl:any;
 
-  constructor(public http:Http,public platform:Platform,private storage: Storage,public menu:MenuController,public navCtrl: NavController,db: AngularFireDatabase, public formBuilder: FormBuilder,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public navParams: NavParams) {
-  
+constructor(public http:Http,public platform:Platform,private storage: Storage,public menu:MenuController,public navCtrl: NavController,db: AngularFireDatabase, public formBuilder: FormBuilder,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public navParams: NavParams) {
+    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+
      Observable.interval(30000).subscribe(x => {
         this.error=''; this.errormsg='';
      })
@@ -40,7 +42,8 @@ loginUser(email, password): any {
    this.submitAttempt = true;
    if (this.loginForm.valid){
      this.error='';
-       this.http.get("http://kanchan.mediaoncloud.com/briddgge/login?email="+email+"&password="+password).map(res => res.json()).subscribe(data => {
+       this.http.get(this.apiurl+"login?email="+email+"&password="+password).map(res => res.json()).subscribe(data => {
+       
         this.storage.set('usrid',data.id);
 
            let loading = this.loadingCtrl.create({
@@ -60,6 +63,7 @@ loginUser(email, password): any {
             //    userid:data.id
             //  }); 
           })
+         
     }else{
       this.error='Enter valid email id.'
       this.errormsg='Your password must be more than 6 characters.'

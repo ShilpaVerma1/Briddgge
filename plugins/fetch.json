@@ -136,5 +136,13 @@
         "variables": {
             "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Multiple images access"
         }
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.7.1"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

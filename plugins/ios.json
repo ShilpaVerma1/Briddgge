@@ -61,6 +61,9 @@
         "com.synconset.imagepicker": {
             "PHOTO_LIBRARY_USAGE_DESCRIPTION": "Multiple images access",
             "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.briddgge.com"
         }
     },
     "dependent_plugins": {

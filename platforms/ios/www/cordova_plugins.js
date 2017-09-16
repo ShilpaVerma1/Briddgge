@@ -376,6 +376,15 @@ module.exports = [
     "clobbers": [
       "plugins.imagePicker"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -397,7 +406,8 @@ module.exports.metadata =
   "cordova-sqlite-storage": "2.0.4",
   "ionic-plugin-keyboard": "2.2.1",
   "onesignal-cordova-plugin": "2.2.0",
-  "com.synconset.imagepicker": "2.1.8"
+  "com.synconset.imagepicker": "2.1.8",
+  "cordova-plugin-inappbrowser": "1.7.1"
 };
 // BOTTOM OF METADATA
 });

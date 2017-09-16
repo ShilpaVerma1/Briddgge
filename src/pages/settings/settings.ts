@@ -9,9 +9,15 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class SettingsPage {
   orderBy:any;
+  chattext:any;
+  buttonClicked:boolean=false;
 constructor(public alertCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams) {
+
 }
  selected(value: string) {
     this.orderBy = value;
+  }
+  openchat(){
+    this.buttonClicked = !this.buttonClicked;
   }
 }

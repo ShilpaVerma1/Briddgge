@@ -21,11 +21,14 @@ db:any;counts:any;
 commentstatus:any;
 afstatus:Array <FirebaseListObservable<any>>;
 afstatus1:Array <FirebaseListObservable<any>>;
+apiurl:any;
+
 constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
     this.statusid= navParams.data;
     this.db=db;
+    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
  this.storage.get('usrid').then((usrid)=>{
-    this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+    this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
       this.commentdata=data.comment;
     })
  })
@@ -60,13 +63,7 @@ constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,pr
                  reff.subscribe((keydata)=>{
                      keydata.forEach(data=>{
                         this.afstatus1.push(data);
-                        //   var refff=this.db.list('/Commentss/')
-                        //   refff.subscribe((commnttext)=>{
-                        //       commnttext.forEach((text)=>{
-                        //           this.afstatus1.push(text);
-                        //        console.log(this.afstatus1)
-                        //     }) 
-                        // })
+
                      })
                 })
            }
@@ -85,7 +82,7 @@ senddd(afcount,afkey){
     }else{
         this.storage.get('usrid').then((usrid)=>{
 
-            this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
+            this.http.get(this.apiurl+"getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
             this.counts = this.db.list('/Commentss/'+this.statusid+'/Comments/');
                /****Push comments ****/
                 this.counts.push({ 
@@ -141,7 +138,7 @@ like(key,likecount,usrids){
 /*send(afcount,afkey){
 
   this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/saveComment?user_id="+usrid+"&post_id="+this.statusid+"&comment="+this.commenttext).map(res => res.json()).subscribe(data => {
+        this.http.get(this.apiurl+"saveComment?user_id="+usrid+"&post_id="+this.statusid+"&comment="+this.commenttext).map(res => res.json()).subscribe(data => {
             if(data.status=='Success'){
             var newcommentcount=JSON.parse(afcount)+1;
                 var ref=this.db.list('/Count/'+ this.statusid);
@@ -158,7 +155,7 @@ like(key,likecount,usrids){
                 })
                 this.commenttext='';
                this.storage.get('usrid').then((usrid)=>{
-                    this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+                    this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
                     this.commentdata=data.comment;
                     })
                 })
@@ -177,7 +174,7 @@ unlike(key,likecount,usrids){
     var newcount=JSON.parse(afcount)-1;
     this.commentdata[index].likeStatus=false;
     this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeComment?user_id="+usrid+"&comment_id="+pid+"&likesComment=0").map(res => res.json()).subscribe(data => {
+        this.http.get(this.apiurl+"likeComment?user_id="+usrid+"&comment_id="+pid+"&likesComment=0").map(res => res.json()).subscribe(data => {
         })
     })
     var ref=this.db.list('/Commentlikes/'+pid);

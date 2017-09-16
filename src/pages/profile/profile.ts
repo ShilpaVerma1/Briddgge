@@ -16,10 +16,14 @@ export class ProfilePage {
   tab2Root = ImagessPage;
   userid:any;
   profiledata:any=[];
+  apiurl:any;
+
 constructor(public menu:MenuController,private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
+this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+
 this.storage.get('usrid').then((usrid)=>{
   this.userid=usrid;
-    this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
+    this.http.get(this.apiurl+"getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
       this.profiledata=data;
     })
   })

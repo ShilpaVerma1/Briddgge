@@ -45,7 +45,7 @@
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png",
@@ -65,7 +65,7 @@
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_disabled_color_18.png",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_normal.9.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_36dp.png",
@@ -213,7 +213,7 @@
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_normal.9.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
@@ -233,6 +233,6 @@
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.2/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     }
 ]

@@ -15,9 +15,13 @@ export class OtherprofilePage {
   tab2Root = VideossotherPage;
   tab3Root = VideossotherPage;
   uid:any;profiledata=[]
+  apiurl:any;
+
 constructor(public http:Http,public navCtrl: NavController, public navParams: NavParams) {
   this.uid=this.navParams.get('otheruserid');
-  this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+this.uid).map(res => res.json()).subscribe(data => {
+  this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+
+  this.http.get(this.apiurl+"getProfile?user_id="+this.uid).map(res => res.json()).subscribe(data => {
       this.profiledata=data;
   })
 }

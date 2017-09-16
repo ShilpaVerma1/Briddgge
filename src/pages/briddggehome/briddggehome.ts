@@ -23,16 +23,18 @@ export class BriddggeHomePage {
   tab3Root = LivevideoshomePage;
   imgcount:any;videocount:any
   stories=[];profiledata=[];
+  apiurl:any;
 constructor(public http:Http,private storage: Storage,public navCtrl: NavController, public menu:MenuController,  public platform:Platform, private navParams:NavParams) {
   //this.uid=this.navParams.get('userid');
+ this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
  this.storage.get('usrid').then((usrid)=>{
-  this.http.get("http://kanchan.mediaoncloud.com/briddgge/recentPostUsers?user_id="+usrid).map(res => res.json()).subscribe(data => {
+  this.http.get(this.apiurl+"recentPostUsers?user_id="+usrid).map(res => res.json()).subscribe(data => {
     this.stories=data;
     this.imgcount=this.stories[0].imgCount;
     this.videocount=this.stories[0].vidCount;
    })
 
-   this.http.get("http://kanchan.mediaoncloud.com/briddgge/getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
+   this.http.get(this.apiurl+"getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
       this.profiledata=data;
     })
 })

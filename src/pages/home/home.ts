@@ -5,7 +5,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { MediaCapture,CaptureVideoOptions,CaptureError, MediaFile } from '@ionic-native/media-capture';
 import * as firebase from 'firebase';
-import { ListPage } from '../list/list';
 import { File } from '@ionic-native/file';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';

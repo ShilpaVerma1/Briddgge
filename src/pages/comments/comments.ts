@@ -30,7 +30,7 @@ apiurl:any;
 afstatus:Array <FirebaseListObservable<any>>;
 constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   this.db=db;
-  this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+  this.apiurl='http://briiddge.com/';
 
   // this.postimg=this.navParams.get('postimg');
   // this.postmsg=this.navParams.get('postmsg');

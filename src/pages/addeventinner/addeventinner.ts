@@ -11,6 +11,8 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
 import * as firebase from 'firebase';
 import { Http } from '@angular/http';
+import {VgAPI} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
 
 declare var window;
 
@@ -25,11 +27,13 @@ daytime:any;
 captureDataUrl:any;
 videourl:any;
 MediaFile:any;
-imageurl:any;imagearray:any=[];
+imageurl:any;
+imagearray:any;
 apiurl:any;
+api:VgAPI;
 constructor(public storage:Storage,public http:Http,public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
     this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
- //   this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+   //this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
  
 }
 
@@ -70,6 +74,7 @@ selecttime(){
 selimages(index){
   /*****Capturing image from camera*****/
   if(index==1){
+      this.captureDataUrl='';
       return new Promise((resolve)=>{
         const options: CameraOptions = {
           quality : 95,
@@ -109,6 +114,7 @@ selimages(index){
 /*************Accessing multiple images from gallery & upload**************/
 
   if(index==2){
+        this.imagearray=[];
         let options = {
         // maximumImagesCount: 8,
         // width: 500,
@@ -153,6 +159,7 @@ selimages(index){
 /*************Capture video from camera**************/
 
 if(index==3){
+  this.videourl='';
    return new Promise((resolve)=>{
 
       let options: CaptureVideoOptions = { limit: 1 };
@@ -193,6 +200,7 @@ if(index==3){
   }
   /*************Video selection from gallery**************/
   if(index==4){
+    this.videourl='';
     return new Promise((resolve)=>{
     this.zone.run(()=>{ 
      this.camera.getPicture({
@@ -201,7 +209,7 @@ if(index==3){
         sourceType : this.camera.PictureSourceType.PHOTOLIBRARY,
         mediaType:this.camera.MediaType.VIDEO
       }).then((videouri) => {
-        this.captureDataUrl=videouri;
+       
         let storagee = firebase.storage().ref();
 
       window.resolveLocalFileSystemURL('file://' + videouri, (fileEntry) => {
@@ -241,7 +249,16 @@ if(index==3){
     })
   }
 }
-
+onPlayerReady(api:VgAPI){
+     this.api = api;
+    
+    this.api.getDefaultMedia().subscriptions.ended.subscribe(
+        () => {
+            // Set the video to the beginning
+            this.api.getDefaultMedia().currentTime = 0;
+        }
+    );
+}
 onChange(ev){
 
 }

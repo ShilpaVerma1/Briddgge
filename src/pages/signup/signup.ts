@@ -54,19 +54,37 @@ export class SignupPage {
       fraternity:['',Validators.compose([Validators.required])],
       states:['',Validators.compose([Validators.required])]
     });
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/getStates").map(res => res.json()).subscribe(data => {
-         
-          this.statesdata=data;
-                    
-         })
+        this.http.get("http://briiddge.com/getStates").map(res => res.json()).subscribe(data => {
+           this.statesdata=data;
+                 
+       })
 
   }
 selstates(states){
-  this.http.get("http://kanchan.mediaoncloud.com/briddgge/getCity?state="+states).map(res => res.json()).subscribe(data => {
-    this.citydata=data;
+  this.http.get("http://briiddge.com/getCity?state="+states).map(res => res.json()).subscribe(data => {
+      if(data.status!='failed' || data.status!='Failed'){
+           this.citydata=data;
+         }
+      else{
+          this.platform.ready().then(() => {
+              window.plugins.toast.show("Cities not found or Invalid state selected", "long", "center");
+          }) 
+      }     
   })
-
 }
+ onChange(SelectedValue){
+    this.http.get("http://briiddge.com/getUniversity?city="+SelectedValue).map(res => res.json()).subscribe(data => {
+  
+      if(data.status!='failed' || data.status!='Failed'){
+                this.schools=data;
+         }
+      else{
+          this.platform.ready().then(() => {
+              window.plugins.toast.show("University not found or Invalid city selected", "long", "center");
+          }) 
+      } 
+   })
+ }
 // getItems(ev: any) {
 //     // Reset items back to all of the items
 //     this.http.get("http://kanchan.mediaoncloud.com/briddgge/getCity").map(res => res.json()).subscribe(data => {
@@ -98,7 +116,7 @@ doRegister(captureDataUrl,school,city,email, password,name,gender,fraternity,sta
       }
 
      if (this.registerForm.valid){ 
-          this.http.get("http://kanchan.mediaoncloud.com/briddgge/signup?email="+email+"&gender="+gender+"&user_type="+fraternity+"&city="+city+"&password="+password+"&name="+name+"&university="+school+"&img="+captureDataUrl+"&state="+states).map(res => res.json()).subscribe(data => {
+          this.http.get("http://briiddge.com/signup?email="+email+"&gender="+gender+"&user_type="+fraternity+"&city="+city+"&password="+password+"&name="+name+"&university="+school+"&img="+captureDataUrl+"&state="+states).map(res => res.json()).subscribe(data => {
               if(data.msg=="Please fill all fields"){
                 //alert("Please fill all fields");
                 this.platform.ready().then(() => {
@@ -109,6 +127,10 @@ doRegister(captureDataUrl,school,city,email, password,name,gender,fraternity,sta
                 this.platform.ready().then(() => {
                   window.plugins.toast.show("Email id already exists", "long", "center");
                 })
+              }else if(data.msg=="Not saved"){
+                this.platform.ready().then(() => {
+                  window.plugins.toast.show("Something went wrong.Please try again", "long", "center");
+                }) 
               }else{
                 //alert("Check your email for completing registeration process");
                 this.platform.ready().then(() => {
@@ -221,14 +243,7 @@ takePicture(){
        })  
    })
 }
- onChange(SelectedValue){
-   console.log(SelectedValue);
-   if(SelectedValue.length>3)
-    this.http.get("http://kanchan.mediaoncloud.com/briddgge/getUniversity?city="+SelectedValue).map(res => res.json()).subscribe(data => {
-     this.schools=data;
 
-   })
- }
  onChangesel(college){
   console.log(college);
  }

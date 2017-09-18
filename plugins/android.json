@@ -37,6 +37,9 @@
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.briddgge.com"
         },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.briddgge.com"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.briddgge.com"
         },

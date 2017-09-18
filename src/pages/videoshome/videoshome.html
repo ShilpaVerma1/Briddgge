@@ -11,7 +11,7 @@
 	<ion-row  class="post-inner">
 		<p *ngIf="post.message!='undefined'">{{post.message}}</p>
 		<div class="video-main">
-		<video  width="100%" height="200" controls id="{{post.id}}" [src]="post.video" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>
+		<video  width="100%" height="200" controls id="{{post.id}}" [src]="post.video" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
 		<!--<img  *ngIf="test=='playimg'" src="img/playbutton.png"  (click)="play(post.id,i)" />
 		<img  *ngIf="test=='pauseimg'" src="img/pause.png" (click)="play(post.id,i)" />-->
 		

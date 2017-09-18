@@ -21,7 +21,7 @@ afstatus:Array <FirebaseListObservable<any>>;
   this.db=db;
   
   this.storage.get('usrid').then((usrid)=>{
-    this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
+    this.http.get("http://briiddge.com/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
             this.status=data;
     })
   })

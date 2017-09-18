@@ -85,8 +85,8 @@
  </ion-grid>
 
 <ion-row class="images-down">
-  <span class="imgggrid" *ngIf="captureDataUrl " >
-  <img  class="selimg" [src]="captureDataUrl"/>
+  <span class="imgggrid" *ngIf="imageurl " >
+  <img  class="selimg" [src]="imageurl"/>
   </span>
 <span class="imgggrid" *ngFor="let imgg of imagearray">
   <img class="selimg" *ngIf="imagearray" [src]='imgg' />
@@ -107,7 +107,34 @@
  </ion-row>
  </ion-grid>
 <ion-row>
-  	<video  width="100%" height="200" *ngIf="videourl" controls [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>
+    	<!--<video  width="100%" height="200" *ngIf="videourl" controls [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>-->
+ <vg-player (onPlayerReady)="onPlayerReady($event)"  *ngIf="videourl"  >
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+
+    <vg-controls>
+        <vg-play-pause style="border: 1px solid #fff;"></vg-play-pause>
+        <vg-playback-button></vg-playback-button>
+
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+        <!--<vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>-->
+
+        <vg-track-selector></vg-track-selector>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume> 
+  <!--<vg-fullscreen></vg-fullscreen>-->
+    </vg-controls>
+
+    <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>
+        <source [src]="videourl" type="video/mp4">
+    </video>
+</vg-player>
   </ion-row>
 <ion-row class="post" (click)="post(imagearray,eventtype,price,videourl)"><span>Post</span></ion-row>
 

@@ -26,7 +26,7 @@ apiurl:any;
 constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
     this.statusid= navParams.data;
     this.db=db;
-    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+    this.apiurl='http://briiddge.com/';
  this.storage.get('usrid').then((usrid)=>{
     this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
       this.commentdata=data.comment;

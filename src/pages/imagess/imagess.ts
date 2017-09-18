@@ -20,7 +20,7 @@ options : InAppBrowserOptions = {
 apiurl:any;
 
 constructor(private iab: InAppBrowser,public app:App,private storage: Storage,public http:Http,public navCtrl: NavController,public popoverCtrl: PopoverController, public navParams: NavParams) {
- this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+ this.apiurl='http://briiddge.com/';
 
  this.storage.get('usrid').then((usrid)=>{
         this.http.get(this.apiurl+"fetchStatus?user_id="+usrid).map(res => res.json()).subscribe(data => {

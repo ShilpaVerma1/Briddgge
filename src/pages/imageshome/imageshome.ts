@@ -21,7 +21,7 @@ constructor(private app: App,db: AngularFireDatabase,private storage: Storage,pu
  this.db=db;
  this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
  this.storage.get('usrid').then((usrid)=>{
- this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
+ this.http.get("http://briiddge.com/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
           this.status=data;
   })
  })

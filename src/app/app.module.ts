@@ -50,6 +50,12 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Device } from '@ionic-native/device';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Network } from '@ionic-native/network';
+
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
     authDomain: "geofirebase-b42f3.firebaseapp.com",
@@ -86,7 +92,10 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule   
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -111,9 +120,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   ],
   providers: [
     StatusBar,Calendar,OneSignal,Device,ImagePicker,InAppBrowser,
-    SplashScreen,File,MediaCapture,Camera,DatePicker,
+    SplashScreen,File,MediaCapture,Camera,DatePicker,Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
   ]
 })
 export class AppModule {}

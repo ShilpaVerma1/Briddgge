@@ -14,7 +14,7 @@ status:any=[];
   constructor(public app:App,private storage: Storage,public http:Http,public popoverCtrl: PopoverController,public navCtrl: NavController, public navParams: NavParams) {
   // var usrid=navParams.data;
     this.storage.get('usrid').then((usrid)=>{
-            this.http.get("http://kanchan.mediaoncloud.com/briddgge/fetchStatus?user_id="+usrid).map(res => res.json()).subscribe(data => {
+            this.http.get("http://briiddge.com/fetchStatus?user_id="+usrid).map(res => res.json()).subscribe(data => {
               this.status=data;
           })
     })

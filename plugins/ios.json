@@ -64,6 +64,9 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.briddgge.com"
         }
     },
     "dependent_plugins": {

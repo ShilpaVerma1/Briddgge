@@ -19,7 +19,9 @@ import { SettingsPage } from '../pages/settings/settings';
 import { Http } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import { ProfilePage } from '../pages/profile/profile';
+import { Network } from '@ionic-native/network';
 
+declare var window;
 @Component({
   templateUrl: 'app.html',
   providers:[OneSignal]
@@ -32,7 +34,7 @@ export class MyApp {
 profiledata=[];
   pages: Array<{title: string, component: any,icon: any,imgs:any }>;
   options:any;fireAuth:any;
-  constructor(public menu:MenuController,public http:Http,private storage: Storage,private oneSignal: OneSignal,public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(private network: Network,public menu:MenuController,public http:Http,private storage: Storage,private oneSignal: OneSignal,public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
      
     this.initializeApp();
              document.addEventListener("pause", () => {
@@ -56,6 +58,7 @@ profiledata=[];
       { title: 'Logout', component: LoginPage,icon:"ios-arrow-forward",imgs:'http://2.mediaoncloud.com/Shilpa/Briddgge/logout.png' },
 
     ];
+/*********Stay user logged in**********/
   this.storage.get('usrid').then((usrid) => {
           this.usrid = usrid;
           if(!this.usrid){
@@ -73,6 +76,32 @@ profiledata=[];
         })
       })
     })
+/********Internet connection*********/
+
+    // watch network for a disconnect
+    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+         this.platform.ready().then(() => {
+             window.plugins.toast.show("Your interconnection was interrupted", "long", "center");
+         })
+    });
+
+    // watch network for a connection
+    if(this.network.onDisconnect()){
+      let connectSubscription = this.network.onConnect().subscribe(() => {
+         this.platform.ready().then(() => {
+             window.plugins.toast.show("You are now connected to the network connection", "long", "center");
+         })
+           this.nav.setRoot(this.nav.getActive().component);
+          setTimeout(() => {
+            if (this.network.type === 'wifi') {
+               this.platform.ready().then(() => {
+                  window.plugins.toast.show("Yeah,you got a wifi connection'", "long", "center");
+               })
+            }
+          }, 3000);
+ 
+      })
+    }  
   }
 
   initializeApp() {

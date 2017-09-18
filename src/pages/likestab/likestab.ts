@@ -15,7 +15,7 @@ apiurl:any;
 
 constructor(public app:App,public http:Http,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
  this.statusid= navParams.data;
- this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+ this.apiurl='http://briiddge.com/';
 
  this.storage.get('usrid').then((usrid)=>{
 

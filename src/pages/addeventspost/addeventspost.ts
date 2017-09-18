@@ -22,7 +22,7 @@ export class AddeventspostPage {
   db:any;
   counts:any;
   constructor(private device: Device,private file: File,public platform:Platform,private storage: Storage,public http:Http,public viewCtrl:ViewController,db: AngularFireDatabase,public camera: Camera,public zone : NgZone,public navCtrl: NavController,public popoverCtrl: PopoverController, public navParams: NavParams) {
-    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+    this.apiurl='http://briiddge.com/';
     this.db=db;
     
  }

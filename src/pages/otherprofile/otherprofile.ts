@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController,Platform, NavParams } from 'ionic-angular';
 import { BriddggeHomePage } from '../briddggehome/briddggehome';
 import { ImagessotherPage } from '../imagessother/imagessother';
 import { VideossotherPage } from '../videossother/videossother';
 
 import { Http } from '@angular/http';
-
+declare var window;
 @Component({
   selector: 'page-otherprofile',
   templateUrl: 'otherprofile.html',
@@ -17,12 +17,18 @@ export class OtherprofilePage {
   uid:any;profiledata=[]
   apiurl:any;
 
-constructor(public http:Http,public navCtrl: NavController, public navParams: NavParams) {
+constructor(public platform:Platform,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
   this.uid=this.navParams.get('otheruserid');
-  this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+  this.apiurl='http://briiddge.com/';
 
   this.http.get(this.apiurl+"getProfile?user_id="+this.uid).map(res => res.json()).subscribe(data => {
-      this.profiledata=data;
+  if(data.status!='failed' || data.status!='Failed'){
+         this.profiledata=data;
+      }else{
+         this.platform.ready().then(() => {
+               window.plugins.toast.show("Something went wrong", "long", "center");
+          }) 
+      }
   })
 }
 

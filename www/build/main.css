@@ -25353,6 +25353,21 @@ page-addeventinner .imgggrid {
   width: 33.3%;
 }
 
+page-addeventinner vg-playback-button {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+page-addeventinner vg-time-display {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+page-addeventinner #singleVideo {
+  height: 220px;
+  width: 100%;
+}
+
 page-addeventinner .imgggrid img {
   margin: 0px;
   padding: 2px;

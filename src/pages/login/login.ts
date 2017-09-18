@@ -25,7 +25,7 @@ error:any;errormsg:any;
 apiurl:any;
 
 constructor(public http:Http,public platform:Platform,private storage: Storage,public menu:MenuController,public navCtrl: NavController,db: AngularFireDatabase, public formBuilder: FormBuilder,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public navParams: NavParams) {
-    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+    this.apiurl='http://briiddge.com/';
 
      Observable.interval(30000).subscribe(x => {
         this.error=''; this.errormsg='';
@@ -43,27 +43,34 @@ loginUser(email, password): any {
    if (this.loginForm.valid){
      this.error='';
        this.http.get(this.apiurl+"login?email="+email+"&password="+password).map(res => res.json()).subscribe(data => {
-       
-        this.storage.set('usrid',data.id);
+          if(data.status!='Failed'){
+            this.storage.set('usrid',data.id);
 
-           let loading = this.loadingCtrl.create({
-            spinner: 'ios',
-            content: ''
-          });   
-          loading.present(); 
-         setTimeout(() => {
-            //  alert("You are logged in successfully");
-           loading.dismiss();
-           this.navCtrl.push(BriddggeHomePage);
-         },7000)
-            this.platform.ready().then(() => {
-                    window.plugins.toast.show("You are logged in successfully", "long", "center");
-            })
-            //  this.navCtrl.push(BriddggeHomePage,{
-            //    userid:data.id
-            //  }); 
-          })
-         
+              let loading = this.loadingCtrl.create({
+                spinner: 'ios',
+                content: ''
+              });   
+              loading.present(); 
+            setTimeout(() => {
+                //  alert("You are logged in successfully");
+              loading.dismiss();
+              this.navCtrl.push(BriddggeHomePage);
+            },7000)
+                this.platform.ready().then(() => {
+                        window.plugins.toast.show("You are logged in successfully", "long", "center");
+                })
+          }else{
+           // alert('Invalid details');
+             this.platform.ready().then(() => {
+                  window.plugins.toast.show("Invalid details", "long", "center");
+              })
+          }
+
+                //  this.navCtrl.push(BriddggeHomePage,{
+                //    userid:data.id
+                //  }); 
+      })
+            
     }else{
       this.error='Enter valid email id.'
       this.errormsg='Your password must be more than 6 characters.'

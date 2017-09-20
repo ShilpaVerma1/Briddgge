@@ -12,8 +12,8 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__briddggehome_briddggehome__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -62,7 +62,7 @@ var LoginPage = (function () {
         this.submitAttempt = true;
         if (this.loginForm.valid) {
             this.error = '';
-            this.http.get(this.apiurl + "login?email=" + email + "&password=" + password).map(function (res) { return res.json(); }).subscribe(function (data) {
+            this.http.get(this.apiurl + "applogin?email=" + email + "&password=" + password).map(function (res) { return res.json(); }).subscribe(function (data) {
                 if (data.status != 'Failed') {
                     _this.storage.set('usrid', data.id);
                     var loading_1 = _this.loadingCtrl.create({
@@ -136,8 +136,8 @@ LoginPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideossPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(73);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -200,8 +200,8 @@ VideossPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_device__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_media_capture__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_file__ = __webpack_require__(122);
@@ -547,8 +547,8 @@ ImagepopverPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImagessPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_in_app_browser__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -693,8 +693,8 @@ FindfriendsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageshomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -722,7 +722,7 @@ var ImageshomePage = (function () {
         this.navParams = navParams;
         this.status = [];
         this.db = db;
-        this.apiurl = 'http://kanchan.mediaoncloud.com/briddgge/';
+        this.apiurl = 'http://briiddge.com/';
         this.storage.get('usrid').then(function (usrid) {
             _this.http.get("http://briiddge.com/fetchStatusAll?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
                 _this.status = data;
@@ -809,8 +809,8 @@ ImageshomePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoshomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -837,11 +837,14 @@ var VideoshomePage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.status = [];
-        this.test = 'playimg';
+        this.test = [];
         this.db = db;
         this.storage.get('usrid').then(function (usrid) {
             _this.http.get("http://briiddge.com/fetchStatusAll?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
                 _this.status = data;
+                for (var i = 0; i < _this.status.length; i++) {
+                    _this.test.push({ status: 'playimg', vol: 'unmute' });
+                }
             });
         });
         var refNew = this.db.list('/Count/', { query: {
@@ -861,17 +864,26 @@ var VideoshomePage = (function () {
             });
         });
     }
+    VideoshomePage.prototype.volume = function (pid, index) {
+        this.video = document.getElementById(pid);
+        if (!this.video.muted) {
+            this.video.muted = true;
+            this.test[index].vol = 'mute';
+        }
+        else {
+            this.video.muted = false;
+            this.test[index].vol = 'unmute';
+        }
+    };
     VideoshomePage.prototype.play = function (pid, index) {
         this.video = document.getElementById(pid);
         if (this.video.paused === false) {
-            this.test = 'playimg';
+            this.test[index].status = 'playimg';
             this.video.pause();
-            // btn.textContent= ">";
         }
         else {
-            this.test = 'pauseimg';
+            this.test[index].status = 'pauseimg';
             this.video.play();
-            // btn.textContent= "||";
         }
     };
     VideoshomePage.prototype.like = function (afcount, afkey, index, pid) {
@@ -879,7 +891,7 @@ var VideoshomePage = (function () {
         var newcount = JSON.parse(afcount) + 1;
         this.status[index].likeStatus = true;
         this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id=" + usrid + "&post_id=" + pid + "&likeStatus=1").map(function (res) { return res.json(); }).subscribe(function (data) {
+            _this.http.get("http://briiddge.com/likeStatus?user_id=" + usrid + "&post_id=" + pid + "&likeStatus=1").map(function (res) { return res.json(); }).subscribe(function (data) {
             });
         });
         var ref = this.db.list('/Count/' + pid);
@@ -892,7 +904,7 @@ var VideoshomePage = (function () {
         var newcount = JSON.parse(afcount) - 1;
         this.status[index].likeStatus = false;
         this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id=" + usrid + "&post_id=" + pid + "&likeStatus=0").map(function (res) { return res.json(); }).subscribe(function (data) {
+            _this.http.get("http://briiddge.com/likeStatus?user_id=" + usrid + "&post_id=" + pid + "&likeStatus=0").map(function (res) { return res.json(); }).subscribe(function (data) {
             });
         });
         var ref = this.db.list('/Count/' + pid);
@@ -913,7 +925,7 @@ var VideoshomePage = (function () {
 }());
 VideoshomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-videoshome',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/videoshome/videoshome.html"*/'<ion-header>\n</ion-header>\n\n<ion-content >\n<div  *ngFor="let post of status let i=index;">\n<div *ngIf=" post.video">\n	<ion-row class="post-heading" >\n		<img [src]="post.profile_img" /><h5>{{post.name}}</h5>\n	</ion-row>\n\n	<ion-row  class="post-inner">\n		<p *ngIf="post.message!=\'undefined\'">{{post.message}}</p>\n		<div class="video-main">\n		<video  width="100%" height="200" controls id="{{post.id}}" [src]="post.video" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>\n		<!--<img  *ngIf="test==\'playimg\'" src="img/playbutton.png"  (click)="play(post.id,i)" />\n		<img  *ngIf="test==\'pauseimg\'" src="img/pause.png" (click)="play(post.id,i)" />-->\n		\n		</div>\n	</ion-row>\n	<ion-row class="post-comments" >\n		<a><ion-icon name="ios-chatboxes-outline" (click)="Comments(post.id,post.video,post.message,post.name,post.profile_img)"></ion-icon> <span class="count">{{afstatus[post.id].Commentcount}}</span></a>\n		<a>  \n		<ion-icon name="heart-outline" *ngIf="post.likeStatus==false" (click)="like(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> \n		<ion-icon style="color:red;" md="md-heart" *ngIf="post.likeStatus==true" (click)="unlike(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> \n		<span class="count" (click)="likepost(post.id,post.img,post.message,post.name,post.profile_img)"></span>{{afstatus[post.id].Likecount}}	</a>\n	</ion-row>\n</div>\n</div>\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/videoshome/videoshome.html"*/,
+        selector: 'page-videoshome',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/videoshome/videoshome.html"*/'<ion-header>\n</ion-header>\n\n<ion-content >\n<div  *ngFor="let post of status; let i=index;">\n<div *ngIf=" post.video">\n	<ion-row class="post-heading" >\n		<img [src]="post.profile_img" /><h5>{{post.name}}</h5>\n	</ion-row>\n\n	<ion-row  class="post-inner">\n		<p *ngIf="post.message!=\'undefined\'">{{post.message}}</p>\n		<div class="video-main">\n		<video  width="100%" height="250"  id="{{post.id}}" [src]="post.video" poster="img/postr.jpg" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>\n		<img  *ngIf="test[i].status==\'playimg\'"  src="img/play.png"  (click)="play(post.id,i)" />\n		<img  *ngIf="test[i].status==\'pauseimg\'"  src="img/pause.png" (click)="play(post.id,i)" />\n		<img  class="vol-img"   *ngIf="test[i].vol==\'unmute\'" src="img/volume.png"  (click)="volume(post.id,i)" />\n    	<img  class="vol-img"  *ngIf="test[i].vol==\'mute\'" src="img/mute.png" (click)="volume(post.id,i)" />\n\n		</div>\n	</ion-row>\n	<ion-row class="post-comments" >\n		<a><ion-icon name="ios-chatboxes-outline" (click)="Comments(post.id,post.video,post.message,post.name,post.profile_img)"></ion-icon> <span class="count">{{afstatus[post.id].Commentcount}}</span></a>\n		<a>  \n		<ion-icon name="heart-outline" *ngIf="post.likeStatus==false" (click)="like(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> \n		<ion-icon style="color:red;" md="md-heart" *ngIf="post.likeStatus==true" (click)="unlike(afstatus[post.id].Likecount,afstatus[post.id].$key,i,post.id)"></ion-icon> \n		<span class="count" (click)="likepost(post.id,post.img,post.message,post.name,post.profile_img)"></span>{{afstatus[post.id].Likecount}}	</a>\n	</ion-row>\n</div>\n</div>\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/videoshome/videoshome.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], VideoshomePage);
@@ -970,14 +982,14 @@ LivevideoshomePage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_media_capture__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2_database__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1012,9 +1024,34 @@ var AddeventinnerPage = (function () {
         this.navCtrl = navCtrl;
         this.datePicker = datePicker;
         this.navParams = navParams;
-        this.apiurl = 'http://kanchan.mediaoncloud.com/briddgge/';
-        //this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+        this.imagearray = [];
+        this.apiurl = 'http://briiddge.com/';
+        // this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+        this.status = "playimg";
+        this.vol = "mute";
     }
+    AddeventinnerPage.prototype.volume = function () {
+        this.video = document.getElementById('video1');
+        if (!this.video.muted) {
+            this.video.muted = true;
+            this.vol = 'mute';
+        }
+        else {
+            this.video.muted = false;
+            this.vol = 'unmute';
+        }
+    };
+    AddeventinnerPage.prototype.play = function () {
+        this.video = document.getElementById('video1');
+        if (this.video.paused === false) {
+            this.status = 'playimg';
+            this.video.pause();
+        }
+        else {
+            this.status = 'pauseimg';
+            this.video.play();
+        }
+    };
     AddeventinnerPage.prototype.rangeprice = function (ev) {
         this.price = ev._value;
     };
@@ -1075,7 +1112,6 @@ var AddeventinnerPage = (function () {
                         loading.present();
                         imageRef.putString(_this.captureDataUrl, __WEBPACK_IMPORTED_MODULE_9_firebase__["storage"].StringFormat.DATA_URL).then(function (snapshot) {
                             _this.imageurl = snapshot.downloadURL;
-                            loading.dismiss();
                         });
                         loading.dismiss();
                     }, function (err) {
@@ -1086,17 +1122,17 @@ var AddeventinnerPage = (function () {
         }
         /*************Accessing multiple images from gallery & upload**************/
         if (index == 2) {
-            this.imagearray = [];
             var options = {
-                // maximumImagesCount: 8,
+                maximumImagesCount: 6,
                 // width: 500,
                 // height: 500,
                 quality: 100
             };
             this.imagePicker.getPictures(options).then(function (results) {
-                var imageURLs = [];
+                //let imageURLs=[];
                 var storagee = __WEBPACK_IMPORTED_MODULE_9_firebase__["storage"]().ref();
                 for (var i = 0; i < results.length; i++) {
+                    _this.url = '';
                     var imagePath = results[i].substr(0, results[i].lastIndexOf('/') + 1);
                     var imageName = results[i].substr(results[i].lastIndexOf('/') + 1);
                     _this.file.readAsDataURL(imagePath, imageName).then(function (b64str) {
@@ -1108,9 +1144,8 @@ var AddeventinnerPage = (function () {
                         });
                         loading.present();
                         imageRef.putString(b64str, __WEBPACK_IMPORTED_MODULE_9_firebase__["storage"].StringFormat.DATA_URL).then(function (snapshot) {
-                            _this.imageurl = snapshot.downloadURL;
-                            _this.imagearray.push(_this.imageurl);
-                            loading.dismiss();
+                            _this.url = snapshot.downloadURL;
+                            _this.imagearray.push(_this.url);
                         });
                         loading.dismiss();
                     }).catch(function (err) {
@@ -1189,8 +1224,8 @@ var AddeventinnerPage = (function () {
                                     loading.present();
                                     __WEBPACK_IMPORTED_MODULE_9_firebase__["storage"]().ref().child("eventvideo/" + name).put(blob).then(function (snapshot) {
                                         _this.videourl = snapshot.downloadURL;
-                                        loading.dismiss();
                                     });
+                                    loading.dismiss();
                                 };
                                 fileReader.readAsArrayBuffer(file);
                             }, function (error) {
@@ -1212,23 +1247,15 @@ var AddeventinnerPage = (function () {
             });
         }
     };
-    AddeventinnerPage.prototype.onPlayerReady = function (api) {
-        var _this = this;
-        this.api = api;
-        this.api.getDefaultMedia().subscriptions.ended.subscribe(function () {
-            // Set the video to the beginning
-            _this.api.getDefaultMedia().currentTime = 0;
-        });
-    };
     AddeventinnerPage.prototype.onChange = function (ev) {
     };
     AddeventinnerPage.prototype.post = function (aray, eventtype, price, vid) {
         var _this = this;
         var time = document.getElementById('timee').innerHTML;
         var year = document.getElementById('yearr').innerHTML;
-        if (this.eventname != undefined && this.eventlocation != undefined && time != '' && year != '' && eventtype != undefined && price != undefined || vid) {
+        if (this.message != undefined && this.eventname != undefined && this.eventlocation != undefined && time != '' && year != '' && eventtype != undefined && price != undefined || vid) {
             this.storage.get('usrid').then(function (usrid) {
-                _this.http.get(_this.apiurl + "saveEvent?user_id=" + usrid + "&name=" + _this.eventname + "&location=" + _this.eventlocation + "&event_type=" + eventtype + "&evt_date=" + year + "&evt_time=" + time + "&price=" + price + "&video=" + vid).map(function (res) { return res.json(); }).subscribe(function (data) {
+                _this.http.get(_this.apiurl + "saveEvent?user_id=" + usrid + "&desc=" + _this.message + "&name=" + _this.eventname + "&location=" + _this.eventlocation + "&event_type=" + eventtype + "&evt_date=" + year + "&evt_time=" + time + "&price=" + price + "&video=" + vid).map(function (res) { return res.json(); }).subscribe(function (data) {
                     if (data.status == 'Success') {
                         for (var i = 0; i < aray.length; i++) {
                             _this.http.get(_this.apiurl + "saveEventImage?evt_id=" + data.id + "&img=" + aray[i]).map(function (res) { return res.json(); }).subscribe(function (data) {
@@ -1236,6 +1263,11 @@ var AddeventinnerPage = (function () {
                         }
                         _this.platform.ready().then(function () {
                             window.plugins.toast.show('Event successfully posted', "long", "center");
+                        });
+                    }
+                    else {
+                        _this.platform.ready().then(function () {
+                            window.plugins.toast.show('Status update failed', "long", "center");
                         });
                     }
                 });
@@ -1246,7 +1278,7 @@ var AddeventinnerPage = (function () {
 }());
 AddeventinnerPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-addeventinner',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/addeventinner/addeventinner.html"*/'\n<ion-header>\n\n\n\n<ion-navbar>\n</ion-navbar>\n</ion-header>\n\n<ion-content padding class="main-background">\n <ion-row class="heading"> <p>ADD EVENTS</p></ion-row>\n<ion-row> <ion-input   placeholder="Name" class="input-pass" name="eventname" [(ngModel)]="eventname"></ion-input> </ion-row>\n<ion-row> <ion-input   placeholder="Location" class="input-pass" name="eventlocation" [(ngModel)]="eventlocation"></ion-input> </ion-row>\n<ion-row class="row-padding">  \n  <span style="color:#fff;margin-bottom:-10px;" *ngIf="!eventtype">Event type</span>    \n  <select  placeholder="Event type" onmousedown="this.value=\'\';" name="eventtype" [(ngModel)]="eventtype" (change)="onChange(eventtype)" >		\n          <option > BBQ</option>\n          <option >  Banquet </option>\n          <option > Party</option>\n          <option > Meeting</option>\n          <option > Birthday</option>\n          <option > Festival</option>\n          <option > Galas</option>\n          <option > Award Programs</option>\n          <option > Lunch</option>\n          <option > Wedding</option>\n          <option > Reunion</option>\n          <option > Anniversary</option>\n          <option > Dinner</option>\n          <option > Sports</option>\n          <option > Kickback</option>\n\n        </select></ion-row>\n<ion-row>\n  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="price" > ${{price}}</p>\n  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="!price" > Price</p> </ion-row>\n  <ion-range min="5" max="50" step="5" snaps="true"  pin="true" (ionChange)="rangeprice($event)" [(ngModel)]="brightness">\n    <ion-icon small range-left name="logo-usd"></ion-icon>>\n     <ion-icon range-right name="logo-usd"></ion-icon>\n   </ion-range>\n\n      <ion-row class="heading"> <p>EVENTS DATE</p></ion-row>\n  <ion-grid>  \n      <ion-row class="dateline">\n\n<ion-col col-2 class="col-one">\n<img src="img/innericon1.png"/>\n  </ion-col>\n<ion-col col-6 class="col-second">\n<p id="yearr"> {{daytime| date: \'MMMM d,yyyy\'}} </p>\n  </ion-col>\n  <ion-col col-4 class="col-third" (click)="selectday()">\n<span>Day</span>\n  </ion-col>\n </ion-row>\n </ion-grid>\n\n\n   <ion-grid>  \n      <ion-row class="dateline">\n\n<ion-col col-2 class="col-one">\n<img src="img/innericon2.png"/>\n  </ion-col>\n<ion-col col-6 class="col-second" >\n<p id="timee">{{time| date: \'EEEE H:mm\'}} </p>\n\n  </ion-col>\n  <ion-col col-4 class="col-third" (click)="selecttime()">\n<span class="time">Time</span>\n  </ion-col>\n </ion-row>\n </ion-grid>\n   <ion-grid>  \n<ion-row class="cemra">\n\n<ion-col col-5 class="col-second">\n<p>Photos</p>\n  </ion-col>\n<ion-col col-7 class="col-img"> \n<img src="img/cemra.png"  (click)="selimages(1)" />\n<img src="img/add.png"  (click)="selimages(2)"/>\n</ion-col>\n </ion-row>\n </ion-grid>\n\n<ion-row class="images-down">\n  <span class="imgggrid" *ngIf="imageurl " >\n  <img  class="selimg" [src]="imageurl"/>\n  </span>\n<span class="imgggrid" *ngFor="let imgg of imagearray">\n  <img class="selimg" *ngIf="imagearray" [src]=\'imgg\' />\n</span>\n  </ion-row>\n\n<ion-grid>  \n<ion-row class="cemra">\n\n<ion-col col-5 class="col-second">\n<p>Video</p>\n  </ion-col>\n<ion-col col-7 class="col-img">\n<img src="img/videonew.png" (click)="selimages(3)"/>\n<img src="img/add.png" (click)="selimages(4)"/>\n  </ion-col>\n	\n </ion-row>\n </ion-grid>\n<ion-row>\n    	<!--<video  width="100%" height="200" *ngIf="videourl" controls [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>-->\n <vg-player (onPlayerReady)="onPlayerReady($event)"  *ngIf="videourl"  >\n    <vg-overlay-play></vg-overlay-play>\n    <vg-buffering></vg-buffering>\n\n    <vg-controls>\n        <vg-play-pause style="border: 1px solid #fff;"></vg-play-pause>\n        <vg-playback-button></vg-playback-button>\n\n        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>\n\n        <!--<vg-scrub-bar>\n            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>\n            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>\n        </vg-scrub-bar>\n        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>\n        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>-->\n\n        <vg-track-selector></vg-track-selector>\n        <vg-mute></vg-mute>\n        <vg-volume></vg-volume> \n  <!--<vg-fullscreen></vg-fullscreen>-->\n    </vg-controls>\n\n    <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>\n        <source [src]="videourl" type="video/mp4">\n    </video>\n</vg-player>\n  </ion-row>\n<ion-row class="post" (click)="post(imagearray,eventtype,price,videourl)"><span>Post</span></ion-row>\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/addeventinner/addeventinner.html"*/,
+        selector: 'page-addeventinner',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/addeventinner/addeventinner.html"*/'\n<ion-header>\n\n\n\n<ion-navbar>\n</ion-navbar>\n</ion-header>\n\n<ion-content padding class="main-background">\n <ion-row class="heading"> <p>ADD EVENTS</p></ion-row>\n<ion-row> <ion-input   placeholder="Name" class="input-pass" name="eventname" [(ngModel)]="eventname"></ion-input> </ion-row>\n<ion-row> <ion-input   placeholder="Location" class="input-pass" name="eventlocation" [(ngModel)]="eventlocation"></ion-input> </ion-row>\n<ion-row> <ion-input   placeholder="Message" class="input-pass" name="message" [(ngModel)]="message"></ion-input> </ion-row>\n\n<ion-row class="row-padding">  \n  <span style="color:#fff;margin-bottom:-10px;" *ngIf="!eventtype">Event type</span>    \n  <select  placeholder="Event type" onmousedown="this.value=\'\';" name="eventtype" [(ngModel)]="eventtype" (change)="onChange(eventtype)" >		\n          <option > BBQ</option>\n          <option >  Banquet </option>\n          <option > Party</option>\n          <option > Meeting</option>\n          <option > Birthday</option>\n          <option > Festival</option>\n          <option > Galas</option>\n          <option > Award Programs</option>\n          <option > Lunch</option>\n          <option > Wedding</option>\n          <option > Reunion</option>\n          <option > Anniversary</option>\n          <option > Dinner</option>\n          <option > Sports</option>\n          <option > Kickback</option>\n\n        </select></ion-row>\n<ion-row>\n  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="price" > ${{price}}</p>\n  <p class="input-pass" style=" margin-left: 10px;color: #fff;" *ngIf="!price" > Price</p> </ion-row>\n  <ion-range min="5" max="50" step="5" snaps="true"  pin="true" (ionChange)="rangeprice($event)" [(ngModel)]="brightness">\n    <ion-icon small range-left name="logo-usd"></ion-icon>>\n     <ion-icon range-right name="logo-usd"></ion-icon>\n   </ion-range>\n\n      <ion-row class="heading"> <p>EVENTS DATE</p></ion-row>\n  <ion-grid>  \n      <ion-row class="dateline">\n\n<ion-col col-2 class="col-one">\n<img src="img/innericon1.png"/>\n  </ion-col>\n<ion-col col-6 class="col-second">\n<p id="yearr"> {{daytime| date: \'MMMM d,yyyy\'}} </p>\n<!--<p id="yearr">September 30,2017 </p>-->\n  </ion-col>\n  <ion-col col-4 class="col-third" (click)="selectday()">\n<span>Day</span>\n  </ion-col>\n </ion-row>\n </ion-grid>\n\n\n   <ion-grid>  \n      <ion-row class="dateline">\n\n<ion-col col-2 class="col-one">\n<img src="img/innericon2.png"/>\n  </ion-col>\n<ion-col col-6 class="col-second" >\n<p id="timee">{{time| date: \'EEEE H:mm\'}} </p>\n<!--<p id="timee">Wednesday 06:34 </p>-->\n  </ion-col>\n  <ion-col col-4 class="col-third" (click)="selecttime()">\n<span class="time">Time</span>\n  </ion-col>\n </ion-row>\n </ion-grid>\n   <ion-grid>  \n<ion-row class="cemra">\n\n<ion-col col-5 class="col-second">\n<p>Photos</p>\n  </ion-col>\n<ion-col col-7 class="col-img"> \n<img src="img/cemra.png"  (click)="selimages(1)" />\n<img src="img/add.png"  (click)="selimages(2)"/>\n</ion-col>\n </ion-row>\n </ion-grid>\n\n<ion-row class="images-down">\n  <span class="imgggrid" *ngIf="imageurl " >\n  <img  class="selimg" [src]="imageurl"/>\n  </span>\n<span class="imgggrid" *ngFor="let imgg of imagearray">\n  <img class="selimg"  [src]=\'imgg\' />\n</span>\n  </ion-row>\n\n<ion-grid>  \n<ion-row class="cemra">\n\n<ion-col col-5 class="col-second">\n<p>Video</p>\n  </ion-col>\n<ion-col col-7 class="col-img">\n<img src="img/videonew.png" (click)="selimages(3)"/>\n<img src="img/add.png" (click)="selimages(4)"/>\n  </ion-col>\n	\n </ion-row>\n </ion-grid>\n<ion-row class="video-main" *ngIf="videourl">\n    <video  width="100%" height="200" id="video1" poster="img/postr.jpg"   [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>\n    <img  *ngIf="status==\'playimg\'"  src="img/play.png"  (click)="play()" />\n		<img  *ngIf="status==\'pauseimg\'" src="img/pause.png" (click)="play()" />\n		<img  class="vol-img"   *ngIf="vol==\'unmute\'" src="img/volume.png"  (click)="volume()" />\n    <img  class="vol-img"  *ngIf="vol==\'mute\'" src="img/mute.png" (click)="volume()" />\n  </ion-row>\n<ion-row class="post" (click)="post(imagearray,eventtype,price,videourl)"><span>Post</span></ion-row>\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/addeventinner/addeventinner.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_8_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__["a" /* File */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__["a" /* File */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__["a" /* Camera */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_media_capture__["a" /* MediaCapture */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_media_capture__["a" /* MediaCapture */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _l || Object, typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__["a" /* DatePicker */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_date_picker__["a" /* DatePicker */]) === "function" && _m || Object, typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _o || Object])
 ], AddeventinnerPage);
@@ -1263,8 +1295,8 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LikestabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__otherprofile_otherprofile__ = __webpack_require__(358);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1308,10 +1340,9 @@ LikestabPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-likestab',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/likestab/likestab.html"*/'\n\n\n<ion-content >\n     \n<ion-row class="tiles" *ngFor="let post of likesdata;let i=index;">\n   <img [src]="post.profile_img"/>\n   <p class="name">{{post.name}}</p>\n<p class="next">  \n    <button ion-button (click)="view(post.user_id)" class="btn-follow" >View profile</button>\n</p>\n</ion-row>\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/likestab/likestab.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], LikestabPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=likestab.js.map
 
 /***/ }),
@@ -1325,7 +1356,7 @@ var _a, _b, _c, _d, _e;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__imagessother_imagessother__ = __webpack_require__(359);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__videossother_videossother__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1384,8 +1415,8 @@ OtherprofilePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImagessotherPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_in_app_browser__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1448,8 +1479,8 @@ ImagessotherPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideossotherPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__comments_comments__ = __webpack_require__(73);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1504,8 +1535,8 @@ VideossotherPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommenttabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__ = __webpack_require__(40);
@@ -1644,10 +1675,9 @@ CommenttabPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-commenttab',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/'<!--<ion-content >\n<p *ngIf="commentdata==null">Post your comment here</p>\n\n<ion-row class="comment" *ngFor="let post of commentdata;let i=index;">\n  <img [src]="post.profile_img"/>\n  <p class="heading">{{post.name}}</p> \n  <p class="comments">{{post.comment}}</p>\n<ul>\n \n <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>10:30AM</a></li>\n    <li><a href="#"> \n        <ion-icon class="comment-icon" *ngIf="post.likeStatus==false" name="thumbs-up" (click)=like(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n        <ion-icon class="comment-icon" style="color:#2370b5;" *ngIf="post.likeStatus==true" name="thumbs-up" (click)=unlike(afstatus1[post.id].Likes,afstatus1[post.id].$key,i,post.id)></ion-icon>\n  {{afstatus1[post.id].Likes}}    \n\n  </a></li>\n   </ul>\n    </ion-row>\n</ion-content>\n<ion-footer>\n  <ion-row>\n    <ion-input class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-input>\n      <button ion-button (click)="send(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>\n\n  </ion-row>\n\n    </ion-footer>-->\n\n\n<ion-content >\n<p *ngIf="!afstatus1">Post your comment here</p>\n\n<ion-row class="comment" *ngFor="let cmt of afstatus1">\n <img [src]="cmt.profile_img"/>\n  <p class="heading">{{cmt.name}}</p> \n  <p class="comments">{{cmt.comment}}</p>\n<ul>\n <li><a href="#"> <ion-icon class="comment-icon" md="ios-time"></ion-icon>{{cmt.createdAt| date: \'h:mm a\' }}</a></li>\n    <li><a href="#"> \n        <ion-icon class="comment-icon" [ngClass]="commentstatus" name="thumbs-up" (click)=like(cmt.$key,cmt.Likes,cmt.user_ids)></ion-icon>\n       <!-- <ion-icon class="comment-icon" style="color:#2370b5;" name="thumbs-up" (click)=unlike()></ion-icon>-->\n  {{cmt.Likes}}\n  </a></li>\n   </ul>\n    </ion-row>\n<ion-footer>\n  <ion-row class="comment-row">\n    <ion-textarea class="reply" type="text" placeholder="Write your message..." [(ngModel)]="commenttext"></ion-textarea >\n       <button ion-button (click)="senddd(afstatus[0].Commentcount,afstatus[0].$key)">Send</button>\n\n  </ion-row>\n   </ion-footer>\n\n</ion-content>\n\n\n'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/commenttab/commenttab.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_5_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], CommenttabPage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=commenttab.js.map
 
 /***/ }),
@@ -1705,7 +1735,7 @@ ChatslistPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2_database__ = __webpack_require__(40);
@@ -1997,6 +2027,8 @@ SignupPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventinnerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2008,21 +2040,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var EventinnerPage = (function () {
-    function EventinnerPage(navCtrl, navParams) {
+    function EventinnerPage(http, storage, navCtrl, navParams) {
+        var _this = this;
+        this.http = http;
+        this.storage = storage;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.eventstatus = [];
+        this.photos = [];
+        this.apiurl = 'http://briiddge.com/';
+        this.storage.get('usrid').then(function (usrid) {
+            // this.http.get(this.apiurl+"fetchEvents?user_id="+usrid).map(res => res.json()).subscribe(data => {
+            //   this.eventstatus=data;
+            // })
+            _this.http.get(_this.apiurl + "fetchEventsAll?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
+                if (data.status != 'Failed') {
+                    _this.eventstatus = data;
+                }
+                else {
+                    alert('Records not found');
+                }
+            });
+        });
     }
-    EventinnerPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EventinnerPage');
-    };
     return EventinnerPage;
 }());
 EventinnerPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-eventinner',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/eventinner/eventinner.html"*/'\n<ion-header>\n <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>\n    </button>\n        <ion-title >Events</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content class="background">\n<ion-grid class="grid-padding">\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">10:30AM</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n        <ion-icon class="icons" ios="ios-mail-outline" md="ios-mail-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n<p class="right-para">Lorem ipsum dolor sit amet elit sed do eiusmod tempor sed do eiusmod tempor.Lorem ipsum dolor sit amet elit sed...  </p>\n<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n<span class="first-icon"><ion-icon ios="ios-people-outline" md="ios-people-outline"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n\n\n<ion-grid>\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">10:30AM</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n        <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n <p class="img-div"><img src="img/back-profile.jpg"/></p> \n<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n<span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n\n\n<ion-grid class="grid-padding">\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">10:30AM</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n            <ion-icon class="icons" ios="ios-mail-outline" md="ios-mail-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n<p class="right-para">Lorem ipsum dolor sit amet elit sed do eiusmod tempor sed do eiusmod tempor. </p>\n<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n<span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n\n\n<ion-grid>\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">10:30AM</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n              <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n <p class="img-div"><img src="img/back-profile.jpg"/></p> \n<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n<span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/eventinner/eventinner.html"*/,
+        selector: 'page-eventinner',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/eventinner/eventinner.html"*/'\n<ion-header>\n <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>\n    </button>\n        <ion-title >Events</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="background">\n<div *ngFor="let ev of eventstatus;let i=index;">\n<ion-grid class="grid-padding" *ngIf="ev.photos[0]==\'\' &&  (ev.description) " >\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">{{ev.created | date: \'EEEE H:mm\'}}</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n        <ion-icon class="icons" ios="ios-mail-outline" md="ios-mail-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n<p class="right-para" >{{ev.description}} </p>\n<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n<span class="first-icon"><ion-icon ios="ios-people-outline" md="ios-people-outline"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n</div>\n<div *ngFor="let e of eventstatus;">\n<ion-grid  *ngIf="e.photos[0]!=\'\' ">\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">{{e.created | date: \'EEEE H:mm\'}}</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n        <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n    <p class="img-div" ><img [src]="e.photos[0]"/></p> \n    <p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n    <span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n    <span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n    <span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n</div>\n<div *ngFor="let ev of eventstatus;">\n<ion-grid class="grid-padding" *ngIf="ev.video!=\'\' &&(ev.video!=\'undefined\')">\n  <ion-row class="row-padding">\n    <ion-col col-2 class="first-col padding-col">\n    <p class="time">{{ev.created | date: \'EEEE H:mm\'}}</p>\n    </ion-col>\n    <ion-col  col-2 class="padding-col">\n            <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>\n    </ion-col>\n    <ion-col col-8 class="msgcol">\n <p class="img-div" >\n      <video [src]="ev.video" controls controlsList="nodownload" ></video></p> \n      <p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>\n      <span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> \n      <span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>\n      <span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>\n\n    </ion-col>\n    </ion-row>\n    <ion-row class="side-line">\n  </ion-row>\n</ion-grid>\n</div>\n\n\n</ion-content>'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/eventinner/eventinner.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], EventinnerPage);
 
 //# sourceMappingURL=eventinner.js.map
@@ -2198,7 +2248,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_settings_settings__ = __webpack_require__(392);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_imagessother_imagessother__ = __webpack_require__(359);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_videossother_videossother__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ionic_native_status_bar__ = __webpack_require__(297);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__ionic_native_splash_screen__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_angularfire2__ = __webpack_require__(66);
@@ -2210,7 +2260,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_calendar__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_onesignal__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_date_picker__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__ionic_native_device__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__ionic_native_image_picker__ = __webpack_require__(356);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__ionic_native_in_app_browser__ = __webpack_require__(196);
@@ -2377,12 +2427,12 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_onesignal__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_briddggehome_briddggehome__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_addeventspost_addeventspost__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_eventinner_eventinner__ = __webpack_require__(389);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_members_members__ = __webpack_require__(390);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_request_request__ = __webpack_require__(391);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_settings_settings__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_Rx__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_profile_profile__ = __webpack_require__(60);
@@ -2548,8 +2598,8 @@ MyApp = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__videoshome_videoshome__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__livevideoshome_livevideoshome__ = __webpack_require__(343);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__profile_profile__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addeventspost_addeventspost__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__comments_comments__ = __webpack_require__(73);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2588,7 +2638,7 @@ var BriddggeHomePage = (function () {
         //this.uid=this.navParams.get('userid');
         this.apiurl = 'http://briiddge.com/';
         this.storage.get('usrid').then(function (usrid) {
-            _this.http.get("http://kanchan.mediaoncloud.com/briddgge/recentPostUsers?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
+            _this.http.get(_this.apiurl + "recentPostUsers?user_id=" + usrid).map(function (res) { return res.json(); }).subscribe(function (data) {
                 _this.stories = data;
                 _this.imgcount = _this.stories[0].imgCount;
                 _this.videocount = _this.stories[0].vidCount;
@@ -2617,10 +2667,9 @@ BriddggeHomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-briddggehome',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/briddggehome/briddggehome.html"*/'<ion-header>\n <ion-navbar hideBackButton>\n    <button ion-button menuToggle>\n      <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n<ion-scroll scrollX="true" class="first-scroll top-scroll">\n      <ion-card >\n      <img class="storyimg" *ngIf="profiledata.img" [src]="profiledata.img" /> \n      <button ion-button class="addstory" (click)="addstory()"> \n       <ion-icon class="addicon" ios="ios-add" md="md-add"></ion-icon>\n      </button>\n      <a>{{profiledata.name}}</a>\n    </ion-card>\n    <ion-card *ngFor="let story of stories;">\n      <img *ngIf="story.profile_img" [src]="story.profile_img" (click)="openstory(story.post_id)" />\n      <a>{{story.name}}</a>\n    </ion-card>\n  </ion-scroll>\n\n <ion-tabs style="position:relative;height:92%;top:2%;">\n <ion-tab [root]="tab1Root"  tabBadge="{{imgcount}}" tabBadgeStyle="danger"  tabTitle="Images"> </ion-tab>  \n  <ion-tab [root]="tab2Root"   tabBadge="{{videocount}}" tabBadgeStyle="danger" tabTitle="Videos"></ion-tab>\n   <ion-tab [root]="tab3Root"  tabBadge="25" tabBadgeStyle="danger" tabTitle="Live Videos"></ion-tab>\n</ion-tabs>\n\n\n<ion-footer class="bottom-footer">\n      <ion-icon ios="ios-home" md="md-home" (click)="home()" ></ion-icon>\n      <ion-icon ios="ios-search" md="md-search"></ion-icon>\n      <ion-icon ios="ios-heart" md="md-heart"></ion-icon>\n      <ion-icon ios="ios-person" md="md-person" (click)="profile()"></ion-icon>\n    </ion-footer>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/briddggehome/briddggehome.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
 ], BriddggeHomePage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=briddggehome.js.map
 
 /***/ }),
@@ -2633,8 +2682,8 @@ var _a, _b, _c, _d, _e, _f;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__videoss_videoss__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__imagess_imagess__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__briddggehome_briddggehome__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2716,9 +2765,9 @@ ProfilePage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__briddggehome_briddggehome__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__likestab_likestab__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__commenttab_commenttab__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2775,10 +2824,9 @@ CommentsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-comments',template:/*ion-inline-start:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/comments/comments.html"*/'<ion-header>\n	<ion-navbar hideBackButton="true">\n		 <ion-icon name="arrow-round-back" (click)="back()" style="font-size: 2.0em; color: #fff;margin: 5px;"></ion-icon>\n  	</ion-navbar>\n</ion-header>\n<ion-content>\n<ion-row class="post-heading">\n		<img *ngIf="commentdata.profile_img" [src]="commentdata.profile_img" /><h5>{{commentdata.name}}</h5>\n		</ion-row>\n		<ion-row class="post-inner">\n			<p></p>\n			<img *ngIf="commentdata.img!=null &&(commentdata.img!=\'\')" [src]="commentdata.img" />\n		<video  *ngIf="commentdata.video" controls="controls" width="100%" height="180"  [src]="commentdata.video"   controlsList="nodownload"></video>\n      <p *ngIf="commentdata.message!=\'undefined\'">{{commentdata.message}} </p>\n</ion-row>\n \n  <ion-tabs class="new-tab" style="position:relative;height:100%;margin-top: 5px;">\n			<ion-tab [root]="tab2Root " tabIcon="md-chatbubbles" tabBadge="{{afstatus[0].Commentcount}}" [rootParams]="postid"></ion-tab>\n\n		<ion-tab [root]="tab1Root" tabBadge="{{afstatus[0].Likecount}}" tabIcon="md-thumbs-up" [rootParams]="postid"></ion-tab>\n\n		<ion-tab  tabIcon="share-alt" (ionSelect)="share()"> </ion-tab>\n	</ion-tabs>\n\n</ion-content>\n\n'/*ion-inline-end:"/home/moc/Desktop/All Projects/Briidgge/Briddgge/src/pages/comments/comments.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]])
 ], CommentsPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=comments.js.map
 
 /***/ }),
@@ -3135,8 +3183,8 @@ HomePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_date_picker__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase__);

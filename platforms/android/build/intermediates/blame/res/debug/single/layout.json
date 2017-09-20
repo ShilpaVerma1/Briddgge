@@ -32,12 +32,12 @@
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/res/layout/notification_template_big_media_narrow_custom.xml"
-    },
-    {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
@@ -84,12 +84,12 @@
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_cancel_action.xml"
-    },
-    {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/layout/actionbar_custom_view_done_discard.xml",

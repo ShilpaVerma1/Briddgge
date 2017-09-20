@@ -3,12 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.2.2/jars/classes.jar"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="1d2ee92c55b107ec366ddb534edae4548201e25b">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.2.2_9ae7236302353f120f68616c5346ad1d6c06b0b2.jar" />
+        sha1="49743d94bd8f62b64049c3e3065c18598ce2ca7f">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.4.0_93f3e9d137a0fb256ac8f354ae5bd07a91e58780.jar" />
     </item>
     <item
         is-multidex="false"
@@ -30,12 +30,84 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="453427e529ccd47ef859c7d739a59ab32f7f14ee">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.4.0_07459c2a7e4568e0c9bebc427a714b8046b3ae7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_da35398dbc38559907ac4f6a0342883b079243f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8f34896233f3fe6ecb75025e06b33980cee8239a">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.4.0_bf3fb6b02a71b32f1757a79bcb043663017a2335.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_bf376689f805146fdc4f1507cf08148073b4edbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f32a31f3449f318d8f76b627644a19531285a0d6">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-11.4.0_4bb97472a15446b3436db0e085d6f694cb1f297b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_b7e9faffd895cf8da21239ade883cd3e9b091a93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_51aba97b3aa071f651276cc2c450467f93776b5a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e6fff1d276738bb82cfc131c49d2e72a47dfd0aa">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-customtabs-26.1.0_5c55b480e05274d8e7ad81a461276f1bd0ad3357.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/moc/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_c07efe69ec45c7dc71c78a8ce36fac8acad41d16.jar" />
     </item>
     <item
         is-multidex="false"
@@ -57,39 +129,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="81731aca8a4bb4974bd5430f840cfea96c7017f0">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-11.4.0_879ae90ee1f8afb6fa3157c085aa413de49227c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="508f50705b4fde51a16259f29c854201a3044516">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_65d5b9546aebbf80c1841444f36c6903f8699d88.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.2.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b35ff61463403c8aa7820fc2fa7caf6a29e31c2c">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-11.2.2_706a9973604602b1170bef6ef6d05462138aae18.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_bf376689f805146fdc4f1507cf08148073b4edbc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.2.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="7ed36108b22a98a311676b5ad153d1e3587fcd16">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.2.2_6b81fc1abc86189906dd21f849970395037967dd.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,48 +156,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.2.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a1c4ae24ce3c755b3ef7d79a343acfadfb0b097e">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-11.2.2_f118740f5939e73a4f493a4a9c246e464c962e7b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.2.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="cf47665b22d68f560d1b8fa2e51b8c23a34574f2">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.2.2_d33d452b305c753724cc901136a0ec0f6cb5aa2d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/11.2.2/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="73d3d4e86f3d6da0dd1987f7cff9fb07d5a36132">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-11.2.2_c3c54e1df23f40a651e2df7dec0b6557798564f0.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_0abe367de6ef2eba86c28a0450b863225e6af315.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_b7e9faffd895cf8da21239ade883cd3e9b091a93.jar" />
     </item>
     <item
         is-multidex="false"
@@ -156,21 +174,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ed3fc7c06f23dead13772eca1140a58f2960af0f">
+        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-11.4.0_9b598d0f31ac290fd4eb0b855d9b59a29d9437b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_d26c0ca97ff1cdd5c8117f2deecd3489f473b084.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_51aba97b3aa071f651276cc2c450467f93776b5a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -183,30 +201,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e6fff1d276738bb82cfc131c49d2e72a47dfd0aa">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-customtabs-26.1.0_5c55b480e05274d8e7ad81a461276f1bd0ad3357.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/moc/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
         <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-26.1.0_b3f02c2850509541293d4ae0fb5d84b2677ee324.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/moc/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/pre-dexed/debug/common-1.0.0_c07efe69ec45c7dc71c78a8ce36fac8acad41d16.jar" />
     </item>
 
 </items>

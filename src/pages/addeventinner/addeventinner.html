@@ -11,6 +11,8 @@
  <ion-row class="heading"> <p>ADD EVENTS</p></ion-row>
 <ion-row> <ion-input   placeholder="Name" class="input-pass" name="eventname" [(ngModel)]="eventname"></ion-input> </ion-row>
 <ion-row> <ion-input   placeholder="Location" class="input-pass" name="eventlocation" [(ngModel)]="eventlocation"></ion-input> </ion-row>
+<ion-row> <ion-input   placeholder="Message" class="input-pass" name="message" [(ngModel)]="message"></ion-input> </ion-row>
+
 <ion-row class="row-padding">  
   <span style="color:#fff;margin-bottom:-10px;" *ngIf="!eventtype">Event type</span>    
   <select  placeholder="Event type" onmousedown="this.value='';" name="eventtype" [(ngModel)]="eventtype" (change)="onChange(eventtype)" >		
@@ -48,6 +50,7 @@
   </ion-col>
 <ion-col col-6 class="col-second">
 <p id="yearr"> {{daytime| date: 'MMMM d,yyyy'}} </p>
+<!--<p id="yearr">September 30,2017 </p>-->
   </ion-col>
   <ion-col col-4 class="col-third" (click)="selectday()">
 <span>Day</span>
@@ -64,7 +67,7 @@
   </ion-col>
 <ion-col col-6 class="col-second" >
 <p id="timee">{{time| date: 'EEEE H:mm'}} </p>
-
+<!--<p id="timee">Wednesday 06:34 </p>-->
   </ion-col>
   <ion-col col-4 class="col-third" (click)="selecttime()">
 <span class="time">Time</span>
@@ -89,7 +92,7 @@
   <img  class="selimg" [src]="imageurl"/>
   </span>
 <span class="imgggrid" *ngFor="let imgg of imagearray">
-  <img class="selimg" *ngIf="imagearray" [src]='imgg' />
+  <img class="selimg"  [src]='imgg' />
 </span>
   </ion-row>
 
@@ -106,35 +109,12 @@
 	
  </ion-row>
  </ion-grid>
-<ion-row>
-    	<!--<video  width="100%" height="200" *ngIf="videourl" controls [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>-->
- <vg-player (onPlayerReady)="onPlayerReady($event)"  *ngIf="videourl"  >
-    <vg-overlay-play></vg-overlay-play>
-    <vg-buffering></vg-buffering>
-
-    <vg-controls>
-        <vg-play-pause style="border: 1px solid #fff;"></vg-play-pause>
-        <vg-playback-button></vg-playback-button>
-
-        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-        <!--<vg-scrub-bar>
-            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-        </vg-scrub-bar>
-        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>-->
-
-        <vg-track-selector></vg-track-selector>
-        <vg-mute></vg-mute>
-        <vg-volume></vg-volume> 
-  <!--<vg-fullscreen></vg-fullscreen>-->
-    </vg-controls>
-
-    <video [vgMedia]="media" #media id="singleVideo" preload="auto" crossorigin>
-        <source [src]="videourl" type="video/mp4">
-    </video>
-</vg-player>
+<ion-row class="video-main" *ngIf="videourl">
+    <video  width="100%" height="200" id="video1" poster="img/postr.jpg"   [src]="videourl" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>
+    <img  *ngIf="status=='playimg'"  src="img/play.png"  (click)="play()" />
+		<img  *ngIf="status=='pauseimg'" src="img/pause.png" (click)="play()" />
+		<img  class="vol-img"   *ngIf="vol=='unmute'" src="img/volume.png"  (click)="volume()" />
+    <img  class="vol-img"  *ngIf="vol=='mute'" src="img/mute.png" (click)="volume()" />
   </ion-row>
 <ion-row class="post" (click)="post(imagearray,eventtype,price,videourl)"><span>Post</span></ion-row>
 

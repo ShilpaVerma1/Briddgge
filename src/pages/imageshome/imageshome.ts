@@ -19,7 +19,7 @@ apiurl:any;
 
 constructor(private app: App,db: AngularFireDatabase,private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
  this.db=db;
- this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
+ this.apiurl='http://briiddge.com/';
  this.storage.get('usrid').then((usrid)=>{
  this.http.get("http://briiddge.com/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
           this.status=data;

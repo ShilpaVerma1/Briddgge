@@ -2,10 +2,18 @@ page-eventinner {
  .first-col{    padding: 0px;
     padding-top: 6px;
 }
+video{
+    width:88%;
+    height:110px;
+}
+ion-icon {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 500}
 .toolbar-title-md{
     color:#fff
 }
-.img-div img{    height: 100px;}
+.img-div img{   width:88%; height: 100px;}
 .padding-col{padding-top:10%;}
     .msg-col{margin: 1em 0px;}
  .background{ 
@@ -45,12 +53,12 @@ page-eventinner {
     height: 1.3em;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
+    width: 88%;
     
     }
     .first-icon{    color: #fff;
     margin-right: 9px;
-    font-size: 14px;}
+    font-size: 17px;}
        .first-icon span{margin-left:5px;}
        .side-line{    border-right: 2px solid #fff;
     width: 24%;

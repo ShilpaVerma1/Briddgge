@@ -42,7 +42,7 @@ loginUser(email, password): any {
    this.submitAttempt = true;
    if (this.loginForm.valid){
      this.error='';
-       this.http.get(this.apiurl+"login?email="+email+"&password="+password).map(res => res.json()).subscribe(data => {
+       this.http.get(this.apiurl+"applogin?email="+email+"&password="+password).map(res => res.json()).subscribe(data => {
           if(data.status!='Failed'){
             this.storage.set('usrid',data.id);
 

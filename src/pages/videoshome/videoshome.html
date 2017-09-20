@@ -2,7 +2,7 @@
 </ion-header>
 
 <ion-content >
-<div  *ngFor="let post of status let i=index;">
+<div  *ngFor="let post of status; let i=index;">
 <div *ngIf=" post.video">
 	<ion-row class="post-heading" >
 		<img [src]="post.profile_img" /><h5>{{post.name}}</h5>
@@ -11,10 +11,12 @@
 	<ion-row  class="post-inner">
 		<p *ngIf="post.message!='undefined'">{{post.message}}</p>
 		<div class="video-main">
-		<video  width="100%" height="200" controls id="{{post.id}}" [src]="post.video" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
-		<!--<img  *ngIf="test=='playimg'" src="img/playbutton.png"  (click)="play(post.id,i)" />
-		<img  *ngIf="test=='pauseimg'" src="img/pause.png" (click)="play(post.id,i)" />-->
-		
+		<video  width="100%" height="250"  id="{{post.id}}" [src]="post.video" poster="img/postr.jpg" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
+		<img  *ngIf="test[i].status=='playimg'"  src="img/play.png"  (click)="play(post.id,i)" />
+		<img  *ngIf="test[i].status=='pauseimg'"  src="img/pause.png" (click)="play(post.id,i)" />
+		<img  class="vol-img"   *ngIf="test[i].vol=='unmute'" src="img/volume.png"  (click)="volume(post.id,i)" />
+    	<img  class="vol-img"  *ngIf="test[i].vol=='mute'" src="img/mute.png" (click)="volume(post.id,i)" />
+
 		</div>
 	</ion-row>
 	<ion-row class="post-comments" >

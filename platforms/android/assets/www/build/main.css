@@ -25343,6 +25343,11 @@ video::-webkit-media-controls-panel {
   width: calc(100% + 40px);
 }
 
+page-addeventinner {
+  /*********Video player CSS*********/
+  /******************/
+}
+
 page-addeventinner .images-down {
   padding: 0;
   margin: 1.1%;
@@ -25358,6 +25363,36 @@ page-addeventinner vg-playback-button {
   font-weight: bold;
 }
 
+page-addeventinner .video-main {
+  background: black;
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+page-addeventinner .video-main .vol-img {
+  position: absolute;
+  top: 74%;
+  left: 88%;
+  bottom: 0;
+  height: 28px;
+  width: 23px;
+  margin: auto;
+}
+
+page-addeventinner .video-main img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
 page-addeventinner vg-time-display {
   font-size: 20px;
   font-weight: bold;
@@ -25369,6 +25404,8 @@ page-addeventinner #singleVideo {
 }
 
 page-addeventinner .imgggrid img {
+  height: 120px;
+  width: 100%;
   margin: 0px;
   padding: 2px;
 }
@@ -26411,11 +26448,23 @@ page-eventinner .first-col {
   padding-top: 6px;
 }
 
+page-eventinner video {
+  width: 88%;
+  height: 110px;
+}
+
+page-eventinner ion-icon {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
 page-eventinner .toolbar-title-md {
   color: #fff;
 }
 
 page-eventinner .img-div img {
+  width: 88%;
   height: 100px;
 }
 
@@ -26472,13 +26521,13 @@ page-eventinner .right-para {
   height: 1.3em;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 88%;
 }
 
 page-eventinner .first-icon {
   color: #fff;
   margin-right: 9px;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 page-eventinner .first-icon span {
@@ -28293,6 +28342,16 @@ page-videoshome .video-main {
   position: relative;
 }
 
+page-videoshome .video-main .vol-img {
+  position: absolute;
+  top: 74%;
+  left: 88%;
+  bottom: 0;
+  height: 28px;
+  width: 23px;
+  margin: auto;
+}
+
 page-videoshome .video-main img {
   position: absolute;
   left: 0;
@@ -28302,10 +28361,6 @@ page-videoshome .video-main img {
   height: 50px;
   width: 60px;
   margin: auto;
-}
-
-page-videoshome .playimg {
-  display: none;
 }
 
 page-videoss video::-webkit-media-controls-enclosure {

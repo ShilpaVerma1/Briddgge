@@ -13,16 +13,18 @@ import { AngularFireDatabaseModule, FirebaseListObservable, AngularFireDatabase}
 })
 export class VideoshomePage {
 status:any=[];video:any;
-test:any;
+test:any=[];
 db:any;
 afstatus:Array <FirebaseListObservable<any>>;
   constructor(db: AngularFireDatabase,private app: App,private storage: Storage,public http:Http,public navCtrl: NavController, public navParams: NavParams) {
-  this.test='playimg';
   this.db=db;
   
   this.storage.get('usrid').then((usrid)=>{
     this.http.get("http://briiddge.com/fetchStatusAll?user_id="+usrid).map(res => res.json()).subscribe(data => {
             this.status=data;
+            for(let i = 0; i < this.status.length; i++){
+              this.test.push({status:'playimg',vol:'unmute'});
+            }
     })
   })
         var refNew = this.db.list('/Count/', { query: {
@@ -42,27 +44,34 @@ afstatus:Array <FirebaseListObservable<any>>;
          })
         })
 }
+volume(pid,index){
+   this.video=document.getElementById(pid);
+
+   if (!this.video.muted) {
+        this.video.muted = true;
+        this.test[index].vol='mute';
+    } else {
+        this.video.muted = false;
+        this.test[index].vol='unmute';
+    }
+}
   play(pid,index){
     
     this.video=document.getElementById(pid);
     if(this.video.paused===false){
-        this.test='playimg';
+        this.test[index].status='playimg';
         this.video.pause();
-         // btn.textContent= ">";
-
       }
       else{
-          this.test='pauseimg';
-          this.video.play();
-       // btn.textContent= "||";
-        
+           this.test[index].status='pauseimg';
+          this.video.play();        
       }
   }
 like(afcount,afkey,index,pid){
   var newcount=JSON.parse(afcount)+1;
   this.status[index].likeStatus=true;
     this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=1").map(res => res.json()).subscribe(data => {
+        this.http.get("http://briiddge.com/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=1").map(res => res.json()).subscribe(data => {
         })
     })
     var ref=this.db.list('/Count/'+pid);
@@ -75,7 +84,7 @@ unlike(afcount,afkey,index,pid){
   var newcount=JSON.parse(afcount)-1;
   this.status[index].likeStatus=false;
     this.storage.get('usrid').then((usrid)=>{
-        this.http.get("http://kanchan.mediaoncloud.com/briddgge/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=0").map(res => res.json()).subscribe(data => {
+        this.http.get("http://briiddge.com/likeStatus?user_id="+usrid+"&post_id="+pid+"&likeStatus=0").map(res => res.json()).subscribe(data => {
         })
     })
     var ref=this.db.list('/Count/'+pid);

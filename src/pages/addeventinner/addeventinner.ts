@@ -11,9 +11,9 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
 import * as firebase from 'firebase';
 import { Http } from '@angular/http';
-import {VgAPI} from 'videogular2/core';
-import {VgControlsModule} from 'videogular2/controls';
 
+import * as jQuery from 'jquery';
+import * as $ from 'jquery';
 declare var window;
 
 @Component({
@@ -28,15 +28,44 @@ captureDataUrl:any;
 videourl:any;
 MediaFile:any;
 imageurl:any;
-imagearray:any;
+imagearray:any=[];
 apiurl:any;
-api:VgAPI;
+video:any;
+message:any;
+url:any;
+status:any;
+vol:any;
 constructor(public storage:Storage,public http:Http,public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
-    this.apiurl='http://kanchan.mediaoncloud.com/briddgge/';
-   //this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
- 
+    this.apiurl='http://briiddge.com/';
+   // this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+    this.status="playimg";
+    this.vol="mute";
 }
+volume(){
+   this.video=document.getElementById('video1');
 
+   if (!this.video.muted) {
+        this.video.muted = true;
+        this.vol='mute';
+
+    } else {
+        this.video.muted = false;
+        this.vol='unmute';
+
+    }
+}
+  play(){
+    
+    this.video=document.getElementById('video1');
+    if(this.video.paused===false){
+        this.status='playimg';
+        this.video.pause();
+      }
+      else{
+           this.status='pauseimg';
+          this.video.play();        
+      }
+  }
 rangeprice(ev:any){
   this.price=ev._value;
 }
@@ -100,8 +129,6 @@ selimages(index){
           loading.present(); 
           imageRef.putString(this.captureDataUrl,firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
             this.imageurl=snapshot.downloadURL;
-              loading.dismiss();
-
           })
           loading.dismiss();
 
@@ -114,33 +141,35 @@ selimages(index){
 /*************Accessing multiple images from gallery & upload**************/
 
   if(index==2){
-        this.imagearray=[];
         let options = {
-        // maximumImagesCount: 8,
+           maximumImagesCount: 6,
         // width: 500,
         // height: 500,
          quality: 100
         }
     this.imagePicker.getPictures(options).then((results) => {
-      let imageURLs=[];
+      //let imageURLs=[];
       let storagee = firebase.storage().ref();
 
       for (var i = 0; i < results.length; i++) {
-     
+        this.url='';
          var imagePath = results[i].substr(0, results[i].lastIndexOf('/') + 1);
          var imageName = results[i].substr(results[i].lastIndexOf('/') + 1);
          this.file.readAsDataURL(imagePath, imageName).then((b64str) => {
             const filename = Math.floor(Date.now() / 1000);
             const imageRef = storagee.child(`eventimages/${filename}.jpg`);          
+            
             let loading = this.loadingCtrl.create({
                 spinner: 'ios',
                 content: 'Uploading...',
             });
             loading.present(); 
             imageRef.putString(b64str,firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
-              this.imageurl=snapshot.downloadURL;
-              this.imagearray.push(this.imageurl);
-                loading.dismiss();
+               
+                  this.url=snapshot.downloadURL;
+                  this.imagearray.push(this.url);
+          
+              
             })
             loading.dismiss();
         }).catch(err => {
@@ -226,8 +255,9 @@ if(index==3){
             loading.present(); 
                firebase.storage().ref().child(`eventvideo/${name}`).put(blob).then((snapshot)=> {
                  this.videourl=snapshot.downloadURL;
-                loading.dismiss();
+            
               });
+                  loading.dismiss();
           };
            fileReader.readAsArrayBuffer(file);
          }, (error) => {
@@ -249,37 +279,30 @@ if(index==3){
     })
   }
 }
-onPlayerReady(api:VgAPI){
-     this.api = api;
-    
-    this.api.getDefaultMedia().subscriptions.ended.subscribe(
-        () => {
-            // Set the video to the beginning
-            this.api.getDefaultMedia().currentTime = 0;
-        }
-    );
-}
+
 onChange(ev){
 
 }
 post(aray,eventtype,price,vid){
   var time=document.getElementById('timee').innerHTML;
   var year=document.getElementById('yearr').innerHTML;
-
-    if(this.eventname!=undefined && this.eventlocation!=undefined && time!='' && year!='' && eventtype!=undefined && price!=undefined ||vid ){
+    if(this.message!=undefined && this.eventname!=undefined && this.eventlocation!=undefined && time!='' && year!='' && eventtype!=undefined && price!=undefined ||vid ){
   
       this.storage.get('usrid').then((usrid)=>{
-        this.http.get( this.apiurl+"saveEvent?user_id="+usrid+"&name="+this.eventname+"&location="+this.eventlocation+"&event_type="+eventtype+"&evt_date="+year+"&evt_time="+time+"&price="+price+"&video="+vid).map(res => res.json()).subscribe(data => {
+        this.http.get( this.apiurl+"saveEvent?user_id="+usrid+"&desc="+this.message+"&name="+this.eventname+"&location="+this.eventlocation+"&event_type="+eventtype+"&evt_date="+year+"&evt_time="+time+"&price="+price+"&video="+vid).map(res => res.json()).subscribe(data => {
           if(data.status=='Success'){
-          
             for(var i=0;i<aray.length;i++) {
               this.http.get(this.apiurl+"saveEventImage?evt_id="+data.id+"&img="+aray[i]).map(res => res.json()).subscribe(data => {
                   
               })
             }
-            this.platform.ready().then(() => {
-                window.plugins.toast.show('Event successfully posted', "long", "center");
-            })
+              this.platform.ready().then(() => {
+                  window.plugins.toast.show('Event successfully posted', "long", "center");
+              })
+          }else{
+              this.platform.ready().then(() => {
+                  window.plugins.toast.show('Status update failed', "long", "center");
+              })
           }
         })
       })

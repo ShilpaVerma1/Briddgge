@@ -92,4 +92,34 @@ font-weight:300;
     border: 2px solid #8e8e8e;
     border-radius: 14px;}
     .share-alt{font-size:32px;}
+    /*********Video player CSS*********/
+
+.video-main{  background: black;
+    width: 100%;
+    float:left;    margin-top: 8px;
+   // border-radius: 10px;
+    position: relative;
+}
+.video-main .vol-img{
+    position: absolute;
+    top: 74%;
+    left: 88%;
+    bottom: 0;
+    height: 28px;
+    width: 23px;
+    margin: auto;
+}
+.video-main img{  
+         position: absolute;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         height:50px;
+         width: 60px;
+         margin: auto;
+}
+
+ 
+/******************/
 }

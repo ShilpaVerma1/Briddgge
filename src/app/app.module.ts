@@ -30,6 +30,7 @@ import { OtherprofilePage } from '../pages/otherprofile/otherprofile';
 import { SettingsPage } from '../pages/settings/settings';
 import { ImagessotherPage } from '../pages/imagessother/imagessother';
 import { VideossotherPage } from '../pages/videossother/videossother';
+import { EventpostPage } from '../pages/eventpost/eventpost';
 
 import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -52,10 +53,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Network } from '@ionic-native/network';
 
-import {VgCoreModule} from 'videogular2/core';
-import {VgControlsModule} from 'videogular2/controls';
-import {VgOverlayPlayModule} from 'videogular2/overlay-play';
-import {VgBufferingModule} from 'videogular2/buffering';
+
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
     authDomain: "geofirebase-b42f3.firebaseapp.com",
@@ -74,7 +72,7 @@ import {VgBufferingModule} from 'videogular2/buffering';
     MembersPage,
     RequestPage,
     ProfilePage,
-    StorypostingPage,
+    StorypostingPage,EventpostPage,
     ImagessPage,ImagessotherPage,AddeventinnerPage,
     VideossPage,SettingsPage,VideossotherPage,
     ChatslistPage,OtherprofilePage,
@@ -92,10 +90,7 @@ import {VgBufferingModule} from 'videogular2/buffering';
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule   
+ 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -107,7 +102,7 @@ import {VgBufferingModule} from 'videogular2/buffering';
     MembersPage,
     RequestPage,
     ProfilePage,
-    StorypostingPage,
+    StorypostingPage,EventpostPage,
     ImagessPage,ImagessotherPage,AddeventinnerPage,
     VideossPage,SettingsPage,VideossotherPage,
     ChatslistPage,OtherprofilePage,

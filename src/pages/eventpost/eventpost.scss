@@ -1,0 +1,123 @@
+page-eventpost {
+    .para-row{width:100%;}
+.play-icon{    position: absolute;
+    right: 4%;
+    bottom: -8%;
+    font-size: 25px;
+    color: #fff;
+    background: #3989d2;
+    border-radius: 50%;
+    padding: 8px 12px 9px 17px;}
+    .main-div{position: relative;}
+    .extra-margin{margin-top:40px;}
+.main-div2 img  { 
+ box-shadow:2px 2px 8px 1px #c1c1c1;  height: 115px;     width: 32% !important;
+  
+    float: left;
+ margin: 0.2%;border: 1px solid #717171;}
+.heading1{ margin: 5px 0px 0px;font-size: 22px;color: #0f4b81;} 
+.heading2{ margin: 6px 0px;font-size: 18px; width: 100%;}
+.heading3{ margin: 6px 0px;font-size: 14px;}
+.heading3 span {
+    padding-right: 10px;
+    color: #3d3d3d;
+    font-size: 16px;
+    font-weight: 500;
+}
+.meassage{text-align:justify;}
+/*******************Tabs CSS********************/
+.tabs-md .tabbar{    bottom: -2px!important;
+    background-color : #fff!important;}
+
+    .tabs-md .tabbar{position: absolute!important;}
+    .new-tab .tabbar{position:relative;top:0px;}
+
+ .tabs-md .tabbar {
+    background-color: transparent;
+    height:60px;
+}
+.tabs-md .tabbar{width:100%;}
+     .scroll-content{      background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+ .tabs-md .tab-button{    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+}
+ .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+    color:#2370b5 !important;
+    position: absolute;
+    right: calc(72% - 25px);
+    font-size: 24px;
+}
+
+.has-icon .tab-button-icon, .has-title .tab-button-text {
+
+    color: #000!important;}
+.tabs-md .tab-button-text{font-size: 15px;
+    width: 80%;
+color:#000;
+font-weight:300;
+}
+    .tabs-md .tab-button[aria-selected=true] {
+      color: #000;
+    background-color: transparent;
+    padding: 0px !important;
+    border-radius: 14px;
+    border: 1px solid #636363;
+    margin-bottom: 4px;}
+
+
+    .tabs-md .tab-button[aria-selected=true] .tab-button-text{      font-size: 14px;
+    width: 80%;
+    text-align: center;
+    font-weight: 300; color:#000;}
+    .tabs-md .tabbar{position:relative;}
+.show-tab{position:relative;}
+
+
+.has-icon .tab-badge{    font-size: 14px;
+    background-color: transparent;
+    right: calc(38% - 20px);
+    border-radius: 50%;
+    padding: 4px;
+    top: 0px;
+    font-weight: 500;
+    color:#000;}
+
+    .tabs-md .tab-button-icon{font-size:25px;}
+    .tabs-md .tab-button {
+    min-height: 35px;}
+ .tabs-md .tab-button[aria-selected=true] .tab-button-icon .has-icon .tab-badge{color:#000;}
+ /*********Video player CSS*********/
+
+.video-main{  background: black;
+    width: 100%;
+    float:left;    margin-top: 8px;
+   // border-radius: 10px;
+    position: relative;
+}
+.video-main .vol-img{
+    position: absolute;
+    top: 74%;
+    left: 88%;
+    bottom: 0;
+    height: 28px;
+    width: 23px;
+    margin: auto;
+}
+.video-main img{  
+         position: absolute;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         height:50px;
+         width: 60px;
+         margin: auto;
+}
+
+ 
+/******************/
+}

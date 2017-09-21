@@ -1,50 +1,57 @@
 
 <ion-header>
- <ion-navbar>
+ <ion-navbar hideBackButton="true">
     <button ion-button menuToggle>
       <ion-icon name="menu" style="color:#fff;font-size:30px;"></ion-icon>
     </button>
-        <ion-title >Events</ion-title>
+       <ion-title >Events</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content class="background">
 <div *ngFor="let ev of eventstatus;let i=index;">
+  <div *ngIf="ev.video=='' || (ev.video=='undefined')">
 <ion-grid class="grid-padding" *ngIf="ev.photos[0]=='' &&  (ev.description) " >
   <ion-row class="row-padding">
     <ion-col col-2 class="first-col padding-col">
-    <p class="time">{{ev.created | date: 'EEEE H:mm'}}</p>
+    <p class="time">{{ev.event_time}}</p>
     </ion-col>
     <ion-col  col-2 class="padding-col">
         <ion-icon class="icons" ios="ios-mail-outline" md="ios-mail-outline"></ion-icon>
     </ion-col>
     <ion-col col-8 class="msgcol">
 <p class="right-para" >{{ev.description}} </p>
-<p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>
-<span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> 
-<span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
-<span class="first-icon"><ion-icon ios="ios-people-outline" md="ios-people-outline"><span>25</span> RSVP</ion-icon></span>   </p>
+<p><span class="first-icon" (click)="comments(ev.id,ev.description)"> <ion-icon  class="ic" ios="ios-chatboxes" md="ios-chatboxes-outline"><span>{{afstatus[ev.id].Commentcount}}</span></ion-icon></span>
+<span class="first-icon">
+  <ion-icon class="ic" md="ios-heart-outline"  *ngIf="ev.likeStatus==false" (click)="like(afstatus[ev.id].Likecount,afstatus[ev.id].$key,i,ev.id)"></ion-icon>
+  <ion-icon style="color:red;" md="md-heart" *ngIf="ev.likeStatus==true" (click)="unlike(afstatus[ev.id].Likecount,afstatus[ev.id].$key,i,ev.id)"></ion-icon>
+<span>{{afstatus[ev.id].Likecount}}</span></span> 
+<span class="first-icon"> <ion-icon  class="ic" ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
+<span class="first-icon"> <ion-icon name="person-add"><span>25</span> RSVP</ion-icon></span>   </p>
 
     </ion-col>
     </ion-row>
     <ion-row class="side-line">
   </ion-row>
-</ion-grid>
+</ion-grid></div>
 </div>
-<div *ngFor="let e of eventstatus;">
+<div *ngFor="let e of eventstatus;let i=index;">
 <ion-grid  *ngIf="e.photos[0]!='' ">
   <ion-row class="row-padding">
     <ion-col col-2 class="first-col padding-col">
-    <p class="time">{{e.created | date: 'EEEE H:mm'}}</p>
+    <p class="time">{{e.event_time}}</p>
     </ion-col>
     <ion-col  col-2 class="padding-col">
         <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>
     </ion-col>
     <ion-col col-8 class="msgcol">
     <p class="img-div" ><img [src]="e.photos[0]"/></p> 
-    <p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>
-    <span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> 
-    <span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
-    <span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>
+    <p><span class="first-icon" (click)="comments(e.id,e.photos)"> <ion-icon class="ic" ios="ios-chatboxes" md="ios-chatboxes-outline"><span>{{afstatus[e.id].Commentcount}}</span></ion-icon></span>
+    <span class="first-icon">
+      <ion-icon class="ic" md="ios-heart-outline"  *ngIf="e.likeStatus==false" (click)="like(afstatus[e.id].Likecount,afstatus[e.id].$key,i,e.id)"></ion-icon>
+    <ion-icon style="color:red;" md="md-heart" *ngIf="e.likeStatus==true" (click)="unlike(afstatus[e.id].Likecount,afstatus[e.id].$key,i,e.id)"></ion-icon>
+   <span>{{afstatus[e.id].Likecount}}</span> </span> 
+    <span class="first-icon"> <ion-icon class="ic" ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
+    <span class="first-icon"> <ion-icon class="ic" name="person-add"><span>25</span> RSVP</ion-icon></span>   </p>
 
     </ion-col>
     </ion-row>
@@ -52,22 +59,33 @@
   </ion-row>
 </ion-grid>
 </div>
-<div *ngFor="let ev of eventstatus;">
-<ion-grid class="grid-padding" *ngIf="ev.video!='' &&(ev.video!='undefined')">
+<div *ngFor="let ev of eventstatus;let i=index;">
+ 
+<ion-grid class="grid-padding" *ngIf="ev.video!='' && (ev.video!='undefined')">
   <ion-row class="row-padding">
     <ion-col col-2 class="first-col padding-col">
-    <p class="time">{{ev.created | date: 'EEEE H:mm'}}</p>
+    <p class="time">{{ev.event_time}}</p>
     </ion-col>
     <ion-col  col-2 class="padding-col">
             <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>
     </ion-col>
     <ion-col col-8 class="msgcol">
- <p class="img-div" >
-      <video [src]="ev.video" controls controlsList="nodownload" ></video></p> 
-      <p><span class="first-icon"> <ion-icon ios="ios-chatboxes" md="ios-chatboxes-outline"><span>25</span></ion-icon></span>
-      <span class="first-icon"> <ion-icon ios="ios-thumbs-up-outline" md="ios-thumbs-up-outline"><span>25</span></ion-icon></span> 
-      <span class="first-icon"> <ion-icon ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
-      <span class="first-icon"><ion-icon ios="ios-people" md="md-people"><span>25</span> RSVP</ion-icon></span>   </p>
+<div class="video-main">
+		<video  width="100%" height="250"  id="{{ev.id}}" [src]="ev.video" poster="img/postr.jpg" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
+		<img  *ngIf="test[i].statuss=='playimg'"  src="img/play.png"  (click)="play(ev.id,i)" />
+		<img  *ngIf="test[i].statuss=='pauseimg'"  src="img/pause.png" (click)="play(ev.id,i)" />
+		<img  class="vol-img"   *ngIf="test[i].vol=='unmute'" src="img/volume.png"  (click)="volume(ev.id,i)" />
+    	<img  class="vol-img"  *ngIf="test[i].vol=='mute'" src="img/mute.png" (click)="volume(ev.id,i)" />
+
+		</div>
+ <p><span class="first-icon" (click)="comments(ev.id,ev.video)"> <ion-icon class="ic" ios="ios-chatboxes" md="ios-chatboxes-outline"><span>{{afstatus[ev.id].Commentcount}}</span></ion-icon></span>
+      <span class="first-icon"> 
+        <ion-icon class="ic" md="ios-heart-outline"  *ngIf="ev.likeStatus==false" (click)="like(afstatus[ev.id].Likecount,afstatus[ev.id].$key,i,ev.id)"></ion-icon>
+         <ion-icon style="color:red;" md="md-heart" *ngIf="ev.likeStatus==true" (click)="unlike(afstatus[ev.id].Likecount,afstatus[ev.id].$key,i,ev.id)"></ion-icon>
+         <span>{{afstatus[ev.id].Likecount}}</span>
+      </span> 
+      <span class="first-icon"> <ion-icon class="ic" ios="ios-share-outline" md="ios-share-outline"></ion-icon></span>
+      <span class="first-icon"> <ion-icon class="ic" name="person-add"><span>25</span> RSVP</ion-icon></span>   </p>
 
     </ion-col>
     </ion-row>
@@ -75,6 +93,5 @@
   </ion-row>
 </ion-grid>
 </div>
-
 
 </ion-content>

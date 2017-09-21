@@ -35,11 +35,14 @@ message:any;
 url:any;
 status:any;
 vol:any;
+counts:any;
+db:any;
 constructor(public storage:Storage,public http:Http,public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
     this.apiurl='http://briiddge.com/';
    // this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
     this.status="playimg";
     this.vol="mute";
+    this.db=db;
 }
 volume(){
    this.video=document.getElementById('video1');
@@ -291,6 +294,12 @@ post(aray,eventtype,price,vid){
       this.storage.get('usrid').then((usrid)=>{
         this.http.get( this.apiurl+"saveEvent?user_id="+usrid+"&desc="+this.message+"&name="+this.eventname+"&location="+this.eventlocation+"&event_type="+eventtype+"&evt_date="+year+"&evt_time="+time+"&price="+price+"&video="+vid).map(res => res.json()).subscribe(data => {
           if(data.status=='Success'){
+              var pid=data.id;
+                this.counts = this.db.list('/EventCount/'+pid); 
+                this.counts.push({ 
+                      Likecount: 0,
+                      Commentcount:0
+                });
             for(var i=0;i<aray.length;i++) {
               this.http.get(this.apiurl+"saveEventImage?evt_id="+data.id+"&img="+aray[i]).map(res => res.json()).subscribe(data => {
                   

@@ -10,7 +10,15 @@
 		<ion-row class="post-inner">
 			<p></p>
 			<img *ngIf="commentdata.img!=null &&(commentdata.img!='')" [src]="commentdata.img" />
-		<video  *ngIf="commentdata.video" controls="controls" width="100%" height="180"  [src]="commentdata.video"   controlsList="nodownload"></video>
+		<!--<video  *ngIf="commentdata.video" controls="controls" width="100%" height="180"  [src]="commentdata.video"   controlsList="nodownload"></video>-->
+  
+  <ion-row  *ngIf="commentdata.video" class="video-main" >
+    <video  width="100%" height="200" id="video1" poster="img/postr.jpg"   [src]="commentdata.video" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload"></video>
+    <img  *ngIf="status=='playimg'"  src="img/play.png"  (click)="play()" />
+		<img  *ngIf="status=='pauseimg'" src="img/pause.png" (click)="play()" />
+		<img  class="vol-img"   *ngIf="vol=='unmute'" src="img/volume.png"  (click)="volume()" />
+    <img  class="vol-img"  *ngIf="vol=='mute'" src="img/mute.png" (click)="volume()" />
+  </ion-row>
       <p *ngIf="commentdata.message!='undefined'">{{commentdata.message}} </p>
 </ion-row>
  

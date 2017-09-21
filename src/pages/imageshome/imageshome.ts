@@ -44,6 +44,7 @@ constructor(private app: App,db: AngularFireDatabase,private storage: Storage,pu
         })
 }
 Comments(postid,postimg,postmsg,usrname,profileimg){
+  this.storage.set('storyevent','stories');
   this.app.getRootNav().push(CommentsPage,{
     postid:postid,
     postimg:postimg,
@@ -79,13 +80,13 @@ unlike(afcount,afkey,index,pid){
       Likecount:newcount,
     })
 }
-likepost(postid,postimg,postmsg,usrname,profileimg){
-    this.app.getRootNav().push(CommentsPage,{
-    postid:postid,
-    postimg:postimg,
-    postmsg:postmsg,
-    postusrname:usrname,
-    profilepic:profileimg,
-    })
-}
+// likepost(postid,postimg,postmsg,usrname,profileimg){
+//     this.app.getRootNav().push(CommentsPage,{
+//     postid:postid,
+//     postimg:postimg,
+//     postmsg:postmsg,
+//     postusrname:usrname,
+//     profilepic:profileimg,
+//     })
+// }
 }

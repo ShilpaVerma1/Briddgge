@@ -21,38 +21,27 @@ db:any;counts:any;
 commentstatus:any;
 afstatus:Array <FirebaseListObservable<any>>;
 afstatus1:Array <FirebaseListObservable<any>>;
+evstatus:Array <FirebaseListObservable<any>>;
 apiurl:any;
-
+story:any;
 constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
     this.statusid= navParams.data;
     this.db=db;
     this.apiurl='http://briiddge.com/';
- this.storage.get('usrid').then((usrid)=>{
-    this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
-      this.commentdata=data.comment;
+/**************Stories************/
+this.storage.get('storyevent').then((storyevent)=>{
+            this.story=storyevent;
+    if(this.story=='stories'){
+    this.storage.get('usrid').then((usrid)=>{
+        this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+        this.commentdata=data.comment;
+        })
     })
- })
     var refNew = this.db.list('/Count/'+this.statusid);
         refNew.subscribe((data)=>{   
         this.afstatus=data;
    })
  
-    // var ref = this.db.list('/Commentlikes/', { query: {
-    //        orderByChild:'key'
-    //     }}).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
-    //     ref.subscribe((data)=>{
-    //       var rawlist=[];
-    //       this.afstatus1 = [];    
-    //       data.forEach(minispanshot =>{ 
-    //       var refval = minispanshot.$key;
-    //       var refNew = this.db.list('/Commentlikes/'+refval);
-    //        refNew.subscribe((dataInner)=>{ 
-    //          let newData = dataInner[0];
-    //           rawlist[refval] = newData;
-    //           this.afstatus1 = rawlist;
-    //        })
-    //      })
-    //     })
     var ref = this.db.list('/Commentss/');
     ref.subscribe((data)=>{  
         this.afstatus1=[];
@@ -69,7 +58,36 @@ constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,pr
            }
        })
     })
+  }
+  if(this.story=='events'){
+    this.storage.get('usrid').then((usrid)=>{
+    this.http.get(this.apiurl+"fetchEventInner?evt_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
+            this.commentdata=data.comment;
+            })
+        })
+        var refNew = this.db.list('/EventCount/'+this.statusid);
+            refNew.subscribe((data)=>{   
+            this.afstatus=data;
+        })
+    console.log(this.afstatus);
+        // var ref = this.db.list('/Commentss/');
+        // ref.subscribe((data)=>{  
+        //     this.afstatus1=[];
+        // data.forEach(snapshot=>{
+        //     var keys=snapshot.$key;
+        //     if(keys==this.statusid){
+        //         var reff=this.db.list('/Commentss/'+keys+'/Comments/')
+        //             reff.subscribe((keydata)=>{
+        //                 keydata.forEach(data=>{
+        //                     this.afstatus1.push(data);
 
+        //                 })
+        //             })
+        //     }
+        // })
+        // })
+  }
+})
 }
 
 senddd(afcount,afkey){

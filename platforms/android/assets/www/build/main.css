@@ -25368,7 +25368,6 @@ page-addeventinner .video-main {
   width: 100%;
   float: left;
   margin-top: 8px;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -25560,6 +25559,10 @@ page-addeventinner .col-img img {
   height: 18px;
   width: 18px;
   margin-left: 5px;
+}
+
+page-addeventinner .post {
+  width: 100%;
 }
 
 page-addeventinner .cemra {
@@ -26161,6 +26164,11 @@ page-chatslist .ion-md-person:before {
   vertical-align: middle;
 }
 
+page-comments {
+  /*********Video player CSS*********/
+  /******************/
+}
+
 page-comments .tabs-md .tabbar {
   bottom: -2px !important;
   background-color: #fff !important;
@@ -26319,6 +26327,35 @@ page-comments .share-alt {
   font-size: 32px;
 }
 
+page-comments .video-main {
+  background: black;
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  position: relative;
+}
+
+page-comments .video-main .vol-img {
+  position: absolute;
+  top: 74%;
+  left: 88%;
+  bottom: 0;
+  height: 28px;
+  width: 23px;
+  margin: auto;
+}
+
+page-comments .video-main img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
 page-commenttab .scroll-content {
   margin-top: 43px;
   margin-bottom: 50px !important;
@@ -26443,6 +26480,11 @@ page-event .search {
   margin-right: 10px;
 }
 
+page-eventinner {
+  /***************Video Player CSS*****************/
+  /***************Video Player CSS*****************/
+}
+
 page-eventinner .first-col {
   padding: 0px;
   padding-top: 6px;
@@ -26550,6 +26592,41 @@ page-eventinner .grid {
   padding: 0px 5px !important;
 }
 
+page-eventinner .ic {
+  font-size: 23px;
+  color: #fff;
+  font-weight: 500;
+}
+
+page-eventinner .video-main {
+  background: black;
+  width: 88%;
+  float: left;
+  margin-top: 8px;
+  position: relative;
+}
+
+page-eventinner .video-main .vol-img {
+  position: absolute;
+  top: 74%;
+  left: 88%;
+  bottom: 0;
+  height: 28px;
+  width: 23px;
+  margin: auto;
+}
+
+page-eventinner .video-main img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 60px;
+  margin: auto;
+}
+
 @media (min-width: 320px) {
   page-eventinner .time {
     font-size: 13px;
@@ -26566,6 +26643,166 @@ page-eventinner .grid {
   page-eventinner .side-line {
     width: 23%;
   }
+}
+
+page-eventpost {
+  /*******************Tabs CSS********************/
+}
+
+page-eventpost .play-icon {
+  position: absolute;
+  right: 4%;
+  bottom: -8%;
+  font-size: 25px;
+  color: #fff;
+  background: #3989d2;
+  border-radius: 50%;
+  padding: 8px 12px 9px 17px;
+}
+
+page-eventpost .main-div {
+  position: relative;
+}
+
+page-eventpost .extra-margin {
+  margin-top: 40px;
+}
+
+page-eventpost .main-div2 img {
+  -webkit-box-shadow: 2px 2px 8px 1px #c1c1c1;
+  box-shadow: 2px 2px 8px 1px #c1c1c1;
+  height: 115px;
+  width: 32% !important;
+  margin: 0.2%;
+  border: 1px solid #717171;
+}
+
+page-eventpost .heading1 {
+  margin: 0px;
+  font-size: 22px;
+  color: #0f4b81;
+}
+
+page-eventpost .heading2 {
+  margin: 6px 0px;
+  font-size: 18px;
+}
+
+page-eventpost .heading3 {
+  margin: 6px 0px;
+  font-size: 14px;
+}
+
+page-eventpost .heading3 span {
+  padding-right: 10px;
+  color: #3d3d3d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+page-eventpost .meassage {
+  text-align: justify;
+}
+
+page-eventpost .tabs-md .tabbar {
+  bottom: -2px !important;
+  background-color: #fff !important;
+}
+
+page-eventpost .tabs-md .tabbar {
+  position: absolute !important;
+}
+
+page-eventpost .new-tab .tabbar {
+  position: relative;
+  top: 0px;
+}
+
+page-eventpost .tabs-md .tabbar {
+  background-color: transparent;
+  height: 60px;
+}
+
+page-eventpost .tabs-md .tabbar {
+  width: 100%;
+}
+
+page-eventpost .scroll-content {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+page-eventpost .tabs-md .tab-button {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+
+page-eventpost .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: #2370b5 !important;
+  position: absolute;
+  right: calc(72% - 25px);
+  font-size: 24px;
+}
+
+page-eventpost .has-icon .tab-button-icon, page-eventpost .has-title .tab-button-text {
+  color: #000 !important;
+}
+
+page-eventpost .tabs-md .tab-button-text {
+  font-size: 15px;
+  width: 80%;
+  color: #000;
+  font-weight: 300;
+}
+
+page-eventpost .tabs-md .tab-button[aria-selected=true] {
+  color: #000;
+  background-color: transparent;
+  padding: 0px !important;
+  border-radius: 14px;
+  border: 1px solid #636363;
+  margin-bottom: 4px;
+}
+
+page-eventpost .tabs-md .tab-button[aria-selected=true] .tab-button-text {
+  font-size: 14px;
+  width: 80%;
+  text-align: center;
+  font-weight: 300;
+  color: #000;
+}
+
+page-eventpost .tabs-md .tabbar {
+  position: relative;
+}
+
+page-eventpost .show-tab {
+  position: relative;
+}
+
+page-eventpost .has-icon .tab-badge {
+  font-size: 14px;
+  background-color: transparent;
+  right: calc(38% - 20px);
+  border-radius: 50%;
+  padding: 4px;
+  top: 0px;
+  font-weight: 500;
+  color: #000;
+}
+
+page-eventpost .tabs-md .tab-button-icon {
+  font-size: 25px;
+}
+
+page-eventpost .tabs-md .tab-button {
+  min-height: 35px;
+}
+
+page-eventpost .tabs-md .tab-button[aria-selected=true] .tab-button-icon .has-icon .tab-badge {
+  color: #000;
 }
 
 page-findfriends {
@@ -28283,6 +28520,10 @@ page-videoshome span.count {
   font-weight: bold;
 }
 
+page-videoshome .post-inner row {
+  width: 100%;
+}
+
 page-videoshome .post-inner img {
   width: 100%;
 }
@@ -28338,7 +28579,6 @@ page-videoshome .video-main {
   width: 100%;
   float: left;
   margin-top: 8px;
-  border-radius: 10px;
   position: relative;
 }
 

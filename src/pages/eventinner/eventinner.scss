@@ -67,6 +67,39 @@ ion-icon {
     z-index: -999;}
     .row-padding{    padding: 1em 0px;}
     .grid{padding:0px 5px!important;}
+.ic{
+    font-size: 23px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/***************Video Player CSS*****************/
+.video-main{  background: black;
+    width: 88%;
+    float:left;    margin-top: 8px;
+    position: relative;
+}
+.video-main .vol-img{
+    position: absolute;
+    top: 74%;
+    left: 88%;
+    bottom: 0;
+    height: 28px;
+    width: 23px;
+    margin: auto;
+}
+.video-main img{  
+         position: absolute;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         height:50px;
+         width: 60px;
+         margin: auto;
+}
+/***************Video Player CSS*****************/
+
     @media(min-width:320px){
         .time{font-size:13px;}
         .first-icon{margin-right:5px;}

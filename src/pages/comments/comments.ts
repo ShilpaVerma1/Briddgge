@@ -27,11 +27,15 @@ postvideo:any;
 db:any;
 commentdata=[];
 apiurl:any;
+video:any;
 afstatus:Array <FirebaseListObservable<any>>;
+status:any;
+vol:any;
 constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: NavController, public navParams: NavParams,public http:Http) {
   this.db=db;
   this.apiurl='http://briiddge.com/';
-
+  this.status="playimg";
+    this.vol="mute";
   // this.postimg=this.navParams.get('postimg');
   // this.postmsg=this.navParams.get('postmsg');
   // this.postusrname=this.navParams.get('postusrname');
@@ -53,6 +57,31 @@ constructor(private storage: Storage,db: AngularFireDatabase,public navCtrl: Nav
 share(){
  
 }
+volume(){
+   this.video=document.getElementById('video1');
+
+   if (!this.video.muted) {
+        this.video.muted = true;
+        this.vol='mute';
+
+    } else {
+        this.video.muted = false;
+        this.vol='unmute';
+
+    }
+}
+  play(){
+    
+    this.video=document.getElementById('video1');
+    if(this.video.paused===false){
+        this.status='playimg';
+        this.video.pause();
+      }
+      else{
+           this.status='pauseimg';
+          this.video.play();        
+      }
+  }
   back(){
     this.navCtrl.push(BriddggeHomePage);
   }

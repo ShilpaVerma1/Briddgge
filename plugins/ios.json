@@ -67,6 +67,10 @@
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.briddgge.com"
+        },
+        "cordova-plugin-media": {
+            "MICROPHONE_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.briddgge.com"
         }
     },
     "dependent_plugins": {

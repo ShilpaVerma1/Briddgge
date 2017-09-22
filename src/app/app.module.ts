@@ -52,7 +52,7 @@ import { Device } from '@ionic-native/device';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Network } from '@ionic-native/network';
-
+import { Media, MediaObject } from '@ionic-native/media';
 
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
@@ -115,7 +115,7 @@ import { Network } from '@ionic-native/network';
   ],
   providers: [
     StatusBar,Calendar,OneSignal,Device,ImagePicker,InAppBrowser,
-    SplashScreen,File,MediaCapture,Camera,DatePicker,Network,
+    SplashScreen,File,MediaCapture,Camera,DatePicker,Network,Media,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
   ]

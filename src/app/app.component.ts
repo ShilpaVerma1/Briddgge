@@ -20,6 +20,7 @@ import { Http } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import { ProfilePage } from '../pages/profile/profile';
 import { Network } from '@ionic-native/network';
+import { HomePage } from '../pages/home/home';
 
 declare var window;
 @Component({

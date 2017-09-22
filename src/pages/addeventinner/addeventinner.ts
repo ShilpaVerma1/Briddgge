@@ -39,11 +39,12 @@ counts:any;
 db:any;
 constructor(public storage:Storage,public http:Http,public loadingCtrl:LoadingController,db: AngularFireDatabase,public zone : NgZone,private file: File,public camera: Camera, private mediaCapture: MediaCapture,private imagePicker: ImagePicker,public platform:Platform,public navCtrl: NavController, private datePicker: DatePicker,public navParams: NavParams) {
     this.apiurl='http://briiddge.com/';
-   // this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
+  //  this.videourl='https://firebasestorage.googleapis.com/v0/b/geofirebase-b42f3.appspot.com/o/statusvideo%2F1504847497228?alt=media&token=7f3e554f-06a2-45b1-90bb-16a974a529a8';
     this.status="playimg";
     this.vol="mute";
     this.db=db;
 }
+/***********Video player************/
 volume(){
    this.video=document.getElementById('video1');
 
@@ -57,6 +58,15 @@ volume(){
 
     }
 }
+rewind(){
+  this.video=document.getElementById('video1');
+  this.video.currentTime-=10; 
+}
+
+forward(){
+  this.video=document.getElementById('video1');
+  this.video.currentTime+=10; 
+}
   play(){
     
     this.video=document.getElementById('video1');
@@ -69,10 +79,12 @@ volume(){
           this.video.play();        
       }
   }
+/***********Video player************/
+
 rangeprice(ev:any){
   this.price=ev._value;
 }
-
+/*************Date & Time*****************/
 selectday(){
    this.datePicker.show({
         date: new Date(),
@@ -103,6 +115,7 @@ selecttime(){
         })
       }); 
 }
+/***************************/
 selimages(index){
   /*****Capturing image from camera*****/
   if(index==1){

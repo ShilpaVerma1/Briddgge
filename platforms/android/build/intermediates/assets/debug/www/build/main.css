@@ -25363,43 +25363,33 @@ page-addeventinner vg-playback-button {
   font-weight: bold;
 }
 
+page-addeventinner .plyer-row {
+  width: 100%;
+  background: #d6cdcd;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+  padding: 5px 3px;
+  z-index: 4;
+}
+
+page-addeventinner .post-inner img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 4px;
+}
+
 page-addeventinner .video-main {
-  background: black;
-  width: 100%;
-  float: left;
-  margin-top: 8px;
-  position: relative;
+  background: #606060;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
 }
 
-page-addeventinner .video-main .vol-img {
+page-addeventinner img.volume-img {
   position: absolute;
-  top: 74%;
-  left: 88%;
-  bottom: 0;
-  height: 28px;
-  width: 23px;
-  margin: auto;
-}
-
-page-addeventinner .video-main img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
-}
-
-page-addeventinner vg-time-display {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-page-addeventinner #singleVideo {
-  height: 220px;
-  width: 100%;
+  right: 7%;
+  height: 20px;
+  width: 26px;
+  margin-top: 3px;
 }
 
 page-addeventinner .imgggrid img {
@@ -26198,11 +26188,6 @@ page-comments .scroll-content {
   padding: 0px 5px 0px !important;
 }
 
-page-comments .post-inner img {
-  width: 100%;
-  height: 200px;
-}
-
 page-comments .post-inner p {
   color: #000;
   font-size: 14px;
@@ -26327,33 +26312,32 @@ page-comments .share-alt {
   font-size: 32px;
 }
 
-page-comments .video-main {
-  background: black;
+page-comments .plyer-row {
   width: 100%;
-  float: left;
-  margin-top: 8px;
-  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+  padding: 5px 3px;
+  z-index: 4;
 }
 
-page-comments .video-main .vol-img {
-  position: absolute;
-  top: 74%;
-  left: 88%;
-  bottom: 0;
-  height: 28px;
-  width: 23px;
-  margin: auto;
+page-comments .post-inner img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 4px;
 }
 
-page-comments .video-main img {
+page-comments .video-main {
+  background: #606060;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+}
+
+page-comments img.volume-img {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
+  right: 7%;
+  height: 20px;
+  width: 26px;
+  margin-top: 3px;
 }
 
 page-commenttab .scroll-content {
@@ -26647,6 +26631,12 @@ page-eventinner .video-main img {
 
 page-eventpost {
   /*******************Tabs CSS********************/
+  /*********Video player CSS*********/
+  /******************/
+}
+
+page-eventpost .para-row {
+  width: 100%;
 }
 
 page-eventpost .play-icon {
@@ -26673,12 +26663,13 @@ page-eventpost .main-div2 img {
   box-shadow: 2px 2px 8px 1px #c1c1c1;
   height: 115px;
   width: 32% !important;
+  float: left;
   margin: 0.2%;
   border: 1px solid #717171;
 }
 
 page-eventpost .heading1 {
-  margin: 0px;
+  margin: 5px 0px 0px;
   font-size: 22px;
   color: #0f4b81;
 }
@@ -26686,6 +26677,7 @@ page-eventpost .heading1 {
 page-eventpost .heading2 {
   margin: 6px 0px;
   font-size: 18px;
+  width: 100%;
 }
 
 page-eventpost .heading3 {
@@ -26803,6 +26795,35 @@ page-eventpost .tabs-md .tab-button {
 
 page-eventpost .tabs-md .tab-button[aria-selected=true] .tab-button-icon .has-icon .tab-badge {
   color: #000;
+}
+
+page-eventpost .video-main {
+  background: black;
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  position: relative;
+}
+
+page-eventpost .video-main .vol-img {
+  position: absolute;
+  top: 74%;
+  left: 88%;
+  bottom: 0;
+  height: 28px;
+  width: 23px;
+  margin: auto;
+}
+
+page-eventpost .video-main img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 60px;
+  margin: auto;
 }
 
 page-findfriends {
@@ -28524,10 +28545,6 @@ page-videoshome .post-inner row {
   width: 100%;
 }
 
-page-videoshome .post-inner img {
-  width: 100%;
-}
-
 page-videoshome .post-inner p {
   font-size: 14px;
   font-weight: 500;
@@ -28574,33 +28591,32 @@ page-videoshome video::-webkit-media-controls-panel {
   width: calc(100% + 40px);
 }
 
-page-videoshome .video-main {
-  background: black;
+page-videoshome .plyer-row {
   width: 100%;
-  float: left;
-  margin-top: 8px;
-  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+  padding: 5px 3px;
+  z-index: 4;
 }
 
-page-videoshome .video-main .vol-img {
-  position: absolute;
-  top: 74%;
-  left: 88%;
-  bottom: 0;
-  height: 28px;
-  width: 23px;
-  margin: auto;
+page-videoshome .post-inner img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 4px;
 }
 
-page-videoshome .video-main img {
+page-videoshome .video-main {
+  background: #606060;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+}
+
+page-videoshome img.volume-img {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
+  right: 7%;
+  height: 20px;
+  width: 26px;
+  margin-top: 3px;
 }
 
 page-videoss video::-webkit-media-controls-enclosure {

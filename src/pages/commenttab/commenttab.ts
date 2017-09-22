@@ -18,19 +18,20 @@ commentdata=[];
 likes:any;cmtdata=[];
 count:number;
 db:any;counts:any;
-commentstatus:any;
 afstatus:Array <FirebaseListObservable<any>>;
 afstatus1:Array <FirebaseListObservable<any>>;
 evstatus:Array <FirebaseListObservable<any>>;
 apiurl:any;
 story:any;
+commentid:any;
 constructor(public platform:Platform,db: AngularFireDatabase,public http:Http,private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
     this.statusid= navParams.data;
     this.db=db;
     this.apiurl='http://briiddge.com/';
-/**************Stories************/
 this.storage.get('storyevent').then((storyevent)=>{
             this.story=storyevent;
+/**************Stories************/
+
     if(this.story=='stories'){
     this.storage.get('usrid').then((usrid)=>{
         this.http.get(this.apiurl+"fetchStatusInner?post_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
@@ -58,36 +59,40 @@ this.storage.get('storyevent').then((storyevent)=>{
            }
        })
     })
-  }
+ }
+/**************Events************/
+
   if(this.story=='events'){
     this.storage.get('usrid').then((usrid)=>{
     this.http.get(this.apiurl+"fetchEventInner?evt_id="+this.statusid+"&user_id="+usrid).map(res => res.json()).subscribe(data => {
             this.commentdata=data.comment;
             })
         })
+    
         var refNew = this.db.list('/EventCount/'+this.statusid);
             refNew.subscribe((data)=>{   
             this.afstatus=data;
+            console.log(this.afstatus);
         })
-    console.log(this.afstatus);
-        // var ref = this.db.list('/Commentss/');
-        // ref.subscribe((data)=>{  
-        //     this.afstatus1=[];
-        // data.forEach(snapshot=>{
-        //     var keys=snapshot.$key;
-        //     if(keys==this.statusid){
-        //         var reff=this.db.list('/Commentss/'+keys+'/Comments/')
-        //             reff.subscribe((keydata)=>{
-        //                 keydata.forEach(data=>{
-        //                     this.afstatus1.push(data);
+  
+        var ref = this.db.list('/EventCommentss/');
+        ref.subscribe((data)=>{  
+            this.afstatus1=[];
+        data.forEach(snapshot=>{
+            var keys=snapshot.$key;
+            if(keys==this.statusid){
+                var reff=this.db.list('/EventCommentss/'+keys+'/Comments/')
+                    reff.subscribe((keydata)=>{
+                        keydata.forEach(data=>{
+                            this.afstatus1.push(data);
 
-        //                 })
-        //             })
-        //     }
-        // })
-        // })
+                        })
+                    })
+            }
+        })
+    })
   }
-})
+ })
 }
 
 senddd(afcount,afkey){
@@ -101,8 +106,12 @@ senddd(afcount,afkey){
         this.storage.get('usrid').then((usrid)=>{
 
             this.http.get(this.apiurl+"getProfile?user_id="+usrid).map(res => res.json()).subscribe(data => {
-            this.counts = this.db.list('/Commentss/'+this.statusid+'/Comments/');
-               /****Push comments ****/
+            this.storage.get('storyevent').then((storyevent)=>{
+            this.story=storyevent;
+            if(this.story=='stories'){
+             this.counts = this.db.list('/Commentss/'+this.statusid+'/Comments/');
+
+               /****Push comments for stories****/
                 this.counts.push({ 
                     loginuserid:usrid,
                     comment:this.commenttext,
@@ -112,44 +121,100 @@ senddd(afcount,afkey){
                     name:data.name,
                     user_ids:''
                 });
-                /****Increase comment count in count node ****/
+                /****Increase comment count in count node for stories ****/
                 var newcommentcount=JSON.parse(afcount)+1;
                 var ref=this.db.list('/Count/'+ this.statusid);
                 ref.update(afkey,{
                      Commentcount:newcommentcount,
                 })
+               }
+            if(this.story=='events'){
+             this.counts = this.db.list('/EventCommentss/'+this.statusid+'/Comments/');
+               /****Push comments for events****/
+                this.counts.push({ 
+                    loginuserid:usrid,
+                    comment:this.commenttext,
+                    createdAt : firebase.database.ServerValue.TIMESTAMP,
+                    Likes:0,
+                    profile_img:data.img,
+                    name:data.name,
+                    user_ids:''
+                });
+                this.http.get(this.apiurl+"saveCommentEvent?user_id="+usrid+"&event_id="+this.statusid+"&comment="+this.commenttext).map(res => res.json()).subscribe(data => {
+                    if(data.status=='Success'){
+                        this.commentid=data.id;
+                    }
+                })
+                /****Increase comment count in count node for stories ****/
+                var newcommentcount=JSON.parse(afcount)+1;
+                var ref=this.db.list('/EventCount/'+ this.statusid);
+                ref.update(afkey,{
+                     Commentcount:newcommentcount,
+                })
+             }
             })
+          })
         })
     }
 }
 
-like(key,likecount,usrids){
-
+like(key,likecount,usrids,commentid){
   this.storage.get('usrid').then((usrid)=>{
     var split_str = usrids.split(",");
+    var uid= usrid.toString();
     /******Like  comments******/
-    if(split_str.includes(usrid)==false){
-        let userids=usrids+','+usrid
+    if(split_str.includes(uid)==false){
+        let userids=usrids+','+uid
          var newcount=JSON.parse(likecount)+1;
-         //this.commentstatus='commentliked'
-            var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
+          this.storage.get('storyevent').then((storyevent)=>{
+            this.story=storyevent;
+            if(this.story=='stories'){
+                var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
                 ref.update(key,{
                     Likes:newcount,
                     user_ids:userids
-            }) 
+                }) 
+             }
+             if(this.story=='events'){
+                var ref=this.db.list('/EventCommentss/'+this.statusid+'/Comments/');
+                ref.update(key,{
+                    Likes:newcount,
+                    user_ids:userids
+                })
+                this.http.get(this.apiurl+"likeCommentEvent?user_id="+usrid+"&comment_id="+commentid+"&likesComment=1").map(res => res.json()).subscribe(data => {
+                    
+                }) 
+             }
+           }) 
+        
     }
     /******Unlike  comments******/
     else{
-          var remove_index=split_str.indexOf(usrid);
+          var remove_index=split_str.indexOf(uid);
           split_str.splice(remove_index,1);
            var userids=split_str.join(",");
            var count=JSON.parse(likecount)-1;
-           // this.commentstatus='commentunliked'
-            var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
+            this.storage.get('storyevent').then((storyevent)=>{
+            this.story=storyevent;
+
+            if(this.story=='stories'){
+                var ref=this.db.list('/Commentss/'+this.statusid+'/Comments/');
                 ref.update(key,{
                     Likes:count,
                     user_ids:userids
-            }) 
+                }) 
+            }
+             if(this.story=='events'){
+                var ref=this.db.list('/EventCommentss/'+this.statusid+'/Comments/');
+                this.http.get(this.apiurl+"likeCommentEvent?user_id="+usrid+"&comment_id="+commentid+"&likesComment=0").map(res => res.json()).subscribe(data => {
+                    
+                }) 
+                ref.update(key,{
+                    Likes:count,
+                    user_ids:userids
+                }) 
+             }
+            })
     }
  })
 }

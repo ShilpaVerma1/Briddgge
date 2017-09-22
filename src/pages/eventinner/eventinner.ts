@@ -78,6 +78,16 @@ volume(pid,index){
         this.test[index].vol='unmute';
     }
 }
+rewind(pid){
+  this.video=document.getElementById(pid);
+  this.video.currentTime-=10; 
+}
+
+forward(pid){
+  this.video=document.getElementById(pid);
+  this.video.currentTime+=10; 
+}
+
   play(pid,index){
     
     this.video=document.getElementById(pid);

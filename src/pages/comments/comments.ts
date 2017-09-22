@@ -70,6 +70,16 @@ volume(){
 
     }
 }
+rewind(){
+  this.video=document.getElementById('video1');
+  this.video.currentTime-=10; 
+}
+
+forward(){
+  this.video=document.getElementById('video1');
+  this.video.currentTime+=10; 
+}
+
   play(){
     
     this.video=document.getElementById('video1');

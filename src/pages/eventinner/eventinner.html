@@ -69,15 +69,22 @@
     <ion-col  col-2 class="padding-col">
             <ion-icon class="icons" ios="ios-images-outline" md="ios-images-outline"></ion-icon>
     </ion-col>
-    <ion-col col-8 class="msgcol">
-<div class="video-main">
-		<video  width="100%" height="250"  id="{{ev.id}}" [src]="ev.video" poster="img/postr.jpg" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
-		<img  *ngIf="test[i].statuss=='playimg'"  src="img/play.png"  (click)="play(ev.id,i)" />
+<ion-col col-8 class="msgcol">
+<ion-row class="video-main">
+		<video  width="100%" height="150"  id="{{ev.id}}" [src]="ev.video" poster="img/postr.jpg" codecs="avc1.42E01E, mp4a.40.2"  controlsList="nodownload" preload="auto"></video>
+</ion-row>
+<ion-row class="plyer-row">
+		<!--<img  *ngIf="test[i].statuss=='playimg'"  src="img/play.png"  (click)="play(ev.id,i)" />
 		<img  *ngIf="test[i].statuss=='pauseimg'"  src="img/pause.png" (click)="play(ev.id,i)" />
 		<img  class="vol-img"   *ngIf="test[i].vol=='unmute'" src="img/volume.png"  (click)="volume(ev.id,i)" />
-    	<img  class="vol-img"  *ngIf="test[i].vol=='mute'" src="img/mute.png" (click)="volume(ev.id,i)" />
-
-		</div>
+    <img  class="vol-img"  *ngIf="test[i].vol=='mute'" src="img/mute.png" (click)="volume(ev.id,i)" />-->
+	<img  src="img/backward.png" (click)="rewind(ev.id)" />
+	  <img  *ngIf="test[i].statuss=='playimg'"  src="img/play.png"  (click)="play(ev.id,i)" />
+		<img  *ngIf="test[i].statuss=='pauseimg'" src="img/stop.png" (click)="play(ev.id,i)" />
+		<img   src="img/forward.png" (click)="forward(ev.id)" />
+		<img   class="volume-img"   *ngIf="test[i].vol=='unmute'" src="img/volume.png"  (click)="volume(ev.id,i)" />
+    <img  class="volume-img"   *ngIf="test[i].vol=='mute'" src="img/mute.png" (click)="volume(ev.id,i)" />
+</ion-row>
  <p><span class="first-icon" (click)="comments(ev.id,ev.video)"> <ion-icon class="ic" ios="ios-chatboxes" md="ios-chatboxes-outline"><span>{{afstatus[ev.id].Commentcount}}</span></ion-icon></span>
       <span class="first-icon"> 
         <ion-icon class="ic" md="ios-heart-outline"  *ngIf="ev.likeStatus==false" (click)="like(afstatus[ev.id].Likecount,afstatus[ev.id].$key,i,ev.id)"></ion-icon>

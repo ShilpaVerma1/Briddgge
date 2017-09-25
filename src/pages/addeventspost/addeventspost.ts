@@ -1,5 +1,5 @@
-import { Component,NgZone } from '@angular/core';
-import { NavController, NavParams,Platform,PopoverController,ViewController,LoadingController } from 'ionic-angular';
+import { Component,NgZone,ViewChild } from '@angular/core';
+import { NavController, NavParams,Platform,PopoverController,ToastController,ViewController,LoadingController } from 'ionic-angular';
 import { Camera,CameraOptions } from '@ionic-native/camera';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase} from 'angularfire2/database';
@@ -10,7 +10,8 @@ import { Device } from '@ionic-native/device';
 import { MediaCapture,CaptureVideoOptions,CaptureError, MediaFile } from '@ionic-native/media-capture';
 import { File } from '@ionic-native/file';
 import { AddeventinnerPage } from '../addeventinner/addeventinner';
-
+import { FileTransfer, FileUploadOptions} from '@ionic-native/file-transfer';
+declare var cordova: any;
 declare var window: any;
 @Component({
   selector: 'page-addeventspost',
@@ -21,7 +22,7 @@ export class AddeventspostPage {
   apiurl:any;videourl:any;
   db:any;
   counts:any;
-  constructor(private device: Device,private file: File,public platform:Platform,private storage: Storage,public http:Http,public viewCtrl:ViewController,db: AngularFireDatabase,public camera: Camera,public zone : NgZone,public navCtrl: NavController,public popoverCtrl: PopoverController, public navParams: NavParams) {
+  constructor(private transfer: FileTransfer,private device: Device,private file: File,public platform:Platform,private storage: Storage,public http:Http,public viewCtrl:ViewController,db: AngularFireDatabase,public camera: Camera,public zone : NgZone,public navCtrl: NavController,public popoverCtrl: PopoverController, public navParams: NavParams) {
     this.apiurl='http://briiddge.com/';
     this.db=db;
     
@@ -156,7 +157,14 @@ export class ImagepopverPage {
 captureDataUrl:any;imageurl:any;
 captureidd:any;videourl:any;
 MediaFile:any;
-  constructor( private mediaCapture: MediaCapture,public navParams: NavParams,private file: File,public viewCtrl:ViewController,public loadingCtrl:LoadingController,public navCtrl: NavController,public zone : NgZone,public camera: Camera) {
+
+loading:any;
+videoUrl:any;
+videoUrlPath : any;
+lastImage:any;
+fileTransfer:any
+@ViewChild('myvideo') myVideo: any;
+  constructor(private toast: ToastController,private transfer: FileTransfer, private mediaCapture: MediaCapture,public navParams: NavParams,private file: File,public viewCtrl:ViewController,public loadingCtrl:LoadingController,public navCtrl: NavController,public zone : NgZone,public camera: Camera) {
     this.captureidd=this.navParams.get('captureid');
   
   }
@@ -280,6 +288,25 @@ if(this.captureidd==1){
    })
   }
   if(this.captureidd==2){
+  /*    return new Promise((resolve)=>{
+      this.zone.run(()=>{
+      var options = {
+        quality : 95,
+        destinationType: this.camera.DestinationType.FILE_URI,
+        sourceType : this.camera.PictureSourceType.PHOTOLIBRARY,
+        mediaType:this.camera.MediaType.VIDEO
+      };
+      this.camera.getPicture(options).then((data) => {
+        var imagePath = data.substr(0,data.lastIndexOf('/') + 1);
+        var imageName = data.substr(data.lastIndexOf('/') + 1);
+        alert(imagePath);
+        alert(imageName);
+        this.upload(imagePath, imageName, data);
+      })
+    })
+  })
+   */  
+ 
     return new Promise((resolve)=>{
     this.zone.run(()=>{ 
      this.camera.getPicture({
@@ -327,4 +354,53 @@ if(this.captureidd==1){
     })
   }
  }
+
+
+ /* upload(correctPath, currentName,video) {
+     var d = new Date(),
+      n= d.getTime(),
+      x= n + ".mp4";
+      this.file.copyFile(correctPath, currentName, cordova.file.dataDirectory,x).then(success => {
+        this.lastImage = x;
+        alert(this.lastImage);
+        var url = "";
+         // File for Upload
+         var targetPath = this.pathForImage(this.lastImage);    
+         // File name only
+        // this.filename = this.lastImage;      
+         var options = {
+          fileKey: "video",
+          fileName: x,
+          chunkedMode: false,
+          mimeType: "video/mp4"
+        };
+         this.fileTransfer= this.transfer.create();
+         this.loading = this.loadingCtrl.create({
+           content: 'Uploading...',
+         });
+         this.loading.present();
+       //  Use the FileTransfer to upload the image
+         this.fileTransfer.upload(targetPath, url, options).then(data => {   
+          this.videourl = ''+ x;
+          this.videoUrlPath =  x;  
+          this.loading.dismissAll();
+           alert('video succesful uploaded.');
+         }, err => {
+           this.loading.dismissAll()
+           alert('Error while uploading file.');
+         });
+      }, error => {
+         alert(JSON.stringify(error));
+        //alert('Error while storing file.');
+      });
+  }
+  public pathForImage(img) {
+  if (img === null) {
+    return '';
+  } else {
+    return cordova.file.dataDirectory + img;
+  }
+ }
+*/
+  
 }

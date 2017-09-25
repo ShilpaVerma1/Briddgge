@@ -91,6 +91,10 @@
             {
               "xml": "<feature name=\"Media\"><param name=\"ios-package\" value=\"CDVSound\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -234,6 +238,9 @@
     },
     "cordova-plugin-media": {
       "MICROPHONE_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.briddgge.com"
+    },
+    "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.briddgge.com"
     }
   },
@@ -657,6 +664,22 @@
       "clobbers": [
         "window.Media"
       ]
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransferError",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransferError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransfer",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransfer"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -679,6 +702,7 @@
     "com.synconset.imagepicker": "2.1.8",
     "cordova-plugin-inappbrowser": "1.7.1",
     "cordova-plugin-network-information": "1.3.3",
-    "cordova-plugin-media": "3.0.1"
+    "cordova-plugin-media": "3.0.1",
+    "cordova-plugin-file-transfer": "1.6.3"
   }
 }

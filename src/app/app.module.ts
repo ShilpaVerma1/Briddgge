@@ -53,6 +53,7 @@ import { ImagePicker } from '@ionic-native/image-picker';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Network } from '@ionic-native/network';
 import { Media, MediaObject } from '@ionic-native/media';
+import { FileTransfer, FileUploadOptions } from '@ionic-native/file-transfer';
 
   var firebaseConfig = {
     apiKey: "AIzaSyDL7UI8zs31V4cPK-rQtyEdcG7TG7yNiyo",
@@ -117,7 +118,7 @@ import { Media, MediaObject } from '@ionic-native/media';
     StatusBar,Calendar,OneSignal,Device,ImagePicker,InAppBrowser,
     SplashScreen,File,MediaCapture,Camera,DatePicker,Network,Media,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth,
+    AngularFireAuth,FileTransfer
   ]
 })
 export class AppModule {}

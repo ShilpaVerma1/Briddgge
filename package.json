@@ -27,6 +27,7 @@
         "@ionic-native/date-picker": "^4.2.1",
         "@ionic-native/device": "^4.2.1",
         "@ionic-native/file": "^4.2.1",
+        "@ionic-native/file-transfer": "^4.2.1",
         "@ionic-native/image-picker": "^4.2.1",
         "@ionic-native/in-app-browser": "^4.2.1",
         "@ionic-native/media": "^4.2.1",
@@ -50,6 +51,7 @@
         "cordova-plugin-datepicker": "^0.9.3",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-file-transfer": "^1.6.3",
         "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-plugin-media": "^3.0.1",
         "cordova-plugin-media-capture": "^1.4.3",
@@ -102,7 +104,8 @@
             "cordova-plugin-network-information": {},
             "cordova-plugin-media": {
                 "MICROPHONE_USAGE_DESCRIPTION": " "
-            }
+            },
+            "cordova-plugin-file-transfer": {}
         },
         "platforms": [
             "android",

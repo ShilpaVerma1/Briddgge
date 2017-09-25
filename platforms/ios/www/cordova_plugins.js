@@ -418,6 +418,22 @@ module.exports = [
     "clobbers": [
       "window.Media"
     ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransferError",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransferError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransfer",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransfer"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -442,7 +458,8 @@ module.exports.metadata =
   "com.synconset.imagepicker": "2.1.8",
   "cordova-plugin-inappbrowser": "1.7.1",
   "cordova-plugin-network-information": "1.3.3",
-  "cordova-plugin-media": "3.0.1"
+  "cordova-plugin-media": "3.0.1",
+  "cordova-plugin-file-transfer": "1.6.3"
 };
 // BOTTOM OF METADATA
 });

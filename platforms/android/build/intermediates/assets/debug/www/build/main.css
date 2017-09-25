@@ -26188,6 +26188,11 @@ page-comments .scroll-content {
   padding: 0px 5px 0px !important;
 }
 
+page-comments .post-inner img {
+  width: 100%;
+  height: 200px;
+}
+
 page-comments .post-inner p {
   color: #000;
   font-size: 14px;
@@ -26320,7 +26325,7 @@ page-comments .plyer-row {
   z-index: 4;
 }
 
-page-comments .post-inner img {
+page-comments .plyer-row img {
   width: 30px;
   height: 30px;
   margin: 0px 4px;
@@ -26474,11 +26479,6 @@ page-eventinner .first-col {
   padding-top: 6px;
 }
 
-page-eventinner video {
-  width: 88%;
-  height: 110px;
-}
-
 page-eventinner ion-icon {
   display: inline-block;
   font-size: 1.2em;
@@ -26582,33 +26582,35 @@ page-eventinner .ic {
   font-weight: 500;
 }
 
-page-eventinner .video-main {
-  background: black;
+page-eventinner .plyer-row {
+  width: 100%;
   width: 88%;
-  float: left;
-  margin-top: 8px;
-  position: relative;
+  background: #d6cdcd;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+  padding: 5px 3px;
+  z-index: 4;
 }
 
-page-eventinner .video-main .vol-img {
-  position: absolute;
-  top: 74%;
-  left: 88%;
-  bottom: 0;
-  height: 28px;
-  width: 23px;
-  margin: auto;
+page-eventinner .post-inner img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 4px;
 }
 
-page-eventinner .video-main img {
+page-eventinner .video-main {
+  background: #606060;
+  width: 88%;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+}
+
+page-eventinner img.volume-img {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
+  right: 15%;
+  height: 20px;
+  width: 26px;
+  margin-top: 3px;
 }
 
 @media (min-width: 320px) {
@@ -26797,33 +26799,32 @@ page-eventpost .tabs-md .tab-button[aria-selected=true] .tab-button-icon .has-ic
   color: #000;
 }
 
-page-eventpost .video-main {
-  background: black;
+page-eventpost .plyer-row {
   width: 100%;
-  float: left;
-  margin-top: 8px;
-  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+  padding: 5px 3px;
+  z-index: 4;
 }
 
-page-eventpost .video-main .vol-img {
-  position: absolute;
-  top: 74%;
-  left: 88%;
-  bottom: 0;
-  height: 28px;
-  width: 23px;
-  margin: auto;
+page-eventpost .post-inner img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 4px;
 }
 
-page-eventpost .video-main img {
+page-eventpost .video-main {
+  background: #606060;
+  -webkit-box-shadow: 0px 0px 10px 0px #727272;
+  box-shadow: 0px 0px 10px 0px #727272;
+}
+
+page-eventpost img.volume-img {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  width: 60px;
-  margin: auto;
+  right: 7%;
+  height: 20px;
+  width: 26px;
+  margin-top: 3px;
 }
 
 page-findfriends {

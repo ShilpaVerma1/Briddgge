@@ -20,12 +20,12 @@
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/res/drawable-xhdpi/ic_action_remove.png"
     },
     {
-        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_discard_dark.png",
-        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/res/drawable-xhdpi/ic_action_discard_dark.png"
-    },
-    {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_done_light.png",
         "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/res/drawable-xhdpi/ic_action_done_light.png"
+    },
+    {
+        "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_discard_dark.png",
+        "source": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/res/drawable-xhdpi/ic_action_discard_dark.png"
     },
     {
         "merged": "/home/moc/Desktop/All Projects/Briidgge/Briddgge/platforms/android/build/intermediates/res/merged/debug/drawable-xhdpi/ic_action_previous_item.png",

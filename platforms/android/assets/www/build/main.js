@@ -488,111 +488,66 @@ var ImagepopverPage = (function () {
             });
         }
         if (this.captureidd == 2) {
+            /*    return new Promise((resolve)=>{
+                this.zone.run(()=>{
+                var options = {
+                  quality : 95,
+                  destinationType: this.camera.DestinationType.FILE_URI,
+                  sourceType : this.camera.PictureSourceType.PHOTOLIBRARY,
+                  mediaType:this.camera.MediaType.VIDEO
+                };
+                this.camera.getPicture(options).then((data) => {
+                  var imagePath = data.substr(0,data.lastIndexOf('/') + 1);
+                  var imageName = data.substr(data.lastIndexOf('/') + 1);
+                  alert(imagePath);
+                  alert(imageName);
+                  this.upload(imagePath, imageName, data);
+                })
+              })
+            })
+             */
             return new Promise(function (resolve) {
                 _this.zone.run(function () {
-                    var options = {
+                    _this.camera.getPicture({
                         quality: 95,
                         destinationType: _this.camera.DestinationType.FILE_URI,
                         sourceType: _this.camera.PictureSourceType.PHOTOLIBRARY,
                         mediaType: _this.camera.MediaType.VIDEO
-                    };
-                    _this.camera.getPicture(options).then(function (data) {
-                        alert(data);
-                        var imagePath = data.substr(0, data.lastIndexOf('/') + 1);
-                        var imageName = data.substr(data.lastIndexOf('/') + 1);
-                        alert(imagePath);
-                        alert(imageName);
-                        //this.upload(imagePath, imageName, data);
+                    }).then(function (videouri) {
+                        _this.captureDataUrl = videouri;
+                        var storagee = __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref();
+                        window.resolveLocalFileSystemURL('file://' + videouri, function (fileEntry) {
+                            fileEntry.file(function (file) {
+                                var fileReader = new FileReader();
+                                fileReader.onloadend = function (result) {
+                                    var arrayBuffer = result.target.result;
+                                    var blob = new Blob([new Uint8Array(arrayBuffer)], { type: 'video/mp4' });
+                                    var name = '' + Date.now();
+                                    var loading = _this.loadingCtrl.create({
+                                        spinner: 'ios',
+                                        content: 'Uploading...',
+                                    });
+                                    loading.present();
+                                    __WEBPACK_IMPORTED_MODULE_4_firebase__["storage"]().ref().child("statusvideo/" + name).put(blob).then(function (snapshot) {
+                                        _this.videourl = snapshot.downloadURL;
+                                        loading.dismiss();
+                                        _this.viewCtrl.dismiss({
+                                            videourl: _this.videourl
+                                        });
+                                    });
+                                };
+                                fileReader.readAsArrayBuffer(file);
+                            }, function (error) {
+                                console.log('File Entry Error: ' + JSON.stringify(error));
+                            });
+                        }, function (error) {
+                            console.log('Error resolving file: ' + JSON.stringify(error));
+                        });
+                    }, function (err) {
+                        alert(err);
                     });
                 });
             });
-            // return new Promise((resolve)=>{
-            // this.zone.run(()=>{ 
-            //  this.camera.getPicture({
-            //     quality : 95,
-            //     destinationType: this.camera.DestinationType.FILE_URI,
-            //     sourceType : this.camera.PictureSourceType.PHOTOLIBRARY,
-            //     mediaType:this.camera.MediaType.VIDEO
-            //   }).then((videouri) => {
-            //     this.captureDataUrl=videouri;
-            //     let storagee = firebase.storage().ref();
-            // window.resolveLocalFileSystemURL('file://' + videouri, (fileEntry) => {
-            //      fileEntry.file( (file) => {
-            //        let fileReader = new FileReader();         
-            //        fileReader.onloadend= (result: any) => {
-            //          let arrayBuffer = result.target.result;
-            //          let blob = new Blob([new Uint8Array(arrayBuffer)], {type: 'video/mp4'});
-            //          const name = '' + Date.now();
-            //         let loading = this.loadingCtrl.create({
-            //                 spinner: 'ios',
-            //                 content: 'Uploading...',
-            //             });
-            //         loading.present(); 
-            //           firebase.storage().ref().child(`statusvideo/${name}`).put(blob).then((snapshot)=> {
-            //             this.videourl=snapshot.downloadURL;
-            //             loading.dismiss();
-            //             this.viewCtrl.dismiss({
-            //                videourl: this.videourl
-            //             })
-            //           });
-            //       };
-            //        fileReader.readAsArrayBuffer(file);
-            //      }, (error) => {
-            //        console.log('File Entry Error: ' + JSON.stringify(error));
-            //      });
-            //   }, (error) => {
-            //     console.log('Error resolving file: ' + JSON.stringify(error));
-            //   });  
-            //       }, (err) => {
-            //       alert(err)
-            //   });
-            // })
-            // })
-        }
-    };
-    ImagepopverPage.prototype.upload = function (correctPath, currentName, video) {
-        var _this = this;
-        var d = new Date(), n = d.getTime(), x = n + ".mp4";
-        this.file.copyFile(correctPath, currentName, cordova.file.dataDirectory, x).then(function (success) {
-            _this.lastImage = x;
-            alert(_this.lastImage);
-            //var url = "http://kailash.mediaoncloud.com/MLA/saveVideo";
-            // File for Upload
-            var targetPath = _this.pathForImage(_this.lastImage);
-            // File name only
-            // this.filename = this.lastImage;      
-            var options = {
-                fileKey: "video",
-                fileName: x,
-                chunkedMode: false,
-                mimeType: "video/mp4"
-            };
-            _this.fileTransfer = _this.transfer.create();
-            _this.loading = _this.loadingCtrl.create({
-                content: 'Uploading...',
-            });
-            _this.loading.present();
-            // Use the FileTransfer to upload the image
-            //  this.fileTransfer.upload(targetPath, url, options).then(data => {   
-            //  // this.videoUrl = 'http://kailash.mediaoncloud.com/MLAfiles/'+ x;
-            //   this.videoUrlPath =  x;  
-            //   this.loading.dismissAll();
-            //    alert('video succesful uploaded.');
-            //  }, err => {
-            //    this.loading.dismissAll()
-            //    alert('Error while uploading file.');
-            //  });
-        }, function (error) {
-            alert(JSON.stringify(error));
-            //alert('Error while storing file.');
-        });
-    };
-    ImagepopverPage.prototype.pathForImage = function (img) {
-        if (img === null) {
-            return '';
-        }
-        else {
-            return cordova.file.dataDirectory + img;
         }
     };
     return ImagepopverPage;
